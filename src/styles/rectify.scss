@@ -1,0 +1,744 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    cursor: pointer;
+    display: inline;
+    text-decoration: none;
+
+    &:visited {
+        color: black;
+    }
+}
+
+abbr {
+    display: inline;
+}
+
+address {
+    display: block;
+    font-style: normal;
+}
+
+area {
+    display: inline;
+}
+
+article {
+    display: block;
+}
+
+aside {
+    display: block;
+}
+
+audio {
+    display: block;
+    height: auto;
+    width: auto;
+
+    &:not([controls]) {
+        display: none !important;
+    }
+}
+
+b {
+    display: inline;
+    font-weight: bold;
+}
+
+base {
+    display: none;
+}
+
+bdi {
+    display: inline;
+    unicode-bidi: initial;
+}
+
+bdo {
+    display: inline;
+    unicode-bidi: bidi-override;
+}
+
+blockquote {
+    display: block;
+    margin-block: 0;
+    margin-inline: 0;
+}
+
+body {
+    display: block;
+    margin: 0;
+}
+
+br {
+    display: block;
+}
+
+button {
+    align-items: initial;
+    appearance: auto;
+    background: none;
+    border: 1px solid;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    font: initial;
+    font-family: inherit;
+    letter-spacing: normal;
+    margin: 0;
+    padding: 0;
+    text-align: initial;
+    text-indent: 0;
+    text-rendering: auto;
+    text-shadow: none;
+    text-transform: none;
+    word-spacing: normal;
+    writing-mode: initial;
+}
+
+canvas {
+    display: block;
+    overflow: initial;
+    overflow-clip-margin: initial;
+}
+
+caption {
+    display: table-caption;
+    text-align: initial;
+}
+
+cite {
+    display: inline;
+    font-style: normal;
+}
+
+code {
+    display: inline;
+    font-family: inherit;
+}
+
+col {
+    display: table-column;
+}
+
+colgroup {
+    display: table-column-group;
+}
+
+data {
+    display: inline;
+}
+
+datalist {
+    display: none;
+}
+
+dd {
+    display: block;
+    margin: 0;
+}
+
+del {
+    display: inline;
+    text-decoration: line-through;
+}
+
+details {
+    display: block;
+
+    &>summary {
+        list-style: disclosure-closed inside;
+    }
+
+    &[open]>summary {
+        list-style: disclosure-open inside;
+    }
+}
+
+dfn {
+    display: inline;
+    font-style: normal;
+}
+
+dialog {
+    background: none;
+    border: 1px solid;
+    color: inherit;
+    display: block;
+    height: auto;
+    inset-inline: 0;
+    margin: 0;
+    padding: 0;
+    position: static;
+    width: auto;
+}
+
+div {
+    display: block;
+}
+
+dl {
+    display: block;
+    margin-block: 0;
+    margin-inline: 0;
+}
+
+dt {
+    display: block;
+}
+
+em {
+    display: inline;
+    font-style: italic;
+}
+
+embed {
+    display: block;
+    overflow: initial !important;
+    overflow-clip-margin: initial !important;
+}
+
+fieldset {
+    border: none;
+    display: block;
+    margin-inline: 0;
+    min-inline-size: 0;
+    padding-block: 0;
+    padding-inline: 0;
+}
+
+figcaption {
+    display: block;
+}
+
+figure {
+    display: block;
+    margin-block: 0;
+    margin-inline: 0;
+}
+
+footer {
+    display: block;
+}
+
+form {
+    display: block;
+    margin: 0;
+}
+
+h1 {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-block: 0;
+    margin-inline: 0;
+}
+
+h2 {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-block: 0;
+    margin-inline: 0;
+}
+
+h3 {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-block: 0;
+    margin-inline: 0;
+}
+
+h4 {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-block: 0;
+    margin-inline: 0;
+}
+
+h5 {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-block: 0;
+    margin-inline: 0;
+}
+
+h6 {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-block: 0;
+    margin-inline: 0;
+}
+
+head {
+    display: none;
+}
+
+header {
+    display: block;
+}
+
+hgroup {
+    display: block;
+}
+
+hr {
+    border: 1px solid;
+    display: block;
+    margin-block: 1rem;
+    margin-inline: 0;
+    overflow: initial;
+    unicode-bidi: initial;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    color: black;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-synthesis: weight style;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+}
+
+i {
+    display: inline;
+    font-style: italic;
+}
+
+iframe {
+    border: none;
+    display: block;
+    overflow: initial;
+    overflow-clip-margin: initial;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    overflow: initial;
+    overflow-clip-margin: initial;
+}
+
+input {
+    -webkit-rtl-ordering: initial;
+    appearance: auto;
+    background: none;
+    border: 1px solid;
+    color: inherit;
+    cursor: text;
+    display: inline-block;
+    font: initial;
+    font-family: inherit;
+    letter-spacing: normal;
+    margin: 0;
+    padding: 0;
+    text-align: initial;
+    text-indent: 0;
+    text-rendering: auto;
+    text-shadow: none;
+    text-transform: none;
+    word-spacing: normal;
+    writing-mode: initial;
+}
+
+ins {
+    display: inline;
+    text-decoration: underline;
+}
+
+kbd {
+    display: inline;
+    font-family: inherit;
+}
+
+label {
+    cursor: pointer;
+    display: inline;
+}
+
+legend {
+    border: none;
+    display: block;
+    padding-inline: 0;
+}
+
+li {
+    display: list-item;
+    text-align: initial;
+
+    &::marker {
+        font-variant-numeric: initial;
+        text-align: initial !important;
+        text-align-last: initial !important;
+        text-indent: 0 !important;
+        text-transform: none;
+        unicode-bidi: initial;
+    }
+}
+
+link {
+    display: none;
+}
+
+main {
+    display: block;
+}
+
+map {
+    display: inline;
+}
+
+mark {
+    background: none;
+    color: inherit;
+    display: inline;
+}
+
+menu {
+    display: block;
+    list-style: square inside;
+    margin-block: 0;
+    margin-inline: 0;
+    padding-inline: 0;
+}
+
+meta {
+    display: none;
+}
+
+meter {
+    -webkit-user-modify: initial;
+    appearance: auto;
+    block-size: 0;
+    display: inline-block;
+    inline-size: 0;
+    vertical-align: 0;
+    writing-mode: initial;
+}
+
+nav {
+    display: block;
+}
+
+noscript {
+    display: none;
+}
+
+object {
+    display: block;
+    overflow: initial !important;
+    overflow-clip-margin: initial !important;
+}
+
+ol {
+    display: block;
+    list-style: decimal inside;
+    margin-block: 0;
+    margin-inline: 0;
+    padding-inline: 0;
+}
+
+optgroup {
+    display: block;
+    font-weight: normal;
+}
+
+option {
+    display: block;
+    font-weight: normal;
+    min-height: 0;
+    padding: 0;
+    white-space: initial;
+}
+
+output {
+    display: inline;
+    unicode-bidi: initial;
+}
+
+p {
+    display: block;
+    margin-block: 0;
+    margin-inline: 0;
+}
+
+param {
+    display: none;
+}
+
+picture {
+    display: inline-block;
+}
+
+pre {
+    display: block;
+    font-family: inherit;
+    margin: 0;
+    white-space: initial;
+}
+
+progress {
+    appearance: auto;
+    block-size: 0;
+    display: inline-block;
+    inline-size: 0;
+    vertical-align: 0;
+    writing-mode: initial;
+}
+
+q {
+    display: inline;
+
+    &::after {
+        content: none;
+    }
+
+    &::before {
+        content: none;
+    }
+}
+
+rp {
+    display: none;
+}
+
+rt {
+    display: block;
+    font-size: 1rem;
+    line-height: normal;
+    text-align: initial;
+    text-emphasis: none;
+    text-indent: 0;
+}
+
+ruby {
+    display: inline;
+    text-indent: 0;
+}
+
+s {
+    display: inline;
+    text-decoration: line-through;
+}
+
+samp {
+    display: inline;
+    font-family: inherit;
+}
+
+script {
+    display: none;
+}
+
+section {
+    display: block;
+}
+
+select {
+    -webkit-rtl-ordering: initial;
+    align-items: initial;
+    appearance: auto;
+    background: none;
+    border: 1px solid;
+    border-radius: 0;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    font: initial;
+    font-family: inherit;
+    letter-spacing: normal;
+    margin: 0;
+    text-align: initial;
+    text-indent: 0;
+    text-rendering: auto;
+    text-shadow: none;
+    text-transform: none;
+    white-space: initial;
+    word-spacing: normal;
+    writing-mode: initial;
+
+    &:not(:-internal-list-box) {
+        overflow: initial !important;
+    }
+}
+
+slot {
+    display: contents;
+}
+
+small {
+    display: inline;
+    font-size: 1rem;
+}
+
+source {
+    display: none;
+}
+
+span {
+    display: inline;
+}
+
+strong {
+    display: inline;
+    font-weight: bold;
+}
+
+style {
+    display: none;
+}
+
+sub {
+    display: inline;
+    font-size: 1rem;
+    vertical-align: 0;
+}
+
+summary {
+    counter-increment: none;
+    cursor: pointer;
+    display: list-item;
+
+    &::marker {
+        font-variant-numeric: initial;
+        text-align: initial !important;
+        text-align-last: initial !important;
+        text-indent: 0 !important;
+        text-transform: none;
+        unicode-bidi: initial;
+    }
+}
+
+sup {
+    display: inline;
+    font-size: 1rem;
+    vertical-align: 0;
+}
+
+table {
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    text-indent: 0;
+}
+
+tbody {
+    border-color: inherit;
+    display: table-row-group;
+    vertical-align: middle;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+template {
+    display: none;
+}
+
+textarea {
+    -webkit-rtl-ordering: initial;
+    appearance: auto;
+    background: none;
+    border: 1px solid;
+    color: inherit;
+    column-count: initial;
+    cursor: text;
+    display: inline-block;
+    font: initial;
+    font-family: inherit;
+    letter-spacing: normal;
+    margin: 0;
+    overflow-wrap: break-word;
+    padding: 0;
+    resize: none;
+    text-align: initial;
+    text-indent: 0;
+    text-rendering: auto;
+    text-shadow: none;
+    text-transform: none;
+    white-space: initial;
+    word-spacing: normal;
+    writing-mode: initial;
+}
+
+tfoot {
+    border-color: inherit;
+    display: table-footer-group;
+    vertical-align: middle;
+}
+
+th {
+    display: table-cell;
+    font-weight: bold;
+    text-align: initial;
+    vertical-align: inherit;
+}
+
+thead {
+    border-color: inherit;
+    display: table-header-group;
+    vertical-align: middle;
+}
+
+time {
+    display: inline;
+}
+
+title {
+    display: none;
+}
+
+tr {
+    border-color: inherit;
+    display: table-row;
+    vertical-align: inherit;
+}
+
+track {
+    display: none;
+}
+
+u {
+    display: inline;
+    text-decoration: underline;
+}
+
+ul {
+    display: block;
+    list-style: square inside;
+    margin-block: 0;
+    margin-inline: 0;
+    padding-inline: 0;
+}
+
+var {
+    display: inline;
+    font-style: normal;
+}
+
+video {
+    display: block;
+    max-width: 100%;
+    object-fit: initial;
+    overflow: initial;
+    overflow-clip-margin: initial;
+}
+
+wbr {
+    display: none;
+}
+
+[hidden] {
+    display: none !important;
+}

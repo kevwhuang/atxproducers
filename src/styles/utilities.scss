@@ -1,0 +1,78 @@
+@use '_root' as *;
+
+$sizes: (
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60,
+    65,
+    70,
+    75,
+    80,
+    85,
+    90,
+    95,
+    100,
+);
+
+@each $s in $sizes {
+    .m-#{$s} {
+        margin: #{$s}px !important;
+    }
+
+    .mb-#{$s} {
+        margin-bottom: #{$s}px !important;
+    }
+
+    .ml-#{$s} {
+        margin-left: #{$s}px !important;
+    }
+
+    .mr-#{$s} {
+        margin-right: #{$s}px !important;
+    }
+
+    .mx-#{$s} {
+        margin-left: #{$s}px !important;
+        margin-right: #{$s}px !important;
+    }
+
+    .my-#{$s} {
+        margin-bottom: #{$s}px !important;
+        margin-top: #{$s}px !important;
+    }
+
+    .p-#{$s} {
+        padding: #{$s}px !important;
+    }
+
+    .pb-#{$s} {
+        padding-bottom: #{$s}px !important;
+    }
+
+    .pl-#{$s} {
+        padding-left: #{$s}px !important;
+    }
+
+    .pr-#{$s} {
+        padding-right: #{$s}px !important;
+    }
+
+    .px-#{$s} {
+        padding-left: #{$s}px !important;
+        padding-right: #{$s}px !important;
+    }
+
+    .py-#{$s} {
+        padding-bottom: #{$s}px !important;
+        padding-top: #{$s}px !important;
+    }
+}

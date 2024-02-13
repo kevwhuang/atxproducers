@@ -1,0 +1,71 @@
+{
+    "name": "vite",
+    "version": "0.0.0",
+    "description": "",
+    "keywords": [],
+    "homepage": "",
+    "bugs": {
+        "url": "https://github.com/kevwhuang"
+    },
+    "license": "GPL-3.0+",
+    "author": "Kevin Huang",
+    "main": "",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kevwhuang"
+    },
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite",
+        "lint": "eslint src --ext js,cjs,mjs,jsx,ts,tsx",
+        "netlify": "ntl dev",
+        "prebuild": "tsc",
+        "preview": "vite preview",
+        "server": "",
+        "start": "",
+        "test": "vitest"
+    },
+    "dependencies": {
+        "@emotion/react": "*",
+        "@emotion/styled": "*",
+        "@mui/icons-material": "*",
+        "@mui/material": "*",
+        "@netlify/functions": "*",
+        "axios": "*",
+        "cookie": "*",
+        "react": "*",
+        "react-dom": "*",
+        "react-hook-form": "*",
+        "react-hot-toast": "*",
+        "react-intersection-observer": "*",
+        "react-router-dom": "*",
+        "swr": "*",
+        "uuid": "*",
+        "zustand": "*"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "*",
+        "@testing-library/react": "*",
+        "@types/cookie": "*",
+        "@types/node": "*",
+        "@types/react": "*",
+        "@types/react-dom": "*",
+        "@types/react-router-dom": "*",
+        "@types/uuid": "*",
+        "@typescript-eslint/eslint-plugin": "*",
+        "@typescript-eslint/parser": "*",
+        "@vitejs/plugin-react-swc": "*",
+        "autoprefixer": "*",
+        "eslint": "*",
+        "eslint-plugin-import": "*",
+        "eslint-plugin-react-hooks": "*",
+        "eslint-plugin-react-refresh": "*",
+        "jsdom": "*",
+        "sass": "*",
+        "typescript": "*",
+        "vite": "*",
+        "vite-plugin-pwa": "*",
+        "vitest": "*"
+    },
+    "private": true
+}

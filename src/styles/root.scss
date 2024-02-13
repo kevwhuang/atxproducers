@@ -1,0 +1,19 @@
+@use '_root' as *;
+
+:root {
+    --color-1: #1b2635;
+    --color-2: #233044;
+    --color-3: #407ad6;
+    --color-4: #478e3d;
+    --color-5: #f3f4f5;
+    --color-6: #898e96;
+}
+
+html {
+    background: $color-1;
+    color: $color-5;
+    font-family:
+        'SF Pro Display',
+        'Helvetica Neue',
+        sans-serif;
+}
