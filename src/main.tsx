@@ -11,7 +11,10 @@ import { SWRConfig } from 'swr';
 
 import Display from './layouts/Display';
 
+import Admins from './pages/Admins';
+import Feedback from './pages/Feedback';
 import Home from './pages/Home';
+import Producers from './pages/Producers';
 
 import Error from './pages/statuses/Error';
 import Fallback from './pages/statuses/Fallback';
@@ -28,15 +31,28 @@ if (navigator.userAgent.search(/Macintosh|Windows NT/) === -1) {
     import('./styles/media/mobile.scss');
 }
 
-interface Config { }
+interface Config {
+    errorRetryCount: number,
+    refreshInterval: number,
+    revalidateOnReconnect: boolean,
+    shouldRetryOnError: boolean,
+}
 
-const config: Config = {};
+const config: Config = {
+    errorRetryCount: 5,
+    refreshInterval: 600e3,
+    revalidateOnReconnect: true,
+    shouldRetryOnError: true,
+};
 
 const router: any = createBrowserRouter(createRoutesFromElements(
     <Route path="" element={<Display />} errorElement={<Error />}>
         <Route index element={<Home />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="admins" element={<Admins />} />
+        <Route path="feedback" element={<Feedback />} />
         <Route path="home" element={<Navigate to="/" replace={true} />} />
+        <Route path="producers" element={<Producers />} />
     </Route>
 ));
 

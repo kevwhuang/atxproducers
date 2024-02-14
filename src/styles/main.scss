@@ -1,11 +1,41 @@
 @use '_root' as *;
 
-#display {}
+#admins {
+    display: block;
+    font-size: $font-4;
+    margin: 100px;
+}
+
+#display {
+    display: grid;
+    grid-template-areas:
+        'navbar'
+        'main'
+        'footer';
+    grid-template-rows: 50px 1fr 100px;
+    min-height: 100dvh;
+}
 
 #error {}
 
 #fallback {}
 
+#feedback {
+    display: block;
+    font-size: $font-4;
+    margin: 100px;
+}
+
+#home {
+    display: block;
+    font-size: $font-4;
+    margin: 100px;
+}
+
 #not-found {}
 
-#home {}
+#producers {
+    display: block;
+    font-size: $font-4;
+    margin: 100px;
+}

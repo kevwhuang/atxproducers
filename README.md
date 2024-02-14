@@ -1,15 +1,2 @@
-# VITE
-
-Author:
-
-Version:
-
-Date:
-
-Run ```npm i```
-
-Run ```ntl dev```
-
----
-
-## CHANGELOG
+Run `npm i`
+Run `npm run dev`

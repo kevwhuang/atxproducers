@@ -1,0 +1,9 @@
+@use '../_root' as *;
+
+.footer {
+    align-items: center;
+    background-color: orange;
+    display: flex;
+    font-size: $font-4;
+    justify-content: space-around;
+}

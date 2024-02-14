@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow:
 
-Sitemap:
+Sitemap: https://atxproducers.com/sitemap.xml

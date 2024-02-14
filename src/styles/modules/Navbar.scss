@@ -1,0 +1,22 @@
+@use '../_root' as *;
+
+.navbar {
+    align-items: center;
+    background-color: orange;
+    display: flex;
+    font-size: $font-4;
+    justify-content: space-around;
+}
+
+.navbar a {
+    color: $color-5;
+    transition: color 250ms;
+
+    &:visited {
+        color: $color-5;
+    }
+
+    &:hover {
+        color: $color-4;
+    }
+}
