@@ -1,0 +1,51 @@
+{
+    "admin": false,
+    "featured": false,
+    "speaker": false,
+    "alias": "",
+    "description": "",
+    "name": "",
+    "photo": "",
+    "genres": {
+        "acoustic": false,
+        "alternative": false,
+        "bass": false,
+        "classical": false,
+        "dance": false,
+        "electronic": false,
+        "hiphop": false,
+        "other": false,
+        "pop": false,
+        "rnb": false,
+        "rock": false
+    },
+    "instruments": {
+        "brass": false,
+        "drums": false,
+        "guitar": false,
+        "keys": false,
+        "other": false,
+        "strings": false,
+        "synthesizers": false,
+        "vocals": false,
+        "woodwinds": false
+    },
+    "links": {
+        "bandcamp": "",
+        "instagram": "",
+        "soundcloud": "",
+        "spotify": "",
+        "tiktok": "",
+        "website": ""
+    },
+    "workstations": {
+        "ableton": false,
+        "cubase": false,
+        "flstudio": false,
+        "logic": false,
+        "other": false,
+        "protools": false,
+        "reaper": false,
+        "reason": false
+    }
+}

@@ -1,43 +1,28 @@
 {
-    "name": "vite",
-    "version": "0.0.0",
-    "description": "",
-    "keywords": [],
-    "homepage": "",
-    "bugs": {
-        "url": "https://github.com/kevwhuang"
-    },
-    "license": "GPL-3.0+",
+    "name": "atxproducers",
+    "version": "0.0.1",
+    "description": "Austin Producer Alliance",
+    "homepage": "https://atxproducers.com",
+    "license": "UNLICENSED",
     "author": "Kevin Huang",
-    "main": "",
     "repository": {
         "type": "git",
-        "url": "https://github.com/kevwhuang"
+        "url": "https://github.com/kevwhuang/atxproducers.git"
     },
     "scripts": {
         "build": "vite build",
         "dev": "vite",
         "lint": "eslint src --ext js,cjs,mjs,jsx,ts,tsx",
-        "netlify": "ntl dev",
         "prebuild": "tsc",
-        "preview": "vite preview",
-        "server": "",
-        "start": "",
         "test": "vitest"
     },
     "dependencies": {
         "@emotion/react": "*",
         "@emotion/styled": "*",
-        "@mui/icons-material": "*",
-        "@mui/material": "*",
-        "@netlify/functions": "*",
         "axios": "*",
-        "cookie": "*",
         "react": "*",
         "react-dom": "*",
         "react-hook-form": "*",
-        "react-hot-toast": "*",
-        "react-intersection-observer": "*",
         "react-router-dom": "*",
         "swr": "*",
         "uuid": "*",
@@ -46,7 +31,6 @@
     "devDependencies": {
         "@testing-library/jest-dom": "*",
         "@testing-library/react": "*",
-        "@types/cookie": "*",
         "@types/node": "*",
         "@types/react": "*",
         "@types/react-dom": "*",
