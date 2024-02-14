@@ -14,6 +14,7 @@
         "dev": "vite",
         "lint": "eslint src --ext js,cjs,mjs,jsx,ts,tsx",
         "prebuild": "tsc",
+        "preview": "vite preview",
         "test": "vitest"
     },
     "dependencies": {

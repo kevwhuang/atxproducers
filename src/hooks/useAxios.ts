@@ -21,7 +21,7 @@ function fetcher(params: Params): Promise<any> {
 
 function useAxios(params: Params): any {
     const { data, error, isLoading, mutate }: SWRResponse<any, Error, any>
-        = useSWR<Params, Error>(params, fetcher);
+        = useSWR(params, fetcher);
 
     return { data, error, loading: isLoading, mutate };
 }
