@@ -1,0 +1,17 @@
+{
+    "admin": false,
+    "featured": true,
+    "speaker": false,
+    "alias": "J Dilla",
+    "description": "James Dewitt Yancey, better known by his stage names J Dilla and Jay Dee, was an American record producer and rapper who emerged from the mid-1990s underground hip-hop scene in Detroit, Michigan. J Dilla's beats were known for their off-kilter drum patterns, innovative sampling, and soulful vibe. He has influenced a wide range of artists and producers in the hip-hop and neo-soul genres.",
+    "name": "James Dewitt Yancey",
+    "photo": "https://example.com/path/to/jdilla.jpg",
+    "genres": ["Hip Hop", "Neo-Soul"],
+    "instruments": ["MPC", "Synthesizer", "Turntables"],
+    "links": {
+      "spotify": "https://open.spotify.com/artist/JDilla",
+      "instagram": "https://www.instagram.com/officialjdilla/",
+      "soundcloud": "https://soundcloud.com/jdilla"
+    },
+    "workstations": ["Akai MPC"]
+  }

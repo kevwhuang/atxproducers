@@ -15,7 +15,8 @@
         "lint": "eslint src --ext js,cjs,mjs,jsx,ts,tsx",
         "prebuild": "tsc",
         "preview": "vite preview",
-        "test": "vitest"
+        "test": "vitest",
+        "test:local-integration": "jest --config src/tests/local-integration/jest.config.ts"
     },
     "dependencies": {
         "@emotion/react": "*",
@@ -32,6 +33,8 @@
     "devDependencies": {
         "@testing-library/jest-dom": "*",
         "@testing-library/react": "*",
+        "@types/jest": "^29.5.12",
+        "@types/mongodb": "^4.0.7",
         "@types/node": "*",
         "@types/react": "*",
         "@types/react-dom": "*",
@@ -45,8 +48,11 @@
         "eslint-plugin-import": "*",
         "eslint-plugin-react-hooks": "*",
         "eslint-plugin-react-refresh": "*",
+        "jest": "^29.7.0",
         "jsdom": "*",
+        "mongodb-memory-server": "^9.1.6",
         "sass": "*",
+        "ts-jest": "^29.1.2",
         "typescript": "*",
         "vite": "*",
         "vite-plugin-pwa": "*",
