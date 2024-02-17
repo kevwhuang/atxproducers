@@ -4,13 +4,14 @@ const config: Config.InitialOptions = {
   verbose: true,
   preset: 'ts-jest',
   testEnvironment: 'node',
-  globals: {
-    'ts-jest': {
-      tsconfig: 'tsconfig.json',
-    },
+  transform: {
+    '^.+\\.(ts|tsx)$': ['ts-jest', {
+      // ts-jest specific configurations
+      tsconfig: 'tsconfig.json'
+    }],
   },
   testMatch: ['**/?(*.)+(spec|test).[tj]s?(x)'],
-  setupFilesAfterEnv: ['<rootDir>/src/tests/local-integration/setup.ts']
+  setupFilesAfterEnv: ['<rootDir>/setup.ts']
 };
 
 export default config;

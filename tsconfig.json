@@ -28,6 +28,7 @@
         ],
         "types": [
             "vite/client",
+            "jest"
         ],
     },
     "references": [

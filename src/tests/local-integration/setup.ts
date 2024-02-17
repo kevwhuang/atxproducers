@@ -1,4 +1,3 @@
-// tests/local-integration/setup.ts
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import { MongoClient } from 'mongodb';
 import fs from 'fs';
@@ -13,6 +12,8 @@ beforeAll(async () => {
   
   client = new MongoClient(uri);
   await client.connect();
+
+  (global as any).mongoClient = client;
   
   const db = client.db("testDB");
   

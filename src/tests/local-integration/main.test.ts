@@ -2,13 +2,13 @@ import { MongoClient, Db } from 'mongodb';
 
 describe('Local Integration Tests', () => {
   let client: MongoClient;
-  let db: Db; // Explicitly type the `db` variable as `Db`
+  let db: Db;
 
   beforeAll(async () => {
     // Assuming the MongoDB connection setup is handled in setup.ts
     // Connect to the in-memory database
     client = (global as any).mongoClient;
-    db = client.db(); // `db` is now correctly typed as `Db`
+    db = client.db();
   });
 
   it('should match the producer data with the jDilla JSON file', async () => {
