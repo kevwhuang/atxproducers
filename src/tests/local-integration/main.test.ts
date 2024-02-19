@@ -4,7 +4,7 @@ import path from 'path';
 import { MongoClient, Db } from 'mongodb';
 
 describe('Local Integration Tests', () => {
-  const baseURL = process.env.API_BASE_URL || 'http://localhost:3000/api';
+  const baseURL = process.env.API_BASE_URL || 'http://localhost:3001/api';
 
   it('should match the producer data with the jDilla JSON file', async () => {
     // Load DB with jDilla data

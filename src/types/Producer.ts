@@ -1,20 +1,26 @@
-export type Producer = {
-    admin: boolean;
-    featured: boolean;
-    speaker: boolean;
-    alias: string;
-    description: string;
-    name: string;
-    photo: string;
-    genres: string[];
-    instruments: string[];
+import mongoose from 'mongoose';
+
+const producerSchema = new mongoose.Schema({
+    admin: Boolean,
+    featured: Boolean,
+    speaker: Boolean,
+    alias: String,
+    description: String,
+    name: String,
+    photo: String,
+    genres: [String],
+    instruments: [String],
     links: {
-      bandcamp?: string;
-      instagram?: string;
-      soundcloud?: string;
-      spotify?: string;
-      tiktok?: string;
-      website?: string;
-    };
-    workstations: string[];
-  };
+      bandcamp: String,
+      instagram: String,
+      soundcloud: String,
+      spotify: String,
+      tiktok: String,
+      website: String,
+    },
+    workstations: [String],
+  });
+
+const Producer = mongoose.model('Producer', producerSchema);
+
+export default Producer;

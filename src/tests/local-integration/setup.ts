@@ -7,10 +7,10 @@ let client: MongoClient;
 beforeAll(async () => {
   mongoServer = await MongoMemoryServer.create();
   const uri = mongoServer.getUri();
+  process.env.MONGODB_URI = uri;
   
   client = new MongoClient(uri);
-  await client.connect();
-
+  await client.connect();  
   (global as any).mongoClient = client;
 });
 
