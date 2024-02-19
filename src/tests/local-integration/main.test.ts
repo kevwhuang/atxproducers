@@ -11,13 +11,9 @@ describe('Local Integration Tests', () => {
     let client: MongoClient;
     let db: Db;
     const jDillaData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'jDilla.json'), 'utf-8'));
-    beforeAll(async () => {
-      // Assuming the MongoDB connection setup is handled in setup.ts
-      // Connect to the in-memory database
-      client = (global as any).mongoClient;
-      db = client.db();
-      await db.collection('producers').insertOne(jDillaData);
-    });
+    client = (global as any).mongoClient;
+    db = client.db();
+    await db.collection('producers').insertOne(jDillaData);
 
     try {
       const response = await axios.get(`${baseURL}/producers`, { params: { alias: 'J Dilla' } });
@@ -28,5 +24,5 @@ describe('Local Integration Tests', () => {
       // Explicitly fail the test if the API call fails
       expect(error).toBeUndefined();
     }
-  }, 1000);
+  }, 500);
 });
