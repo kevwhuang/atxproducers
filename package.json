@@ -16,12 +16,11 @@
         "prebuild": "tsc",
         "preview": "vite preview",
         "test": "vitest",
-        "test:local-integration": "jest --config src/tests/local-integration/jest.config.ts"
+        "test:local-integration": "jest --config ./src/tests/local-integration/jest.config.ts"
     },
     "dependencies": {
         "@emotion/react": "*",
         "@emotion/styled": "*",
-        "axios": "*",
         "react": "*",
         "react-dom": "*",
         "react-hook-form": "*",
@@ -44,6 +43,7 @@
         "@typescript-eslint/parser": "*",
         "@vitejs/plugin-react-swc": "*",
         "autoprefixer": "*",
+        "axios": "^1.6.7",
         "eslint": "*",
         "eslint-plugin-import": "*",
         "eslint-plugin-react-hooks": "*",
@@ -51,6 +51,7 @@
         "jest": "^29.7.0",
         "jsdom": "*",
         "mongodb-memory-server": "^9.1.6",
+        "path": "^0.12.7",
         "sass": "*",
         "ts-jest": "^29.1.2",
         "ts-node": "^10.9.2",
