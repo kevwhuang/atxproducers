@@ -11,10 +11,12 @@
     },
     "scripts": {
         "build": "vite build",
+        "basic-test": "node src/basictest.js",
         "dev": "vite",
         "lint": "eslint src --ext js,cjs,mjs,jsx,ts,tsx",
         "prebuild": "tsc",
         "preview": "vite preview",
+        "start": "ts-node src/index.ts",
         "test": "vitest",
         "test:local-integration": "jest --config ./src/tests/local-integration/jest.config.ts"
     },
@@ -23,6 +25,7 @@
         "@emotion/styled": "*",
         "body-parser": "^1.20.2",
         "express": "^4.18.2",
+        "mongodb": "^6.3.0",
         "mongoose": "^8.1.3",
         "react": "*",
         "react-dom": "*",
