@@ -1,7 +1,9 @@
 const express = require('express');
 const { MongoClient } = require('mongodb');
+const cors = require('cors');
 const app = express();
 app.use(express.json());
+app.use(cors());
 const port = process.env.PORT || 3001;
 const user = process.env.MONGO_USER;
 const password = process.env.MONGO_PASSWORD;
@@ -29,26 +31,6 @@ app.get('/producers/:alias', async (req, res) => {
             res.json(producer);
         } else {
             res.status(500).send('Producer not found');
-        }
-    } catch {
-        console.error(error);
-        res.status(500).send('Error connecting to the database');
-    }
-});
-
-app.get('/movie', async (req, res) => {
-    const title = req.query.title || 'Back to the Future';
-    try {
-        await client.connect();
-        const database = client.db('sample_mflix');
-        const movies = database.collection('movies');
-        const query = { title: title };
-        const movie = await movies.findOne(query);
-
-        if (movie) {
-            res.json(movie);
-        } else {
-            res.status(500).send('Movie not found');
         }
     } catch {
         console.error(error);
