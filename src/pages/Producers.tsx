@@ -8,7 +8,7 @@ function Producers(): React.ReactElement {
         const fetchProducerData = async () => {
             try {
                 // TODO: Add way to specify producer name
-                const response = await fetch('http://localhost:3001/producers/J%20Dilla');
+                const response = await fetch('http://localhost:5000/producers/J%20Dilla');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
