@@ -1,6 +1,6 @@
 {
     "name": "atxproducers",
-    "version": "0.0.1",
+    "version": "0.1.1",
     "description": "Austin Producer Alliance",
     "homepage": "https://atxproducers.com",
     "license": "UNLICENSED",
@@ -15,12 +15,17 @@
         "lint": "eslint src --ext js,cjs,mjs,jsx,ts,tsx",
         "prebuild": "tsc",
         "preview": "vite preview",
+        "start": "node backend/app.js",
         "test": "vitest"
     },
     "dependencies": {
         "@emotion/react": "*",
         "@emotion/styled": "*",
         "axios": "*",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.18.2",
+        "mongodb": "^6.3.0",
         "react": "*",
         "react-dom": "*",
         "react-hook-form": "*",
