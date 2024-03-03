@@ -33,7 +33,7 @@ app.get('/producers/:alias', async (req, res) => {
         } else {
             res.status(500).send('Producer not found');
         }
-    } catch {
+    } catch (error) {
         console.error(error);
         res.status(500).send('Error connecting to the database');
     }
