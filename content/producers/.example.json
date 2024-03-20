@@ -1,0 +1,60 @@
+{
+    "alias": "",
+    "name": "",
+    "bio": "",
+    "credits": [],
+    "photo": "",
+    "stream": "",
+    "speaker": false,
+    "admin": false,
+    "spotlight": false,
+    "socials": {
+        "website": "",
+        "tree": "",
+        "instagram": "",
+        "tiktok": "",
+        "spotify": "",
+        "soundcloud": ""
+    },
+    "services": {
+        "production": false,
+        "beatmaking": false,
+        "songwriting": false,
+        "singing": false,
+        "musician": false,
+        "recording": false,
+        "mixing": false,
+        "mastering": false,
+        "post": false,
+        "synthesis": false,
+        "editing": false,
+        "live": false
+    },
+    "genres": {
+        "electronic": false,
+        "dance": false,
+        "hiphop": false,
+        "rnb": false,
+        "pop": false,
+        "indie": false,
+        "rock": false,
+        "acoustic": false
+    },
+    "workstations": {
+        "ableton": false,
+        "fl": false,
+        "logic": false,
+        "reaper": false,
+        "reason": false,
+        "protools": false
+    },
+    "instruments": {
+        "hardware": false,
+        "vocals": false,
+        "guitar": false,
+        "keys": false,
+        "percussions": false,
+        "strings": false,
+        "brass": false
+    }
+}

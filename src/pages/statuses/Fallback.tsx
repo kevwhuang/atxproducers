@@ -1,10 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import '../../styles/statuses/Fallback.scss';
 
 function Fallback(): React.ReactElement {
     return (
         <main id="fallback">
+            <Helmet>
+                <title>ATX PRODUCERS | FALLBACK</title>
+            </Helmet>
         </main>
     );
 }

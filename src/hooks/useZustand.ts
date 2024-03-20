@@ -2,9 +2,9 @@
 
 import { create } from 'zustand';
 
-const initialize: State = {};
+const initialize: ZustandState = {};
 
-const useZustand = create<Actions & State>(() => ({
+const useZustand = create<ZustandState & ZustandActions>(() => ({
     ...initialize,
 }));
 

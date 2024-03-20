@@ -42,6 +42,8 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path="" element={<Display />} errorElement={<Error />}>
         <Route index element={<Home />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="error" element={<Error />} />
+        <Route path="fallback" element={<Fallback />} />
         <Route path="home" element={<Navigate to="/" replace={true} />} />
         <Route path="live" element={<Live />} />
         <Route path="producers" element={<Producers />} />
