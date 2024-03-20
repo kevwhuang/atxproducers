@@ -1,7 +1,8 @@
+.env
+todo.txt
 **/.DS_Store
-**/.env**
-!**/.env.example
-dist/
-node_modules/
+
 .netlify/
 .vscode/
+dist/
+node_modules/

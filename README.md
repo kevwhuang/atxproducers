@@ -1,5 +1,15 @@
-Run `npm i`
+# ATX PRODUCERS
 
-Run `npm run dev`
+[ATX PRODUCERS™](https://atxproducers.com) is the home of Austin Producer Alliance, the premier meetup group for music producers in Austin.
 
-Run backend: `npm start`
+Contributors: Kevin Huang, Thomas Flanigan
+
+Version: 0.2.1
+
+Date: March 20, 2024
+
+## FOR DEVELOPERS
+
+- Run <code>npm install</code> to install dependencies.
+- Run <code>npm run netlify</code> to initiate local front-end server.
+- Run <code>npm run server</code> to initiate local back-end server.

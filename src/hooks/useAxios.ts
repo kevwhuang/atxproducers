@@ -1,28 +1,16 @@
 'use strict';
 
-import axios, {
-    AxiosRequestConfig,
-    AxiosResponse,
-} from 'axios';
-import useSWR, { SWRResponse } from 'swr';
+import axios from 'axios';
+import useSWR from 'swr';
 
-interface Params {
-    endpoint: string,
-    options?: AxiosRequestConfig,
+function fetcher(params: AxiosParams) {
+    return axios(`/.netlify/functions/${params.endpoint}`, params.options)
+        .then(res => res.data)
+        .catch(err => alert(err));
 }
 
-const BASE: string = '';
-
-function fetcher(params: Params): Promise<any> {
-    return axios(`${BASE}/${params.endpoint}`, params.options)
-        .then((res: AxiosResponse<any, any>): any => res.data)
-        .catch((err: Error): void => console.log(err));
-}
-
-function useAxios(params: Params): any {
-    const { data, error, isLoading, mutate }: SWRResponse<any, Error, any>
-        = useSWR(params, fetcher);
-
+function useAxios(params: AxiosParams) {
+    const { data, error, isLoading, mutate } = useSWR(params, fetcher);
     return { data, error, loading: isLoading, mutate };
 }
 

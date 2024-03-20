@@ -12,6 +12,8 @@ import {
 import Display from '../layouts/Display';
 
 import Home from '../pages/Home';
+import Live from '../pages/Live';
+import Producers from '../pages/Producers';
 
 import Error from '../pages/statuses/Error';
 import Fallback from '../pages/statuses/Fallback';
@@ -30,6 +32,16 @@ describe('Render', () => {
     describe('Pages', () => {
         test('Home', () => {
             render(<Home />);
+            expect(document.body).toBeInTheDocument();
+        });
+
+        test('Live', () => {
+            render(<Live />);
+            expect(document.body).toBeInTheDocument();
+        });
+
+        test('Producers', () => {
+            render(<Producers />);
             expect(document.body).toBeInTheDocument();
         });
     });

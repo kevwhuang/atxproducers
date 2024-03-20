@@ -1,3 +1,5 @@
+'use strict';
+
 import autoprefixer from 'autoprefixer';
 import react from '@vitejs/plugin-react-swc';
 import {
@@ -16,18 +18,21 @@ const assets: string[] = [
 ];
 
 const manifest: Partial<ManifestOptions> = {
-    background_color: '#1b2635',
-    description: '',
+    background_color: '#000000',
+    description: 'Austin Producer Alliance',
     dir: 'ltr',
     display: 'standalone',
     lang: 'en',
-    name: 'vite',
+    name: 'atxproducers',
     orientation: 'any',
     scope: '/',
-    short_name: 'vite',
+    short_name: 'atxproducers',
     start_url: '/',
-    theme_color: '#1b2635',
-    categories: [],
+    theme_color: '#000000',
+    categories: [
+        'music',
+        'producers',
+    ],
     icons: [
         {
             purpose: 'any',
@@ -46,7 +51,6 @@ const manifest: Partial<ManifestOptions> = {
             type: 'image/png',
         },
     ],
-    screenshots: [],
 };
 
 const vite: UserConfigExport = defineConfig({

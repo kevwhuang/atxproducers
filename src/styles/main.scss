@@ -1,11 +1,5 @@
 @use '_root' as *;
 
-#admins {
-    display: block;
-    font-size: $font-4;
-    margin: 100px;
-}
-
 #display {
     display: grid;
     grid-template-areas:
@@ -16,26 +10,14 @@
     min-height: 100dvh;
 }
 
-#error {}
-
-#fallback {}
-
-#feedback {
-    display: block;
-    font-size: $font-4;
-    margin: 100px;
-}
-
 #home {
     display: block;
-    font-size: $font-4;
-    margin: 100px;
 }
 
-#not-found {}
+#live {
+    display: block;
+}
 
 #producers {
     display: block;
-    font-size: $font-4;
-    margin: 100px;
 }

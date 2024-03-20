@@ -2,21 +2,26 @@
 
 .navbar {
     align-items: center;
-    background-color: orange;
+    background-color: $color-2;
     display: flex;
-    font-size: $font-4;
     justify-content: space-around;
-}
 
-.navbar a {
-    color: $color-5;
-    transition: color 250ms;
+    .navbar__pages {
+        display: flex;
+        gap: 50px;
+        justify-content: space-between;
 
-    &:visited {
-        color: $color-5;
-    }
+        a {
+            color: $color-5;
+            transition: 250ms;
 
-    &:hover {
-        color: $color-4;
+            &:visited {
+                color: $color-5;
+            }
+
+            &:hover {
+                color: $color-4;
+            }
+        }
     }
 }
