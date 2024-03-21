@@ -10,7 +10,6 @@ interface Meetup {
     location: string;
     address: string;
     image: URL;
-    active: boolean;
 }
 
 interface Producer {
@@ -22,14 +21,14 @@ interface Producer {
     stream: URL;
     speaker: boolean;
     admin: boolean;
-    spotlight: boolean;
+    spotlight: Date;
     socials: {
-        website: string;
-        tree: string;
-        instagram: string;
-        tiktok: string;
-        spotify: string;
-        soundcloud: string;
+        website: URL;
+        tree: URL;
+        instagram: URL;
+        tiktok: URL;
+        spotify: URL;
+        soundcloud: URL;
     };
     services: {
         production: boolean;
@@ -37,7 +36,7 @@ interface Producer {
         songwriting: boolean;
         singing: boolean;
         musician: boolean;
-        recording: boolean,
+        recording: boolean;
         mixing: boolean;
         mastering: boolean;
         post: boolean;
@@ -80,7 +79,6 @@ interface Resource {
     type: 'One Shot' | 'Loop' | 'Patch' | 'MIDI';
     difficulty: 'Easy' | 'Normal' | 'Hard';
     preview: URL;
-    source: URL;
     active: boolean;
 }
 
