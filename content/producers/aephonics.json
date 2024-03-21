@@ -1,0 +1,60 @@
+{
+    "alias": "Aephonics",
+    "name": "Kevin Huang",
+    "bio": "",
+    "credits": [],
+    "photo": "",
+    "stream": "",
+    "speaker": false,
+    "admin": true,
+    "spotlight": false,
+    "socials": {
+        "website": "atxproducers.com",
+        "tree": "",
+        "instagram": "@atxproducers",
+        "tiktok": "@atxproducers",
+        "spotify": "",
+        "soundcloud": ""
+    },
+    "services": {
+        "production": true,
+        "beatmaking": true,
+        "songwriting": false,
+        "singing": false,
+        "musician": false,
+        "recording": false,
+        "mixing": true,
+        "mastering": false,
+        "post": false,
+        "synthesis": false,
+        "editing": false,
+        "live": false
+    },
+    "genres": {
+        "electronic": true,
+        "dance": true,
+        "hiphop": true,
+        "rnb": false,
+        "pop": true,
+        "indie": false,
+        "rock": false,
+        "acoustic": false
+    },
+    "workstations": {
+        "ableton": false,
+        "fl": true,
+        "logic": false,
+        "reaper": false,
+        "reason": false,
+        "protools": false
+    },
+    "instruments": {
+        "hardware": false,
+        "vocals": false,
+        "guitar": false,
+        "keys": true,
+        "percussions": false,
+        "strings": false,
+        "brass": false
+    }
+}

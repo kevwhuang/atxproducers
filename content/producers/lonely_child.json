@@ -1,0 +1,64 @@
+{
+    "alias": "Lonely Child",
+    "name": "Bryan Ray",
+    "bio": "Lonely Child is the alias of Austin, Texas-based producer, songwriter, mixer, and musician Bryan Ray. His original songwriting, productions, and mixes have garnered tens of millions of streams and multiple placements across TV and film (Fox, Netflix, etc). He has been twice nominated for Producer of the Year in the Austin Music Awards (2017, 2018).",
+    "credits": [
+        "Daddy NAT",
+        "Jefferson Clay",
+        "Middlespoon"
+    ],
+    "photo": "",
+    "stream": "",
+    "speaker": true,
+    "admin": false,
+    "spotlight": false,
+    "socials": {
+        "website": "lonelychildmusic.com",
+        "tree": "",
+        "instagram": "",
+        "tiktok": "",
+        "spotify": "",
+        "soundcloud": ""
+    },
+    "services": {
+        "production": false,
+        "beatmaking": false,
+        "songwriting": false,
+        "singing": false,
+        "musician": false,
+        "recording": false,
+        "mixing": false,
+        "mastering": false,
+        "post": false,
+        "synthesis": false,
+        "editing": false,
+        "live": false
+    },
+    "genres": {
+        "electronic": false,
+        "dance": false,
+        "hiphop": false,
+        "rnb": false,
+        "pop": false,
+        "indie": false,
+        "rock": false,
+        "acoustic": false
+    },
+    "workstations": {
+        "ableton": false,
+        "fl": false,
+        "logic": false,
+        "reaper": false,
+        "reason": false,
+        "protools": false
+    },
+    "instruments": {
+        "hardware": false,
+        "vocals": false,
+        "guitar": false,
+        "keys": false,
+        "percussions": false,
+        "strings": false,
+        "brass": false
+    }
+}

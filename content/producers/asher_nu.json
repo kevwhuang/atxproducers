@@ -1,0 +1,60 @@
+{
+    "alias": "Asher Nu",
+    "name": "Kyle Henderson",
+    "bio": "Kyle Henderson, AKA Asher Nu, is a music producer, audio engineer and sound designer. He creates music and works with artists in genres such as electronic, hip-hop, r&b, soul and more. His main goal is to help artists and creators express themselves and share their projects with the world.",
+    "credits": [],
+    "photo": "",
+    "stream": "",
+    "speaker": false,
+    "admin": true,
+    "spotlight": false,
+    "socials": {
+        "website": "ashernu.com",
+        "tree": "",
+        "instagram": "",
+        "tiktok": "",
+        "spotify": "",
+        "soundcloud": ""
+    },
+    "services": {
+        "production": false,
+        "beatmaking": false,
+        "songwriting": false,
+        "singing": false,
+        "musician": false,
+        "recording": false,
+        "mixing": false,
+        "mastering": false,
+        "post": false,
+        "synthesis": false,
+        "editing": false,
+        "live": false
+    },
+    "genres": {
+        "electronic": false,
+        "dance": false,
+        "hiphop": false,
+        "rnb": false,
+        "pop": false,
+        "indie": false,
+        "rock": false,
+        "acoustic": false
+    },
+    "workstations": {
+        "ableton": false,
+        "fl": false,
+        "logic": false,
+        "reaper": false,
+        "reason": false,
+        "protools": false
+    },
+    "instruments": {
+        "hardware": false,
+        "vocals": false,
+        "guitar": false,
+        "keys": false,
+        "percussions": false,
+        "strings": false,
+        "brass": false
+    }
+}

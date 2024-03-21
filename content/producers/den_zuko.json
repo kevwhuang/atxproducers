@@ -1,0 +1,63 @@
+{
+    "alias": "Den Zuko",
+    "name": "Brendan Carroll",
+    "bio": "Brendan Carroll (Den Zuko) has been producing an eclectic mix of music for 14 years. After studying jazz saxophone in college and performing with bands as a freelancer, he immersed into the electronic music world. Brendan taught music to students of all ages for 8 years before moving to Austin. He is currently a student of music production and audio engineering at Austin Community College and performs as half of Rainbow Drip alongside his good friend Eric Howard (Freethinker).",
+    "credits": [
+        "Talldoor Records",
+        "Blueprints Records"
+    ],
+    "photo": "",
+    "stream": "",
+    "speaker": true,
+    "admin": false,
+    "spotlight": false,
+    "socials": {
+        "website": "",
+        "tree": "linktr.ee/denzukomusic",
+        "instagram": "",
+        "tiktok": "",
+        "spotify": "",
+        "soundcloud": ""
+    },
+    "services": {
+        "production": false,
+        "beatmaking": false,
+        "songwriting": false,
+        "singing": false,
+        "musician": false,
+        "recording": false,
+        "mixing": false,
+        "mastering": false,
+        "post": false,
+        "synthesis": false,
+        "editing": false,
+        "live": false
+    },
+    "genres": {
+        "electronic": false,
+        "dance": false,
+        "hiphop": false,
+        "rnb": false,
+        "pop": false,
+        "indie": false,
+        "rock": false,
+        "acoustic": false
+    },
+    "workstations": {
+        "ableton": false,
+        "fl": false,
+        "logic": false,
+        "reaper": false,
+        "reason": false,
+        "protools": false
+    },
+    "instruments": {
+        "hardware": false,
+        "vocals": false,
+        "guitar": false,
+        "keys": false,
+        "percussions": false,
+        "strings": false,
+        "brass": false
+    }
+}

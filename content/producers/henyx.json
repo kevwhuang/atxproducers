@@ -1,0 +1,62 @@
+{
+    "alias": "Henyx",
+    "name": "Braulio Guerra",
+    "bio": "Known by the alias Henyx, Houston's very own Braulio “Lio” Guerra is widely recognized for his unequivocally innovative sound design skills. Having been a part of many projects throughout his career, Lio's most notable accomplishment was being a featured artist in Geometry Dash, the #2 paid mobile arcade game in the Google Play Store. A father by day and a mad synthesist by night, Lio hopes to push the boundaries of sound design and inspire others to go beyond their limits.",
+    "credits": [
+        "Geometry Dash"
+    ],
+    "photo": "",
+    "stream": "",
+    "speaker": true,
+    "admin": false,
+    "spotlight": false,
+    "socials": {
+        "website": "",
+        "tree": "linktr.ee/henyx",
+        "instagram": "",
+        "tiktok": "",
+        "spotify": "",
+        "soundcloud": ""
+    },
+    "services": {
+        "production": false,
+        "beatmaking": false,
+        "songwriting": false,
+        "singing": false,
+        "musician": false,
+        "recording": false,
+        "mixing": false,
+        "mastering": false,
+        "post": false,
+        "synthesis": false,
+        "editing": false,
+        "live": false
+    },
+    "genres": {
+        "electronic": false,
+        "dance": false,
+        "hiphop": false,
+        "rnb": false,
+        "pop": false,
+        "indie": false,
+        "rock": false,
+        "acoustic": false
+    },
+    "workstations": {
+        "ableton": false,
+        "fl": false,
+        "logic": false,
+        "reaper": false,
+        "reason": false,
+        "protools": false
+    },
+    "instruments": {
+        "hardware": false,
+        "vocals": false,
+        "guitar": false,
+        "keys": false,
+        "percussions": false,
+        "strings": false,
+        "brass": false
+    }
+}
