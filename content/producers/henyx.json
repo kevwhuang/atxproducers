@@ -5,36 +5,37 @@
     "credits": [
         "Geometry Dash"
     ],
-    "photo": "",
     "stream": "",
+    "photo": "",
     "speaker": true,
     "admin": false,
     "spotlight": "",
     "socials": {
-        "website": "",
-        "tree": "linktr.ee/henyx",
-        "instagram": "",
+        "website": "https://henyx.gumroad.com",
+        "tree": "https://linktr.ee/henyx",
+        "instagram": "https://instagram.com/henyxofficial",
         "tiktok": "",
-        "spotify": "",
-        "soundcloud": ""
+        "spotify": "https://open.spotify.com/artist/5Bf7LFN1GvTy4QZWAzPHRI?si=kJRqvSAZQJ2ZSm61wptToA",
+        "soundcloud": "https://soundcloud.com/officialhenyx",
+        "youtube": "https://youtube.com/channel/UCgPZAAsnYpPfzpil55Hta0w"
     },
     "services": {
-        "production": false,
+        "production": true,
         "beatmaking": false,
         "songwriting": false,
         "singing": false,
         "musician": false,
         "recording": false,
-        "mixing": false,
+        "mixing": true,
         "mastering": false,
         "post": false,
-        "synthesis": false,
+        "synthesis": true,
         "editing": false,
         "live": false
     },
     "genres": {
-        "electronic": false,
-        "dance": false,
+        "electronic": true,
+        "dance": true,
         "hiphop": false,
         "rnb": false,
         "pop": false,
@@ -44,7 +45,7 @@
     },
     "workstations": {
         "ableton": false,
-        "fl": false,
+        "fl": true,
         "logic": false,
         "reaper": false,
         "reason": false,

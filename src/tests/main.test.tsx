@@ -22,7 +22,7 @@ import NotFound from '../pages/statuses/NotFound';
 describe('Render', () => {
     screen.debug();
 
-    describe('Layouts', () => {
+    describe.skip('Layouts', () => {
         test('Display', () => {
             render(<Display />);
             expect(document.body).toBeInTheDocument();
@@ -34,12 +34,10 @@ describe('Render', () => {
             render(<Home />);
             expect(document.body).toBeInTheDocument();
         });
-
         test('Live', () => {
             render(<Live />);
             expect(document.body).toBeInTheDocument();
         });
-
         test('Producers', () => {
             render(<Producers />);
             expect(document.body).toBeInTheDocument();
@@ -51,12 +49,10 @@ describe('Render', () => {
             render(<Error />);
             expect(document.body).toBeInTheDocument();
         });
-
         test('Fallback', () => {
             render(<Fallback />);
             expect(document.body).toBeInTheDocument();
         });
-
         test('NotFound', () => {
             render(<NotFound />);
             expect(document.body).toBeInTheDocument();

@@ -1,0 +1,65 @@
+{
+    "alias": "Skrillex",
+    "name": "Sonny Moore",
+    "bio": "Sonny John Moore (born January 15, 1988), known professionally as Skrillex, is an American record producer, DJ, singer, songwriter and musician.",
+    "credits": [
+        "From First to Last",
+        "Jack Ü",
+        "Flowdan"
+    ],
+    "stream": "https://soundcloud.com/skrillex/skrillex-peekaboo-flowdan-g-rex-badders",
+    "photo": "https://images.unsplash.com/photo-1516873240891-4bf014598ab4?q=80&w=1470",
+    "speaker": true,
+    "admin": true,
+    "spotlight": "2024-03-25T05:00:00.000Z",
+    "socials": {
+        "website": "https://skrillex.com",
+        "tree": "https://linktr.ee/skrillex.art",
+        "instagram": "https://instagram.com/skrillex",
+        "tiktok": "https://tiktok.com/@skrillex",
+        "spotify": "https://open.spotify.com/artist/5he5w2lnU9x7JFhnwcekXX?si=kOH8IlhmRlm7RatyMaLigg",
+        "soundcloud": "https://soundcloud.com/skrillex",
+        "youtube": "https://youtube.com/skrillex"
+    },
+    "services": {
+        "production": true,
+        "beatmaking": true,
+        "songwriting": true,
+        "singing": true,
+        "musician": true,
+        "recording": true,
+        "mixing": true,
+        "mastering": true,
+        "post": true,
+        "synthesis": true,
+        "editing": true,
+        "live": true
+    },
+    "genres": {
+        "electronic": true,
+        "dance": true,
+        "hiphop": true,
+        "rnb": true,
+        "pop": true,
+        "indie": true,
+        "rock": true,
+        "acoustic": true
+    },
+    "workstations": {
+        "ableton": true,
+        "fl": true,
+        "logic": true,
+        "reaper": true,
+        "reason": true,
+        "protools": true
+    },
+    "instruments": {
+        "hardware": true,
+        "vocals": true,
+        "guitar": true,
+        "keys": true,
+        "percussions": true,
+        "strings": true,
+        "brass": true
+    }
+}

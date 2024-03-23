@@ -7,7 +7,7 @@ function Footer(): React.ReactElement {
         <footer className="footer">
             <p>© 2024 ATX PRODUCERS</p>
             <p>atxproducers@gmail.com</p>
-            <p>Socials</p>
+            <samp>Socials</samp>
         </footer>
     );
 }

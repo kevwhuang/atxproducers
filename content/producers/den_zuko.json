@@ -6,21 +6,22 @@
         "Talldoor Records",
         "Blueprints Records"
     ],
-    "photo": "",
     "stream": "",
+    "photo": "",
     "speaker": true,
     "admin": false,
     "spotlight": "",
     "socials": {
-        "website": "",
-        "tree": "linktr.ee/denzukomusic",
-        "instagram": "",
+        "website": "https://denzuko.bandzoogle.com",
+        "tree": "https://linktr.ee/denzukomusic",
+        "instagram": "https://instagram.com/denzukomusic",
         "tiktok": "",
-        "spotify": "",
-        "soundcloud": ""
+        "spotify": "https://open.spotify.com/artist/561JSpK3d7x7H5EaSLEj58?si=f643d88d6a444a44",
+        "soundcloud": "https://soundcloud.com/denzukomusic",
+        "youtube": "https://youtube.com/@denzuko8415"
     },
     "services": {
-        "production": false,
+        "production": true,
         "beatmaking": false,
         "songwriting": false,
         "singing": false,
@@ -35,7 +36,7 @@
     },
     "genres": {
         "electronic": false,
-        "dance": false,
+        "dance": true,
         "hiphop": false,
         "rnb": false,
         "pop": false,
@@ -44,7 +45,7 @@
         "acoustic": false
     },
     "workstations": {
-        "ableton": false,
+        "ableton": true,
         "fl": false,
         "logic": false,
         "reaper": false,

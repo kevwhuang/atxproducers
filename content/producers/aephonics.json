@@ -3,18 +3,19 @@
     "name": "Kevin Huang",
     "bio": "",
     "credits": [],
-    "photo": "",
     "stream": "",
+    "photo": "",
     "speaker": false,
     "admin": true,
     "spotlight": "",
     "socials": {
-        "website": "atxproducers.com",
+        "website": "https://atxproducers.com",
         "tree": "",
-        "instagram": "@atxproducers",
-        "tiktok": "@atxproducers",
+        "instagram": "https://instagram.com/atxproducers",
+        "tiktok": "https://tiktok.com/@atxproducers",
         "spotify": "",
-        "soundcloud": ""
+        "soundcloud": "",
+        "youtube": ""
     },
     "services": {
         "production": true,

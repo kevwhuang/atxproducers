@@ -4,7 +4,7 @@ functions = "functions"
 publish = "dist"
 
 [dev]
-    port = 3002
+    port = 4000
     targetPort = 3000
 
 [functions]

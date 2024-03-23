@@ -5,22 +5,23 @@
     "credits": [
         "Myki"
     ],
-    "photo": "",
     "stream": "",
-    "speaker": false,
+    "photo": "",
+    "speaker": true,
     "admin": false,
-    "spotlight": "",
+    "spotlight": "2024-03-20T05:00:00.000Z",
     "socials": {
         "website": "",
-        "tree": "linktr.ee/altslauson",
-        "instagram": "",
+        "tree": "https://linktr.ee/altslauson",
+        "instagram": "https://instagram.com/altslauson",
         "tiktok": "",
-        "spotify": "",
-        "soundcloud": ""
+        "spotify": "https://open.spotify.com/artist/3X9r0zczTWSwbSAv3A4S3m?si=a_NGwc5OTMOOf6ggUtNZ_g",
+        "soundcloud": "https://soundcloud.com/altslauson",
+        "youtube": "https://youtube.com/channel/UCz97yQQkIJBBStqVoUh37qg"
     },
     "services": {
-        "production": false,
-        "beatmaking": false,
+        "production": true,
+        "beatmaking": true,
         "songwriting": false,
         "singing": false,
         "musician": false,
@@ -33,9 +34,9 @@
         "live": false
     },
     "genres": {
-        "electronic": false,
+        "electronic": true,
         "dance": false,
-        "hiphop": false,
+        "hiphop": true,
         "rnb": false,
         "pop": false,
         "indie": false,
@@ -52,7 +53,7 @@
     },
     "instruments": {
         "hardware": false,
-        "vocals": false,
+        "vocals": true,
         "guitar": false,
         "keys": false,
         "percussions": false,

@@ -5,9 +5,6 @@
     "compilerOptions": {
         "allowImportingTsExtensions": true,
         "allowJs": true,
-        "allowUnreachableCode": true,
-        "allowUnusedLabels": true,
-        "checkJs": true,
         "esModuleInterop": true,
         "isolatedModules": true,
         "noEmit": true,
