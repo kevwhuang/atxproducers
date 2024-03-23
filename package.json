@@ -1,6 +1,6 @@
 {
     "name": "atxproducers",
-    "version": "0.3.1",
+    "version": "0.4.1",
     "description": "Austin Producer Alliance",
     "keywords": [
         "music",
@@ -44,7 +44,7 @@
         "mongodb": "*",
         "react": "*",
         "react-dom": "*",
-        "react-helmet": "*",
+        "react-helmet-async": "*",
         "react-hook-form": "*",
         "react-hot-toast": "*",
         "react-router-dom": "*",

@@ -56,11 +56,6 @@ async function controllerSubmissions(_, res) {
     res.send(data);
 }
 
-async function error(err, _, res, next) {
-    res.status(500);
-    next(err);
-}
-
 const base = path.join(path.dirname(url.fileURLToPath(import.meta.url)), '../content');
 const meetups = fs.readdirSync(`${base}/meetups`).slice(1);
 const producers = fs.readdirSync(`${base}/producers`).slice(1);
@@ -70,7 +65,7 @@ const submissions = fs.readdirSync(`${base}/submissions`).slice(1);
 const options = {
     credentials: true,
     origin: '*',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
 };
 
 const app = express();
@@ -98,5 +93,5 @@ app.use('/api/producers', controllerProducers);
 app.use('/api/resources', controllerResources);
 app.use('/api/submissions', controllerSubmissions);
 
+app.all('/', (_, res) => res.send(''));
 app.all('*', (_, res) => res.status(308).redirect('/'));
-app.use(error);

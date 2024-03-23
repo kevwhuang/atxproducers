@@ -1,6 +1,6 @@
 'use strict';
 
-import axios, { AxiosRequestConfig } from 'axios';
+import axios, { type AxiosRequestConfig } from 'axios';
 import useSWR from 'swr';
 
 interface Params {
