@@ -3,26 +3,27 @@
     "name": "Kyle Henderson",
     "bio": "Kyle Henderson, AKA Asher Nu, is a music producer, audio engineer and sound designer. He creates music and works with artists in genres such as electronic, hip-hop, r&b, soul and more. His main goal is to help artists and creators express themselves and share their projects with the world.",
     "credits": [],
-    "photo": "",
     "stream": "",
+    "photo": "",
     "speaker": false,
     "admin": true,
     "spotlight": "",
     "socials": {
-        "website": "ashernu.com",
-        "tree": "",
-        "instagram": "",
+        "website": "https://ashernu.com/",
+        "tree": "https://linktr.ee/ashernu",
+        "instagram": "https://instagram.com/asher_nu",
         "tiktok": "",
-        "spotify": "",
-        "soundcloud": ""
+        "spotify": "https://open.spotify.com/artist/5DExBme65MVVfVDxmN4mTl?si=j3KV2pQqRSuomorZbkPNqw",
+        "soundcloud": "https://soundcloud.com/ashernu",
+        "youtube": "https://youtube.com/@ashernu"
     },
     "services": {
-        "production": false,
+        "production": true,
         "beatmaking": false,
         "songwriting": false,
         "singing": false,
         "musician": false,
-        "recording": false,
+        "recording": true,
         "mixing": false,
         "mastering": false,
         "post": false,
@@ -31,7 +32,7 @@
         "live": false
     },
     "genres": {
-        "electronic": false,
+        "electronic": true,
         "dance": false,
         "hiphop": false,
         "rnb": false,
@@ -42,7 +43,7 @@
     },
     "workstations": {
         "ableton": false,
-        "fl": false,
+        "fl": true,
         "logic": false,
         "reaper": false,
         "reason": false,
@@ -52,8 +53,8 @@
         "hardware": false,
         "vocals": false,
         "guitar": false,
-        "keys": false,
-        "percussions": false,
+        "keys": true,
+        "percussions": true,
         "strings": false,
         "brass": false
     }

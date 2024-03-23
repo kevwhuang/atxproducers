@@ -1,14 +1,14 @@
 'use strict';
 
 interface Meetup {
-    id: number;
     date: Date;
     duration: number;
-    title: string;
-    speaker: string;
-    description: string;
     location: string;
     address: string;
+    speaker: string;
+    title: string;
+    description: string;
+    page: URL;
     image: URL;
 }
 
@@ -17,8 +17,8 @@ interface Producer {
     name: string;
     bio: string;
     credits: string[];
-    photo: URL;
     stream: URL;
+    photo: URL;
     speaker: boolean;
     admin: boolean;
     spotlight: Date;
@@ -29,6 +29,7 @@ interface Producer {
         tiktok: URL;
         spotify: URL;
         soundcloud: URL;
+        youtube: URL;
     };
     services: {
         production: boolean;
@@ -75,11 +76,11 @@ interface Producer {
 
 interface Resource {
     id: number;
+    preview: URL;
     name: string;
     type: 'One Shot' | 'Loop' | 'Patch' | 'MIDI';
     difficulty: 'Easy' | 'Normal' | 'Hard';
-    preview: URL;
-    active: boolean;
+    download: URL;
 }
 
 interface Submission {
@@ -87,7 +88,6 @@ interface Submission {
     producer: string;
     title: string;
     stream: URL;
-    active: boolean;
 }
 
 interface ZustandActions {

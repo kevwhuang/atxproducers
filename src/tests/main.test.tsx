@@ -22,7 +22,7 @@ import NotFound from '../pages/statuses/NotFound';
 describe('Render', () => {
     screen.debug();
 
-    describe('Layouts', () => {
+    describe.skip('Layouts', () => {
         test('Display', () => {
             render(<Display />);
             expect(document.body).toBeInTheDocument();

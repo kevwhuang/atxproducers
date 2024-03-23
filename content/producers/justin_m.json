@@ -1,20 +1,21 @@
 {
     "alias": "Justin M",
-    "name": "",
+    "name": "Justin Aquino",
     "bio": "Justin M is a producer with two years of experience in house and dance music. He has released over 40 original tracks and remixes. Justin's most successful track has accumulated over 9,000 plays on YouTube and SoundCloud.",
     "credits": [],
-    "photo": "",
     "stream": "",
+    "photo": "",
     "speaker": true,
     "admin": false,
     "spotlight": "",
     "socials": {
         "website": "",
-        "tree": "",
-        "instagram": "",
+        "tree": "https://linktr.ee/justinm_music",
+        "instagram": "https://instagram.com/justinm.music",
         "tiktok": "",
-        "spotify": "",
-        "soundcloud": ""
+        "spotify": "https://open.spotify.com/artist/3zdQqURhVAdBIm8HujnghM?si=BFjSoplhS6OTlKEWwYetyQ",
+        "soundcloud": "https://soundcloud.com/justin-msc",
+        "youtube": "https://youtube.com/@justinmsc"
     },
     "services": {
         "production": false,
@@ -32,7 +33,7 @@
     },
     "genres": {
         "electronic": false,
-        "dance": false,
+        "dance": true,
         "hiphop": false,
         "rnb": false,
         "pop": false,
@@ -41,7 +42,7 @@
         "acoustic": false
     },
     "workstations": {
-        "ableton": false,
+        "ableton": true,
         "fl": false,
         "logic": false,
         "reaper": false,

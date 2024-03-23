@@ -1,11 +1,11 @@
 {
-    "id": 0,
     "date": "",
     "duration": 0,
-    "title": "",
-    "speaker": "",
-    "description": "",
     "location": "",
     "address": "",
+    "speaker": "",
+    "title": "",
+    "description": "",
+    "page": "",
     "image": ""
 }
