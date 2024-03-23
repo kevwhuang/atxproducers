@@ -6,14 +6,18 @@
     display: flex;
     justify-content: space-around;
 
+    .navbar__logo {
+        width: 40px;
+    }
+
     .navbar__pages {
         display: flex;
-        gap: 50px;
+        gap: 40px;
         justify-content: space-between;
 
         a {
             color: $color-5;
-            transition: 250ms;
+            transition: color 250ms;
 
             &:visited {
                 color: $color-5;

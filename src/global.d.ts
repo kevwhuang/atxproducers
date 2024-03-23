@@ -78,8 +78,8 @@ interface Resource {
     id: number;
     preview: URL;
     name: string;
-    type: 'One Shot' | 'Loop' | 'Patch' | 'MIDI';
-    difficulty: 'Easy' | 'Normal' | 'Hard';
+    type: 'one shot' | 'loop' | 'patch' | 'midi';
+    difficulty: 'easy' | 'medium' | 'hard';
     download: URL;
 }
 

@@ -1,3 +1,28 @@
 @use '../_root' as *;
 
-.feedback {}
+.feedback {
+    .feedback__submissions {
+        display: flex;
+        flex-direction: column;
+        margin: 40px;
+        outline: 1px solid $color-6;
+
+        p {
+            width: fit-content;
+        }
+
+        a {
+            color: $color-5;
+            transition: color 250ms;
+            width: fit-content;
+
+            &:visited {
+                color: $color-5;
+            }
+
+            &:hover {
+                color: $color-4;
+            }
+        }
+    }
+}
