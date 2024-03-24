@@ -1,39 +1,46 @@
 import React from 'react';
-import axios from 'axios';
 import { v4 as uuid } from 'uuid';
 
-import AdminControls from '../components/AdminControls';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
+
+import useAxios from '../hooks/useAxios';
 
 import '../styles/modules/Feedback.scss';
 
+function checkAuth(): boolean {
+    return localStorage.getItem('password') === import.meta.env.VITE_PASSWORD;
+}
+
+function handleClick(e: any): void {
+    if (e.target.classList.contains('marked')) {
+        e.target.classList.remove('marked');
+        e.target.parentElement.classList.remove('marked');
+    } else {
+        e.target.classList.add('marked');
+        e.target.parentElement.classList.add('marked');
+    }
+}
+
 function Feedback(): React.ReactElement {
-    const [submissions, setSubmissions] = React.useState([]);
+    const { data: submissions, loading, mutate } = useAxios({ endpoint: 'getSubmissions' });
 
     React.useEffect(() => {
-        (async function () {
-            const res = await axios('/.netlify/functions/getSubmissions');
-            for (const e of res.data) {
-                e.stream = new URL(e.stream);
-            }
-            res.data.sort((a: Submission, b: Submission) => a.id - b.id);
-            setSubmissions(res.data);
+        (function () {
+            mutate([]);
         }());
     }, []);
 
-    function checkAuth() {
-        return localStorage.getItem('password') === import.meta.env.VITE_PASSWORD;
-    }
-
     return (
         <section className="feedback">
-            {checkAuth() && <AdminControls />}
-            {submissions.map((e: Submission) => (
-                <article className="feedback__submissions" key={uuid()}>
+            {loading === false && submissions.map((e: Submission) => (
+                <div className="feedback__submissions" key={uuid()}>
                     <p>{e.id}</p>
                     <p>{e.producer}</p>
                     <p>{e.title}</p>
-                    <a href={e.stream.href} target="_blank">Stream</a>
-                </article>
+                    <a href={e.stream.href} target="_blank"><PlayCircleOutlineIcon /></a>
+                    {checkAuth() && <CheckCircleOutlineIcon onClick={handleClick} />}
+                </div>
             ))}
         </section>
     );

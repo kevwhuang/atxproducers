@@ -1,3 +1,5 @@
 @use '../_root' as *;
 
-#fallback {}
+#fallback {
+    display: block;
+}

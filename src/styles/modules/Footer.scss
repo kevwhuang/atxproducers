@@ -2,7 +2,30 @@
 
 .footer {
     align-items: center;
-    background: $color-2;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    height: 50px;
+
+    span {
+        font-weight: bold;
+    }
+
+    .footer__socials {
+        display: flex;
+        gap: 10px;
+
+        a {
+            color: $color-5;
+            display: flex;
+            transition: color 200ms;
+
+            &:visited {
+                color: $color-5;
+            }
+
+            &:hover {
+                color: $color-4;
+            }
+        }
+    }
 }

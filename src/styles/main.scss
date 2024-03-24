@@ -1,12 +1,6 @@
 @use '_root' as *;
 
 #display {
-    display: grid;
-    grid-template-areas:
-        'navbar'
-        'main'
-        'footer';
-    grid-template-rows: 50px 1fr 100px;
     min-height: 100dvh;
 }
 

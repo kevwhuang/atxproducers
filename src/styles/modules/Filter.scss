@@ -1,3 +1,6 @@
 @use '../_root' as *;
 
-.filter {}
+.filter {
+    background: $color-2;
+    height: 100px;
+}

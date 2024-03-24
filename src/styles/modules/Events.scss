@@ -2,31 +2,69 @@
 
 .events {
     .events__meetup {
-        display: flex;
-        flex-direction: column;
-        margin: 40px;
-        outline: 1px solid $color-6;
+        display: grid;
+        gap: 0 25px;
+        grid-template-areas:
+            'image datetime'
+            'image location'
+            'image title'
+            'image description'
+        ;
+        grid-template-columns: 200px 1fr;
+        margin-bottom: 50px;
+        padding: 0 50px;
+
+        div {
+            background-size: cover;
+            grid-area: image;
+            max-height: 200px;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
         p {
             width: fit-content;
+
+            &:nth-of-type(1) {
+                color: $color-6;
+                font-size: $font-2;
+                grid-area: datetime;
+                margin-bottom: 5px;
+
+                a {
+                    border-bottom: 1px solid transparent;
+                    color: $color-4;
+                    font-size: $font-2;
+                    transition: border-bottom-color 200ms;
+
+                    &:visited {
+                        color: $color-4;
+                    }
+
+                    &:hover {
+                        border-bottom-color: $color-4;
+                    }
+                }
+            }
+
+            &:nth-of-type(2) {
+                color: $color-6;
+                font-size: $font-2;
+                grid-area: location;
+                margin-bottom: 5px;
+            }
+
+            &:nth-of-type(3) {
+                grid-area: description;
+            }
         }
 
-        a {
-            color: $color-5;
-            transition: color 250ms;
+        h4 {
+            color: $color-3;
+            grid-area: title;
+            margin-bottom: 5px;
             width: fit-content;
-
-            &:visited {
-                color: $color-5;
-            }
-
-            &:hover {
-                color: $color-4;
-            }
-        }
-
-        img {
-            width: 200px;
         }
     }
 }

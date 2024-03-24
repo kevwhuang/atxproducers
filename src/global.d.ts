@@ -23,13 +23,13 @@ interface Producer {
     admin: boolean;
     spotlight: Date;
     socials: {
-        website: URL;
-        tree: URL;
-        instagram: URL;
-        tiktok: URL;
-        spotify: URL;
-        soundcloud: URL;
-        youtube: URL;
+        website?: URL;
+        tree?: URL;
+        instagram?: URL;
+        tiktok?: URL;
+        spotify?: URL;
+        soundcloud?: URL;
+        youtube?: URL;
     };
     services: {
         production: boolean;
@@ -91,7 +91,9 @@ interface Submission {
 }
 
 interface ZustandActions {
+    changeModule: (module: string) => void;
 }
 
 interface ZustandState {
+    module: string;
 }

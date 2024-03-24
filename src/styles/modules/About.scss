@@ -1,3 +1,14 @@
 @use '../_root' as *;
 
-.about {}
+.about {
+    margin: 0 50px 50px 50px;
+
+    h2 {
+        margin: 0 auto 25px auto;
+        width: fit-content;
+    }
+
+    p {
+        text-align: center;
+    }
+}

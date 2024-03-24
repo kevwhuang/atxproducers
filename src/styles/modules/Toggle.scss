@@ -1,0 +1,28 @@
+@use '../_root' as *;
+
+.toggle {
+    align-items: center;
+    display: flex;
+    gap: 50px;
+    height: 100px;
+    justify-content: center;
+
+    button {
+        border: none;
+        border-bottom: 1px solid transparent;
+        transition:
+            border-bottom-color 200ms,
+            color 200ms,
+        ;
+
+        &.active {
+            border-bottom-color: $color-3;
+            color: $color-3;
+        }
+
+        &:not(.active):hover {
+            border-bottom-color: $color-4;
+            color: $color-4;
+        }
+    }
+}

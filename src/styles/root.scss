@@ -16,15 +16,44 @@
     --font-7: 121.5px;
 }
 
+a {
+    font-size: $font-3;
+}
+
+button {
+    font-size: $font-5;
+}
+
+h1 {
+    font-size: $font-6;
+}
+
+h2 {
+    font-size: $font-5;
+}
+
+h3 {
+    font-size: $font-4;
+}
+
+h4 {
+    font-size: $font-3;
+}
+
 html {
     background: $color-1;
     color: $color-5;
     font-family:
         'SF Pro Display',
         'Helvetica Neue',
-        sans-serif;
+        'sans-serif'
+    ;
 }
 
-samp {
-    display: block;
+img {
+    user-select: none;
+}
+
+p {
+    font-size: $font-3;
 }

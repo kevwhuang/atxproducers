@@ -1,7 +1,6 @@
 .env
 todo.txt
 **/.DS_Store
-
 .netlify/
 .vscode/
 dist/
