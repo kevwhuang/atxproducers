@@ -2,22 +2,26 @@
 
 .navbar {
     align-items: center;
-    background-color: $color-2;
     display: flex;
-    justify-content: space-around;
+    height: 50px;
+    justify-content: space-between;
+    padding-right: 50px;
+    position: absolute;
+    width: 100%;
 
-    .navbar__logo {
-        width: 40px;
+    img {
+        height: 50px;
     }
 
     .navbar__pages {
         display: flex;
-        gap: 40px;
+        gap: 50px;
         justify-content: space-between;
 
         a {
             color: $color-5;
-            transition: color 250ms;
+            text-transform: uppercase;
+            transition: color 200ms;
 
             &:visited {
                 color: $color-5;

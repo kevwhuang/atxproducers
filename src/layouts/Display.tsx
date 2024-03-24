@@ -8,11 +8,11 @@ import Navbar from '../modules/Navbar';
 function Display(): React.ReactElement {
     return (
         <div id="display">
+            <Navbar />
             <HelmetProvider>
-                <Navbar />
                 <Outlet />
-                <Footer />
             </HelmetProvider>
+            <Footer />
         </div>
     );
 }

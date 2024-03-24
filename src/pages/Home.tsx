@@ -11,10 +11,10 @@ function Home(): React.ReactElement {
     return (
         <main id="home">
             <Hero />
+            <About />
             <Spotlight />
             <Events />
             <Audio />
-            <About />
             <Helmet>
                 <title>ATX PRODUCERS | HOME</title>
             </Helmet>

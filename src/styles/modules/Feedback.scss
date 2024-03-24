@@ -1,27 +1,60 @@
 @use '../_root' as *;
 
 .feedback {
-    .feedback__submissions {
-        display: flex;
-        flex-direction: column;
-        margin: 40px;
-        outline: 1px solid $color-6;
+    min-height: calc(100dvh - 50px - 100px - 50px);
 
-        p {
-            width: fit-content;
+    .feedback__submissions {
+        background: $color-2;
+        display: grid;
+        grid-template-columns: 50px 1fr 3fr auto auto;
+        padding: 5px 50px;
+
+        &.marked {
+            background: $color-1;
         }
 
-        a {
-            color: $color-5;
-            transition: color 250ms;
-            width: fit-content;
+        p {
+            font-size: $font-4;
+            padding: 0 10px;
 
-            &:visited {
-                color: $color-5;
+            &:nth-of-type(1) {
+                text-align: center;
+            }
+
+            &:nth-of-type(2) {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            &:nth-of-type(3) {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+
+        svg {
+            color: $color-5;
+            cursor: pointer;
+            font-size: $font-4;
+            height: 100%;
+            margin: 0 5px;
+            transition:
+                color 200ms,
+                scale 200ms,
+            ;
+
+            &.marked {
+                color: $color-4;
             }
 
             &:hover {
                 color: $color-4;
+            }
+
+            &:active {
+                scale: .9;
             }
         }
     }

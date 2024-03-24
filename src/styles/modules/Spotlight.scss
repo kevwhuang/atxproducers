@@ -1,19 +1,47 @@
 @use '../_root' as *;
 
 .spotlight {
-    display: flex;
-    flex-direction: column;
-    margin: 40px;
-    outline: 1px solid $color-6;
+    background: $color-2;
+    display: grid;
+    gap: 25px;
+    grid-template-areas:
+        'header header'
+        'bio photo'
+        'stream stream'
+    ;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 50px;
+    padding: 50px;
+
+    h2 {
+        grid-area: header;
+        margin: auto;
+        text-align: center;
+    }
 
     p {
-        width: fit-content;
+        grid-area: bio;
+        margin: auto;
+        text-align: center;
+    }
+
+    div {
+        background-size: cover;
+        grid-area: photo;
+        max-height: 800px;
+        min-height: 400px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     a {
+        background: $color-1;
         color: $color-5;
-        transition: color 250ms;
-        width: fit-content;
+        grid-area: stream;
+        padding: 10px 0;
+        text-align: center;
+        transition: color 200ms;
 
         &:visited {
             color: $color-5;
@@ -22,9 +50,5 @@
         &:hover {
             color: $color-4;
         }
-    }
-
-    img {
-        width: 200px;
     }
 }

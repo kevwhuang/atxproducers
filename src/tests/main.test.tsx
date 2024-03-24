@@ -34,12 +34,12 @@ describe('Render', () => {
             render(<Home />);
             expect(document.body).toBeInTheDocument();
         });
-        test('Live', () => {
-            render(<Live />);
-            expect(document.body).toBeInTheDocument();
-        });
         test('Producers', () => {
             render(<Producers />);
+            expect(document.body).toBeInTheDocument();
+        });
+        test('Live', () => {
+            render(<Live />);
             expect(document.body).toBeInTheDocument();
         });
     });
@@ -49,12 +49,12 @@ describe('Render', () => {
             render(<Error />);
             expect(document.body).toBeInTheDocument();
         });
-        test('Fallback', () => {
-            render(<Fallback />);
-            expect(document.body).toBeInTheDocument();
-        });
         test('NotFound', () => {
             render(<NotFound />);
+            expect(document.body).toBeInTheDocument();
+        });
+        test('Fallback', () => {
+            render(<Fallback />);
             expect(document.body).toBeInTheDocument();
         });
     });
