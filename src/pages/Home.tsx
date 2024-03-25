@@ -16,7 +16,7 @@ function Home(): React.ReactElement {
             <Events />
             <Audio />
             <Helmet>
-                <title>ATX PRODUCERS | HOME</title>
+                <title>ATX Producers | Home</title>
             </Helmet>
         </main>
     );

@@ -2,6 +2,11 @@
     "include": [
         "src",
     ],
+    "references": [
+        {
+            "path": "./tsconfig.node.json",
+        },
+    ],
     "compilerOptions": {
         "allowImportingTsExtensions": true,
         "allowJs": true,
@@ -28,9 +33,4 @@
             "vite/client",
         ],
     },
-    "references": [
-        {
-            "path": "./tsconfig.node.json",
-        },
-    ],
 }

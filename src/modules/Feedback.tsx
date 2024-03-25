@@ -29,11 +29,11 @@ function Feedback(): React.ReactElement {
         (function () {
             mutate([]);
         }());
-    }, []);
+    }, [mutate]);
 
     return (
         <section className="feedback">
-            {loading === false && submissions.map((e: Submission) => (
+            {!loading && submissions.map((e: Submission) => (
                 <div className="feedback__submissions" key={uuid()}>
                     <p>{e.id}</p>
                     <p>{e.producer}</p>

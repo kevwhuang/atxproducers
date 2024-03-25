@@ -1,14 +1,14 @@
-# ATX PRODUCERS
+# ATX Producers
 
-[ATX PRODUCERS™](https://atxproducers.com) is the home of Austin Producer Alliance, the premier meetup group for music producers in Austin.
+[ATX Producers™](https://atxproducers.com) is the home of Austin Producer Alliance, a meetup group for music producers in Austin.
 
 Contributors: Kevin Huang, Thomas Flanigan
 
-Version: 0.4.1
+Version: 0.5.1
 
-Date: March 23, 2024
+Date: March 25, 2024
 
-## FOR DEVELOPERS
+## For Developers
 
 - Run <code>npm install</code> to install dependencies.
 - Run <code>npm run netlify</code> to initiate local front-end server.

@@ -17,14 +17,14 @@ import Producers from './pages/Producers';
 
 import Error from './pages/statuses/Error';
 import Fallback from './pages/statuses/Fallback';
-import NotFound from './pages/statuses/NotFound';
+import Unknown from './pages/statuses/Unknown';
 
 import './styles/rectify.scss';
 import './styles/root.scss';
 import './styles/main.scss';
-import './styles/utilities.scss';
 import './styles/keyframes.scss';
 import './styles/media/media.scss';
+import './styles/utilities.scss';
 import './styles/dev.scss';
 
 if (navigator.userAgent.search(/Macintosh|Windows NT/) === -1) {
@@ -33,7 +33,7 @@ if (navigator.userAgent.search(/Macintosh|Windows NT/) === -1) {
 
 const config = {
     errorRetryCount: 5,
-    refreshInterval: 600e3,
+    refreshInterval: 600000,
     revalidateOnReconnect: true,
     shouldRetryOnError: true,
 };
@@ -41,12 +41,12 @@ const config = {
 const router = createBrowserRouter(createRoutesFromElements(
     <Route path="" element={<Display />} errorElement={<Error />}>
         <Route index element={<Home />} />
-        <Route path="*" element={<NotFound />} />
         <Route path="error" element={<Error />} />
         <Route path="fallback" element={<Fallback />} />
         <Route path="home" element={<Navigate to="/" replace={true} />} />
         <Route path="live" element={<Live />} />
         <Route path="producers" element={<Producers />} />
+        <Route path="*" element={<Unknown />} />
     </Route>
 ));
 

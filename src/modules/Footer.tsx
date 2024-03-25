@@ -8,8 +8,8 @@ import '../styles/modules/Footer.scss';
 function Footer(): React.ReactElement {
     return (
         <footer className="footer">
-            <span>© 2024 ATX Producers</span>
-            <span>atxproducers@gmail.com</span>
+            <p>© 2024 ATX Producers</p>
+            <p>atxproducers@gmail.com</p>
             <div className="footer__socials">
                 <a href="https://instagram.com/atxproducers" target="_blank">
                     <InstagramIcon />

@@ -21,7 +21,7 @@ function Cards(): React.ReactElement {
                     else delete e.socials[social];
                 }
             }
-            res.data.sort((a: Producer, b: Producer) => a.alias < b.alias ? -1 : 1);
+            res.data.sort((a: Producer, b: Producer) => (a.alias < b.alias ? -1 : 1));
             setProducers(res.data);
         }());
     }, []);
