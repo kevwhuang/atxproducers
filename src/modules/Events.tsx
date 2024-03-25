@@ -9,7 +9,7 @@ function parseDatetime(date: Date, duration: number): string {
     const day = date.getDate();
     const year = date.getFullYear();
     const start = parseTime(date.getHours(), date.getMinutes());
-    const end = parseTime(date.getHours() + duration / 60, date.getMinutes());
+    const end = parseTime(date.getHours() + (duration / 60), date.getMinutes());
     return `${month} ${day}, ${year}\u00A0 • \u00A0${start} \u2015 ${end}`;
 }
 
@@ -28,10 +28,10 @@ function Events(): React.ReactElement {
             for (const e of res.data) {
                 e.date = new Date(e.date);
                 e.page = new URL(e.page);
-                e.image ||= 'https://images.unsplash.com/photo-1616714109948-c74fe5029a4d?q=80&w=300';
+                e.image ||= 'https://images.unsplash.com/photo-1616714109948-c74fe5029a4d?w=300';
                 e.image = new URL(e.image);
             }
-            res.data.sort((a: Meetup, b: Meetup) => a.date < b.date ? 1 : -1);
+            res.data.sort((a: Meetup, b: Meetup) => (a.date < b.date ? 1 : -1));
             setMeetups(res.data);
         }());
     }, []);

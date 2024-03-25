@@ -11,7 +11,7 @@ function Producers(): React.ReactElement {
             <Filter />
             <Cards />
             <Helmet>
-                <title>ATX PRODUCERS | PRODUCERS</title>
+                <title>ATX Producers | Producers</title>
             </Helmet>
         </main>
     );

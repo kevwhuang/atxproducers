@@ -4,10 +4,7 @@ import {
     expect,
     test,
 } from 'vitest';
-import {
-    render,
-    screen,
-} from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import Display from '../layouts/Display';
 
@@ -17,12 +14,10 @@ import Producers from '../pages/Producers';
 
 import Error from '../pages/statuses/Error';
 import Fallback from '../pages/statuses/Fallback';
-import NotFound from '../pages/statuses/NotFound';
+import Unknown from '../pages/statuses/Unknown';
 
 describe('Render', () => {
-    screen.debug();
-
-    describe.skip('Layouts', () => {
+    describe('Layouts', () => {
         test('Display', () => {
             render(<Display />);
             expect(document.body).toBeInTheDocument();
@@ -34,12 +29,14 @@ describe('Render', () => {
             render(<Home />);
             expect(document.body).toBeInTheDocument();
         });
-        test('Producers', () => {
-            render(<Producers />);
-            expect(document.body).toBeInTheDocument();
-        });
+
         test('Live', () => {
             render(<Live />);
+            expect(document.body).toBeInTheDocument();
+        });
+
+        test('Producers', () => {
+            render(<Producers />);
             expect(document.body).toBeInTheDocument();
         });
     });
@@ -49,12 +46,14 @@ describe('Render', () => {
             render(<Error />);
             expect(document.body).toBeInTheDocument();
         });
-        test('NotFound', () => {
-            render(<NotFound />);
-            expect(document.body).toBeInTheDocument();
-        });
+
         test('Fallback', () => {
             render(<Fallback />);
+            expect(document.body).toBeInTheDocument();
+        });
+
+        test('Unknown', () => {
+            render(<Unknown />);
             expect(document.body).toBeInTheDocument();
         });
     });

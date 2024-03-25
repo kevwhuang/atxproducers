@@ -1,7 +1,6 @@
 'use strict';
 
 import 'dotenv/config';
-import compression from 'compression';
 import cors from 'cors';
 import express from 'express';
 import fs from 'fs';
@@ -65,33 +64,33 @@ const submissions = fs.readdirSync(`${base}/submissions`).slice(1);
 const options = {
     credentials: true,
     origin: '*',
-    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+    methods: ['GET', 'POST'],
 };
 
 const app = express();
 
-app.listen(process.env.PORT, () => {
-    console.log('\x1b[35m%s\x1b[0m', `Server listening on PORT ${process.env.PORT}.`);
+app.listen(process.env.PORT ?? 5000, () => {
+    console.log('\x1b[35m%s\x1b[0m', `Listening on port ${process.env.PORT ?? 5000}.`);
 });
 
 app.disable('strict routing');
 app.enable('case sensitive routing');
 app.set('env', 'production');
 
-app.use(express.json());
 app.use(express.raw());
 app.use(express.text());
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(compression());
 app.use(cors(options));
 app.use(helmet());
 app.use(logger);
 
-app.use('/api/meetups', controllerMeetups);
-app.use('/api/producers', controllerProducers);
-app.use('/api/resources', controllerResources);
-app.use('/api/submissions', controllerSubmissions);
+app.get('/api/meetups', controllerMeetups);
+app.get('/api/producers', controllerProducers);
+app.get('/api/resources', controllerResources);
+app.get('/api/submissions', controllerSubmissions);
+app.post('/api/submissions', (req, res) => res.send(req.body.source));
 
 app.all('/', (_, res) => res.send(''));
 app.all('*', (_, res) => res.status(308).redirect('/'));

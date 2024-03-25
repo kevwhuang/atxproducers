@@ -16,10 +16,12 @@ function useAxios(params: Params) {
 async function fetcher(params: Params) {
     try {
         const res = await axios(`/.netlify/functions/${params.endpoint}`, params.options);
-        for (const e of res.data) {
-            e.stream = new URL(e.stream);
+        if (params.endpoint === 'getSubmissions') {
+            for (const e of res.data) {
+                e.stream = new URL(e.stream);
+            }
+            res.data.sort((a: Submission, b: Submission) => a.id - b.id);
         }
-        res.data.sort((a: Submission, b: Submission) => a.id - b.id);
         return res.data;
     } catch (err) {
         alert(err);

@@ -11,12 +11,6 @@ import {
     defineConfig,
 } from 'vite';
 
-const assets: string[] = [
-    'apple-touch-icon.png',
-    'favicon.ico',
-    'pwa-512x512.png',
-];
-
 const manifest: Partial<ManifestOptions> = {
     background_color: '#000000',
     description: 'Austin Producer Alliance',
@@ -65,7 +59,11 @@ const vite: UserConfigExport = defineConfig({
         VitePWA({
             manifest,
             registerType: 'autoUpdate',
-            includeAssets: assets,
+            includeAssets: [
+                'apple-touch-icon.png',
+                'favicon.ico',
+                'pwa-512x512.png',
+            ],
         }),
         react(),
     ],
@@ -76,9 +74,7 @@ const vite: UserConfigExport = defineConfig({
     },
     css: {
         postcss: {
-            plugins: [
-                autoprefixer,
-            ],
+            plugins: [autoprefixer],
         },
     },
     preview: {

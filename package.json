@@ -1,6 +1,6 @@
 {
     "name": "atxproducers",
-    "version": "0.4.1",
+    "version": "0.5.1",
     "description": "Austin Producer Alliance",
     "keywords": [
         "music",
@@ -21,7 +21,7 @@
         "build": "vite build",
         "dev": "vite",
         "lint": "eslint src --ext js,cjs,mjs,jsx,ts,tsx",
-        "mock": "NODE_ENV=production node mock/index.mjs",
+        "mock": "nodemon mock/index.mjs",
         "netlify": "ntl dev",
         "prebuild": "tsc",
         "preview": "vite preview",
@@ -30,14 +30,12 @@
         "test": "vitest"
     },
     "dependencies": {
-        "@emailjs/browser": "*",
         "@emotion/react": "*",
         "@emotion/styled": "*",
         "@mui/icons-material": "*",
         "@netlify/functions": "*",
         "axios": "*",
         "cors": "*",
-        "compression": "*",
         "dotenv": "*",
         "express": "*",
         "helmet": "*",
@@ -45,7 +43,6 @@
         "react": "*",
         "react-dom": "*",
         "react-helmet-async": "*",
-        "react-hook-form": "*",
         "react-hot-toast": "*",
         "react-router-dom": "*",
         "swr": "*",
@@ -58,7 +55,6 @@
         "@types/node": "*",
         "@types/react": "*",
         "@types/react-dom": "*",
-        "@types/react-helmet": "*",
         "@types/react-router-dom": "*",
         "@types/uuid": "*",
         "@typescript-eslint/eslint-plugin": "*",

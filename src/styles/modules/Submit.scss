@@ -1,0 +1,39 @@
+@use '../_root' as *;
+
+.submit {
+    margin: 0 50px 50px;
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr auto;
+
+        input {
+            border-color: $color-6;
+            font-size: $font-4;
+            padding: 10px 20px;
+            transition: border-color 200ms;
+
+            &:focus {
+                border-color: $color-5;
+                outline: none;
+            }
+
+            &::placeholder {
+                color: $color-6;
+            }
+        }
+
+        button {
+            background: $color-2;
+            border: none;
+            color: $color-5;
+            font-size: $font-4;
+            padding: 10px 20px;
+            transition: color 200ms;
+
+            &:hover {
+                color: $color-4;
+            }
+        }
+    }
+}

@@ -6,8 +6,10 @@ import '../../styles/statuses/Error.scss';
 function Error(): React.ReactElement {
     return (
         <main id="error">
+            <div style={{ height: '50px' }}></div>
+            <h1>ERROR</h1>
             <Helmet>
-                <title>ATX PRODUCERS | ERROR</title>
+                <title>ATX Producers | Error</title>
             </Helmet>
         </main>
     );
