@@ -23,7 +23,7 @@ function Feedback(): React.ReactElement {
 
     React.useEffect(() => {
         mutate([]);
-    }, [mutate]);
+    }, []);
 
     return (
         <section className="feedback">

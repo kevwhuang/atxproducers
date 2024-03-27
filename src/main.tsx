@@ -21,10 +21,9 @@ import Unknown from './pages/statuses/Unknown';
 
 import './styles/rectify.scss';
 import './styles/root.scss';
-import './styles/main.scss';
+import './styles/pages.scss';
 import './styles/keyframes.scss';
 import './styles/media/media.scss';
-import './styles/utilities.scss';
 import './styles/dev.scss';
 
 if (navigator.userAgent.search(/Macintosh|Windows NT/) === -1) {

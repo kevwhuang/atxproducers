@@ -19,7 +19,7 @@ function Live(): React.ReactElement {
             {module === 'submissions' && <Feedback />}
             {module === 'resources' && <Bash />}
             <Helmet>
-                <title>ATX Producers | Live</title>
+                <title>APA | Live</title>
             </Helmet>
         </main>
     );
