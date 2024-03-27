@@ -9,7 +9,7 @@
     "admin": true,
     "spotlight": "",
     "socials": {
-        "website": "https://ashernu.com/",
+        "website": "https://ashernu.com",
         "tree": "https://linktr.ee/ashernu",
         "instagram": "https://instagram.com/asher_nu",
         "tiktok": "",
@@ -41,14 +41,6 @@
         "rock": false,
         "acoustic": false
     },
-    "workstations": {
-        "ableton": false,
-        "fl": true,
-        "logic": false,
-        "reaper": false,
-        "reason": false,
-        "protools": false
-    },
     "instruments": {
         "hardware": false,
         "vocals": false,
@@ -57,5 +49,13 @@
         "percussions": true,
         "strings": false,
         "brass": false
+    },
+    "workstations": {
+        "ableton": false,
+        "fl": true,
+        "logic": false,
+        "reaper": false,
+        "reason": false,
+        "protools": false
     }
 }

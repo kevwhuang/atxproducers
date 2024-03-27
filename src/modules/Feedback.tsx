@@ -12,23 +12,17 @@ function checkAuth(): boolean {
     return localStorage.getItem('password') === import.meta.env.VITE_PASSWORD;
 }
 
-function handleClick(e: any): void {
-    if (e.target.classList.contains('marked')) {
-        e.target.classList.remove('marked');
-        e.target.parentElement.classList.remove('marked');
-    } else {
-        e.target.classList.add('marked');
-        e.target.parentElement.classList.add('marked');
-    }
+function handleClick(e: React.MouseEvent): void {
+    if (!(e.target instanceof SVGElement)) return;
+    if (e.target.classList.contains('marked')) e.target.classList.remove('marked');
+    else e.target.classList.add('marked');
 }
 
 function Feedback(): React.ReactElement {
     const { data: submissions, loading, mutate } = useAxios({ endpoint: 'getSubmissions' });
 
     React.useEffect(() => {
-        (function () {
-            mutate([]);
-        }());
+        mutate([]);
     }, [mutate]);
 
     return (

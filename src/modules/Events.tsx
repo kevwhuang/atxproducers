@@ -31,7 +31,8 @@ function Events(): React.ReactElement {
                 e.image ||= 'https://images.unsplash.com/photo-1616714109948-c74fe5029a4d?w=300';
                 e.image = new URL(e.image);
             }
-            res.data.sort((a: Meetup, b: Meetup) => (a.date < b.date ? 1 : -1));
+            res.data = res.data.filter(e => e.date > Date.now());
+            res.data.sort((a: Meetup, b: Meetup) => (a.date < b.date ? -1 : 1));
             setMeetups(res.data);
         }());
     }, []);

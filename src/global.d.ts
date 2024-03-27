@@ -55,14 +55,6 @@ interface Producer {
         rock: boolean;
         acoustic: boolean;
     };
-    workstations: {
-        ableton: boolean;
-        fl: boolean;
-        logic: boolean;
-        reaper: boolean;
-        reason: boolean;
-        protools: boolean;
-    };
     instruments: {
         hardware: boolean;
         vocals: boolean;
@@ -72,6 +64,20 @@ interface Producer {
         strings: boolean;
         brass: boolean;
     };
+    workstations: {
+        ableton: boolean;
+        fl: boolean;
+        logic: boolean;
+        reaper: boolean;
+        reason: boolean;
+        protools: boolean;
+    };
+}
+
+interface PropsTag {
+    group: string;
+    label: string;
+    tag: string;
 }
 
 interface Resource {
@@ -92,8 +98,25 @@ interface Submission {
 
 interface ZustandActions {
     changeModule: (module: string) => void;
+    updateFilter: (filter: ZustandStateFilter) => void;
+    updateSort: (sort: ZustandStateSort) => void;
 }
 
 interface ZustandState {
     module: string;
+    filter: ZustandStateFilter;
+    sort: ZustandStateSort;
+}
+
+interface ZustandStateFilter {
+    genres: { [key: string]: boolean };
+    instruments: { [key: string]: boolean };
+    services: { [key: string]: boolean };
+    workstations: { [key: string]: boolean };
+}
+
+interface ZustandStateSort {
+    alias: boolean;
+    name: boolean;
+    prev: boolean;
 }

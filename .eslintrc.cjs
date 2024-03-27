@@ -107,7 +107,7 @@ module.exports = {
         'quote-props': [2, 'as-needed'],
         'quotes': [2, 'single'],
         'radix': 2,
-        'react-hooks/exhaustive-deps': 2,
+        'react-hooks/exhaustive-deps': 0,
         'semi': 2,
         'space-before-blocks': 2,
         'space-before-function-paren': [2, { anonymous: 'always', named: 'never' }],

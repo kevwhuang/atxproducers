@@ -11,19 +11,20 @@
     button {
         border: none;
         border-bottom: 1px solid transparent;
+        font-size: $font-5;
         transition:
             border-bottom-color 200ms,
             color 200ms,
         ;
 
-        &.active {
-            border-bottom-color: $color-3;
-            color: $color-3;
-        }
-
         &:not(.active):hover {
             border-bottom-color: $color-4;
             color: $color-4;
+        }
+
+        &.active {
+            border-bottom-color: $color-3;
+            color: $color-3;
         }
     }
 }
