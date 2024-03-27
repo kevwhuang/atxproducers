@@ -1,1 +1,7 @@
 @use '_root' as *;
+
+@keyframes hover {
+    to {
+        scale: .9;
+    }
+}

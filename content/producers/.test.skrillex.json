@@ -45,14 +45,6 @@
         "rock": true,
         "acoustic": true
     },
-    "workstations": {
-        "ableton": true,
-        "fl": true,
-        "logic": true,
-        "reaper": true,
-        "reason": true,
-        "protools": true
-    },
     "instruments": {
         "hardware": true,
         "vocals": true,
@@ -61,5 +53,13 @@
         "percussions": true,
         "strings": true,
         "brass": true
+    },
+    "workstations": {
+        "ableton": true,
+        "fl": true,
+        "logic": true,
+        "reaper": true,
+        "reason": true,
+        "protools": true
     }
 }

@@ -1,6 +1,51 @@
 @use '../_root' as *;
 
 .filter {
-    background: $color-2;
-    height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 25px 0 75px;
+    padding: 0 50px;
+
+    p {
+        background: $color-2;
+        color: $color-3;
+        font-size: $font-2;
+        padding: 5px 10px;
+    }
+
+    button {
+        border: none;
+        margin: 0 5px;
+        padding: 5px 10px;
+        transition: color 200ms;
+        white-space: nowrap;
+
+        &:disabled {
+            cursor: default;
+            opacity: .5;
+        }
+
+        &:hover {
+            color: $color-4;
+        }
+
+        &.active {
+            background: $color-2;
+        }
+    }
+
+    .filter__group {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .filter__actions {
+        display: flex;
+        flex-wrap: wrap;
+
+        button {
+            background: $color-2;
+        }
+    }
 }

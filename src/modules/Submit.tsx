@@ -12,7 +12,6 @@ function Submit(): React.ReactElement {
         } catch {
             return alert('Please enter a valid URL.');
         }
-
         try {
             const res = await axios.post('/.netlify/functions/postSubmission', inputText);
             if (res.data !== inputText) throw Error;

@@ -1,7 +1,8 @@
 @use '../_root' as *;
 
 .submit {
-    margin: 0 50px 50px;
+    height: 100px;
+    margin: 0 50px 0px;
 
     form {
         display: grid;
@@ -10,8 +11,9 @@
         input {
             border-color: $color-6;
             font-size: $font-4;
-            padding: 10px 20px;
+            padding: 10px 25px;
             transition: border-color 200ms;
+            margin-right: 25px;
 
             &:focus {
                 border-color: $color-5;
@@ -28,7 +30,7 @@
             border: none;
             color: $color-5;
             font-size: $font-4;
-            padding: 10px 20px;
+            padding: 10px 25px;
             transition: color 200ms;
 
             &:hover {
