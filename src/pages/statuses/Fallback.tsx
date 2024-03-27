@@ -9,7 +9,7 @@ function Fallback(): React.ReactElement {
             <div style={{ height: '50px' }}></div>
             <h1>FALLBACK</h1>
             <Helmet>
-                <title>ATX Producers | Fallback</title>
+                <title>APA | Fallback</title>
             </Helmet>
         </main>
     );

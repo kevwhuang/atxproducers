@@ -66,6 +66,8 @@
             }
 
             .cards__producer--info {
+                min-height: 100%;
+
                 p {
                     color: $color-6;
                     font-size: $font-2;

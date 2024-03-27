@@ -1,12 +1,12 @@
-# ATX Producers
+# Austin Producer Alliance
 
 [ATX Producers™](https://atxproducers.com) is the home of Austin Producer Alliance, a meetup group for music producers in Austin.
 
 Contributors: Kevin Huang, Thomas Flanigan
 
-Version: 0.5.1
+Version: 0.6.1
 
-Date: March 26, 2024
+Date: March 27, 2024
 
 ## For Developers
 

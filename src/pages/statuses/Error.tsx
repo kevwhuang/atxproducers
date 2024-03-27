@@ -9,7 +9,7 @@ function Error(): React.ReactElement {
             <div style={{ height: '50px' }}></div>
             <h1>ERROR</h1>
             <Helmet>
-                <title>ATX Producers | Error</title>
+                <title>APA | Error</title>
             </Helmet>
         </main>
     );
