@@ -2,10 +2,10 @@ import React from 'react';
 
 import '../styles/modules/Audio.scss';
 
-function Audio(): React.ReactElement {
-    const base = 'https://w.soundcloud.com/player/?url=';
-    const player = 'https%3A//api.soundcloud.com/playlists/1466044633&color=%23233044';
+const base = 'https://w.soundcloud.com/player/?url=';
+const player = 'https%3A//api.soundcloud.com/playlists/1466044633&color=%23233044';
 
+function Audio(): React.ReactElement {
     return (
         <section className="audio">
             <iframe

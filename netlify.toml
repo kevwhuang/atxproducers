@@ -1,32 +1,32 @@
 [build]
-command = "npm run build"
-functions = "functions"
-publish = "dist"
+command = 'npm run build'
+functions = 'functions'
+publish = 'dist'
 
 [dev]
-    port = 4000
-    targetPort = 3000
+port = 4000
+targetPort = 3000
 
 [functions]
-    node_bundler = "esbuild"
+node_bundler = 'esbuild'
 
 [[headers]]
-for = "/*"
-    [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Referrer-Policy = "same-origin"
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "SAMEORIGIN"
+for = '/*'
+[headers.values]
+Access-Control-Allow-Origin = '*'
+Referrer-Policy = 'same-origin'
+X-Content-Type-Options = 'nosniff'
+X-Frame-Options = 'SAMEORIGIN'
 
 [[headers]]
-for = "/assets/*"
-    [headers.values]
-    cache-control = '''
+for = '/assets/*'
+[headers.values]
+cache-control = '''
     max-age=31536000
     immutable
     '''
 
 [[headers]]
-for = "/manifest.webmanifest"
-    [headers.values]
-    Content-Type = "application/manifest+json"
+for = '/manifest.webmanifest'
+[headers.values]
+Content-Type = 'application/manifest+json'

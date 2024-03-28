@@ -64,7 +64,7 @@ function Cards(): React.ReactElement {
                     for (const tag in filter[group as keyof typeof filter]) {
                         if (filter[group as keyof typeof filter][tag] === false) continue;
                         const cur = e[group as keyof typeof e];
-                        if (cur[tag as keyof typeof cur] === false) return undefined;
+                        if (cur[tag as keyof typeof cur] === false) return null;
                     }
                 }
                 return (

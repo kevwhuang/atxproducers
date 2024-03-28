@@ -1,6 +1,6 @@
 import React from 'react';
 
-import text from '../assets/text.json';
+import texts from '../assets/texts.json';
 
 import '../styles/modules/About.scss';
 
@@ -8,7 +8,7 @@ function About(): React.ReactElement {
     return (
         <section className="about">
             <h2>Who We Are</h2>
-            <p>{text.about}</p>
+            <p>{texts.about}</p>
         </section>
     );
 }

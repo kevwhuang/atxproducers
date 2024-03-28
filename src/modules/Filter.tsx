@@ -5,11 +5,11 @@ import useZustand from '../hooks/useZustand';
 import '../styles/modules/Filter.scss';
 
 function Filter(): React.ReactElement {
-    const [selectedAny, setSelectedAny] = React.useState(false);
+    const [selectedSome, setSelectedSome] = React.useState(false);
     const [filter, updateFilter] = useZustand(s => [s.filter, s.updateFilter]);
     const [sort, updateSort] = useZustand(s => [s.sort, s.updateSort]);
 
-    function Tag({ group, label, tag }: PropsTag): React.ReactElement {
+    function Tag({ group, label, tag }: TagProps): React.ReactElement {
         const className = filter[group as keyof typeof filter][tag]
             ? `active filter__group--${group}` : `filter__group--${group}`;
         return (
@@ -23,7 +23,7 @@ function Filter(): React.ReactElement {
         );
     }
 
-    function checkSelectedAny(): boolean {
+    function checkselectedSome(): boolean {
         for (const group in filter) {
             for (const tag in filter[group as keyof typeof filter]) {
                 if (filter[group as keyof typeof filter][tag]) return true;
@@ -38,8 +38,8 @@ function Filter(): React.ReactElement {
                 filter[group as keyof typeof filter][tag] = false;
             }
         }
-        setSelectedAny(false);
-        updateFilter(structuredClone(filter));
+        setSelectedSome(false);
+        updateFilter({ ...filter });
     }
 
     function handleSort(e: React.MouseEvent): void {
@@ -56,11 +56,11 @@ function Filter(): React.ReactElement {
         const tag = e.target.getAttribute('data-tag') as string;
         const cur = filter[group as keyof typeof filter][tag];
         filter[group as keyof typeof filter][tag] = !cur;
-        setSelectedAny(checkSelectedAny());
-        updateFilter(structuredClone(filter));
+        setSelectedSome(checkselectedSome());
+        updateFilter({ ...filter });
     }
 
-    React.useEffect(() => setSelectedAny(checkSelectedAny()), []);
+    React.useEffect(() => setSelectedSome(checkselectedSome()), []);
 
     return (
         <section className="filter">
@@ -112,7 +112,7 @@ function Filter(): React.ReactElement {
             <div className="filter__actions">
                 <button onClick={handleSort}>Sort by Alias</button>
                 <button onClick={handleSort}>Sort by Name</button>
-                <button onClick={handleAll} disabled={!selectedAny}>Clear</button>
+                <button onClick={handleAll} disabled={!selectedSome}>Clear</button>
             </div>
         </section>
     );

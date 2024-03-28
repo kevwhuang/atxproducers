@@ -49,7 +49,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     </Route>
 ));
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById('main') as HTMLElement).render(
     <React.StrictMode>
         <SWRConfig value={config}>
             <RouterProvider router={router} fallbackElement={<Fallback />} />

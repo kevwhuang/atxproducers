@@ -12,22 +12,19 @@
     },
     "license": "UNLICENSED",
     "author": "Kevin Huang",
-    "main": "backend/app.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/kevwhuang/atxproducers.git"
     },
     "scripts": {
+        "be": "nodemon mock/server.mjs",
         "build": "vite build",
         "dev": "vite",
-        "lint": "eslint src --ext js,cjs,mjs,jsx,ts,tsx",
-        "mock": "nodemon mock/index.mjs",
-        "netlify": "ntl dev",
-        "prebuild": "tsc",
-        "preview": "vite preview",
-        "server": "nodemon backend/app.js",
+        "eslint": "eslint src --ext js,cjs,mjs,jsx,ts,tsx",
+        "fe": "ntl dev",
         "start": "NODE_ENV=production node backend/app.js",
-        "test": "vitest"
+        "test": "vitest",
+        "tslint": "tsc"
     },
     "dependencies": {
         "@emotion/react": "*",
@@ -35,11 +32,6 @@
         "@mui/icons-material": "*",
         "@netlify/functions": "*",
         "axios": "*",
-        "cors": "*",
-        "dotenv": "*",
-        "express": "*",
-        "helmet": "*",
-        "mongodb": "*",
         "react": "*",
         "react-dom": "*",
         "react-helmet-async": "*",
@@ -47,12 +39,17 @@
         "react-router-dom": "*",
         "swr": "*",
         "uuid": "*",
-        "zustand": "*"
+        "zustand": "*",
+        "": "",
+        "cors": "*",
+        "dotenv": "*",
+        "express": "*",
+        "helmet": "*",
+        "mongodb": "*"
     },
     "devDependencies": {
         "@testing-library/jest-dom": "*",
         "@testing-library/react": "*",
-        "@types/node": "*",
         "@types/react": "*",
         "@types/react-dom": "*",
         "@types/react-router-dom": "*",
@@ -66,12 +63,13 @@
         "eslint-plugin-react-hooks": "*",
         "eslint-plugin-react-refresh": "*",
         "jsdom": "*",
-        "nodemon": "*",
         "sass": "*",
         "typescript": "*",
         "vite": "*",
         "vite-plugin-pwa": "*",
-        "vitest": "*"
+        "vitest": "*",
+        "": "",
+        "nodemon": "*"
     },
     "private": true
 }
