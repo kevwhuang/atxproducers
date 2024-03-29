@@ -44,12 +44,6 @@
                     &.speaker {
                         color: gold;
                     }
-
-                    &.admin {
-                        &::after {
-                            content: ' \1f6e1';
-                        }
-                    }
                 }
 
                 &:last-child {
@@ -59,10 +53,17 @@
         }
 
         .cards__producer--container {
-            overflow: scroll;
+            margin-bottom: 10px;
+            overflow-y: scroll;
+
+            &:hover {
+                &::-webkit-scrollbar-thumb {
+                    background: $color-5;
+                }
+            }
 
             &::-webkit-scrollbar {
-                width: 0;
+                width: 1px;
             }
 
             .cards__producer--info {

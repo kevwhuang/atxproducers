@@ -20,4 +20,35 @@
 
 @media screen and (max-width: 768px) {}
 
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 480px) {
+    .hero {
+        margin-bottom: 25px !important;
+    }
+
+    .about {
+        padding: 0 25px 25px 25px !important;
+    }
+
+    .spotlight {
+        grid-template-areas:
+            'header'
+            'bio'
+            'stream'
+            !important
+        ;
+        grid-template-columns: auto !important;
+        padding: 25px !important;
+
+        div {
+            display: none;
+        }
+    }
+
+    .events {
+        .events__meetup {
+            gap: 0 !important;
+            grid-template-columns: 0 !important;
+            padding: 0 25px !important;
+        }
+    }
+}

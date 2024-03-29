@@ -3,9 +3,10 @@ import axios from 'axios';
 
 import '../styles/modules/Spotlight.scss';
 
+type MyFeature = [Partial<Producer>, React.Dispatch<React.SetStateAction<Producer>>];
+
 function Spotlight(): React.ReactElement {
-    const [feature, setFeature]: [Partial<Producer>, React.Dispatch<React.SetStateAction<Producer>>]
-        = React.useState({});
+    const [feature, setFeature]: MyFeature = React.useState({});
 
     React.useEffect(() => {
         (async function () {

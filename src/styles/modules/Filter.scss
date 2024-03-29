@@ -11,12 +11,15 @@
         background: $color-2;
         color: $color-3;
         font-size: $font-2;
+        height: 100%;
+        margin-right: 5px;
         padding: 5px 10px;
+        width: min-content;
     }
 
     button {
         border: none;
-        margin: 0 5px;
+        margin: 0 5px 5px 0;
         padding: 5px 10px;
         transition: color 200ms;
         white-space: nowrap;
@@ -46,10 +49,6 @@
 
         button {
             background: $color-2;
-
-            &:first-child {
-                margin-left: 0;
-            }
         }
     }
 }

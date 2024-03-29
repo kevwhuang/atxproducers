@@ -13,9 +13,10 @@ function checkAuth(): boolean {
 }
 
 function handleClick(e: React.MouseEvent): void {
-    if (!(e.target instanceof SVGElement)) return;
-    if (e.target.classList.contains('marked')) e.target.classList.remove('marked');
-    else e.target.classList.add('marked');
+    if (!(e.currentTarget instanceof SVGElement)) return;
+    const classes = e.currentTarget.classList;
+    if (classes.contains('marked')) classes.remove('marked');
+    else (classes.add('marked'));
 }
 
 function Feedback(): React.ReactElement {

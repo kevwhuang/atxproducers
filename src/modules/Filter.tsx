@@ -39,7 +39,7 @@ function Filter(): React.ReactElement {
             }
         }
         setSelectedSome(false);
-        updateFilter({ ...filter });
+        updateFilter(JSON.parse(JSON.stringify(filter)));
     }
 
     function handleSort(e: React.MouseEvent): void {
@@ -47,7 +47,7 @@ function Filter(): React.ReactElement {
         const key = e.target.innerText.split(' ')[2]!.toLowerCase() as keyof typeof sort;
         sort[key] = !sort[key];
         sort.prev = key === 'alias';
-        updateSort({ ...sort });
+        updateSort(JSON.parse(JSON.stringify(sort)));
     }
 
     function handleToggle(e: React.MouseEvent): void {
@@ -57,7 +57,7 @@ function Filter(): React.ReactElement {
         const cur = filter[group as keyof typeof filter][tag];
         filter[group as keyof typeof filter][tag] = !cur;
         setSelectedSome(checkselectedSome());
-        updateFilter({ ...filter });
+        updateFilter(JSON.parse(JSON.stringify(filter)));
     }
 
     React.useEffect(() => setSelectedSome(checkselectedSome()), []);
