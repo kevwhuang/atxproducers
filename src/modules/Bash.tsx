@@ -10,7 +10,7 @@ import '../styles/modules/Bash.scss';
 function capitalize(str: string): string {
     if (str === 'one shot') return 'One Shot';
     if (str === 'midi') return 'MIDI';
-    return str[0].toUpperCase() + str.slice(1);
+    return str[0]!.toUpperCase() + str.slice(1);
 }
 
 function Bash(): React.ReactElement {

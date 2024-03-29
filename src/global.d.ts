@@ -1,5 +1,3 @@
-'use strict';
-
 interface Meetup {
     date: Date;
     duration: number;

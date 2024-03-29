@@ -1,5 +1,3 @@
-'use strict';
-
 import autoprefixer from 'autoprefixer';
 import react from '@vitejs/plugin-react-swc';
 import {

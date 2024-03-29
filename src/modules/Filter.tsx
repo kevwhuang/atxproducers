@@ -44,7 +44,7 @@ function Filter(): React.ReactElement {
 
     function handleSort(e: React.MouseEvent): void {
         if (!(e.target instanceof HTMLElement)) return;
-        const key = e.target.innerText.split(' ')[2].toLowerCase() as keyof typeof sort;
+        const key = e.target.innerText.split(' ')[2]!.toLowerCase() as keyof typeof sort;
         sort[key] = !sort[key];
         sort.prev = key === 'alias';
         updateSort({ ...sort });

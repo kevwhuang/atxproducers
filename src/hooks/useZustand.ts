@@ -1,5 +1,3 @@
-'use strict';
-
 import { create } from 'zustand';
 
 const initialize: ZustandState = {

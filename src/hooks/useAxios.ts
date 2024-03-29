@@ -1,5 +1,3 @@
-'use strict';
-
 import axios, { type AxiosRequestConfig } from 'axios';
 import useSWR from 'swr';
 

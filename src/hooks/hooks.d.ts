@@ -1,5 +1,3 @@
-'use strict';
-
 interface ZustandActions {
     changeModule: (module: string) => void;
     updateFilter: (filter: ZustandStateFilter) => void;

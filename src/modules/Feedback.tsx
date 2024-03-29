@@ -9,7 +9,7 @@ import useAxios from '../hooks/useAxios';
 import '../styles/modules/Feedback.scss';
 
 function checkAuth(): boolean {
-    return localStorage.getItem('password') === import.meta.env.VITE_PASSWORD;
+    return localStorage.getItem('password') === import.meta.env['VITE_PASSWORD'];
 }
 
 function handleClick(e: React.MouseEvent): void {
