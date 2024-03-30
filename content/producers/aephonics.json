@@ -2,34 +2,48 @@
     "alias": "Aephonics",
     "name": "Kevin Huang",
     "bio": "",
-    "credits": [],
+    "credits": [
+        "Auraphonics"
+    ],
     "stream": "",
     "photo": "",
     "speaker": false,
     "admin": true,
     "spotlight": "",
     "socials": {
-        "website": "https://atxproducers.com",
         "tree": "",
+        "website": "https://atxproducers.com",
         "instagram": "https://instagram.com/atxproducers",
         "tiktok": "https://tiktok.com/@atxproducers",
+        "youtube": "",
         "spotify": "",
-        "soundcloud": "",
-        "youtube": ""
+        "soundcloud": ""
     },
     "services": {
         "production": true,
         "beatmaking": true,
-        "songwriting": false,
-        "singing": false,
         "musician": false,
+        "singing": false,
+        "songwriting": false,
         "recording": false,
         "mixing": true,
         "mastering": false,
         "post": false,
-        "synthesis": false,
         "editing": false,
-        "live": false
+        "synthesis": false,
+        "live": false,
+        "teaching": true
+    },
+    "workstations": {
+        "protools": false,
+        "ableton": false,
+        "flstudio": true,
+        "logic": false,
+        "garageband": false,
+        "reaper": false,
+        "reason": false,
+        "cubase": false,
+        "studioone": false
     },
     "genres": {
         "electronic": true,
@@ -38,24 +52,16 @@
         "rnb": false,
         "pop": true,
         "indie": false,
-        "rock": false,
-        "acoustic": false
+        "rock": false
     },
     "instruments": {
         "hardware": false,
         "vocals": false,
         "guitar": false,
         "keys": true,
-        "percussions": false,
+        "drums": false,
+        "brass": false,
         "strings": false,
-        "brass": false
-    },
-    "workstations": {
-        "ableton": false,
-        "fl": true,
-        "logic": false,
-        "reaper": false,
-        "reason": false,
-        "protools": false
+        "woodwinds": false
     }
 }

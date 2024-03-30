@@ -16,22 +16,39 @@
 }
 
 a {
-    font-size: $font-3;
+    color: $color-5;
+    transition: color 200ms;
+
+    &:visited {
+        color: $color-5;
+    }
+
+    &:hover {
+        color: $color-4;
+    }
+}
+
+button {
+    color: $color-5;
 }
 
 h1 {
+    color: $color-5;
     font-size: $font-6;
 }
 
 h2 {
+    color: $color-5;
     font-size: $font-5;
 }
 
 h3 {
+    color: $color-5;
     font-size: $font-4;
 }
 
 h4 {
+    color: $color-5;
     font-size: $font-3;
 }
 
@@ -50,5 +67,6 @@ img {
 }
 
 p {
+    color: $color-5;
     font-size: $font-3;
 }

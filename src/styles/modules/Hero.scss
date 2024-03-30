@@ -2,10 +2,12 @@
 
 .hero {
     background-size: cover;
-    height: 480px;
-    margin-bottom: 50px;
+    height: 500px;
+    position: relative;
+    top: -50px;
+    z-index: -100;
 
-    h1 {
+    .hero__header {
         left: 50%;
         position: relative;
         text-align: center;

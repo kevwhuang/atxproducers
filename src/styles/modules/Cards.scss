@@ -3,16 +3,15 @@
 .cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 75px 50px;
     justify-content: center;
-    margin: 0 50px 50px;
+    padding: 0 100px 50px;
 
     .cards__producer {
         background: $color-2;
         display: grid;
         grid-template-rows: 85px;
         height: 500px;
-        margin-bottom: 25px;
         padding: 20px;
         width: 300px;
 
@@ -26,10 +25,10 @@
             width: 125px;
 
             &:hover {
-                scale: 1.2;
+                scale: 1.15;
             }
 
-            &.spotlight {
+            &.glow {
                 box-shadow: 0 0 20px 0 $color-3;
             }
         }
@@ -37,18 +36,20 @@
         .cards__producer--identity {
             margin-bottom: 10px;
 
+            h3 {
+                font-weight: normal;
+
+                &.speaker {
+                    color: gold;
+                }
+
+                svg {
+                    color: $color-5;
+                }
+            }
+
             p {
-                &:first-child {
-                    font-size: $font-4;
-
-                    &.speaker {
-                        color: gold;
-                    }
-                }
-
-                &:last-child {
-                    font-size: $font-2;
-                }
+                font-size: $font-2;
             }
         }
 
@@ -66,7 +67,7 @@
                 width: 1px;
             }
 
-            .cards__producer--info {
+            .cards__producer--container--info {
                 min-height: 100%;
 
                 p {
@@ -76,7 +77,7 @@
                 }
             }
 
-            .cards__producer--group {
+            .cards__producer--container--group {
                 p {
                     font-size: $font-2;
                     font-weight: bold;
@@ -103,40 +104,19 @@
             margin-bottom: 10px;
 
             a {
-                color: $color-5;
                 display: flex;
-                transition: color 200ms;
-
-                &:visited {
-                    color: $color-5;
-                }
-
-                &:hover {
-                    color: $color-4;
-                }
             }
         }
 
         .cards__producer--stream {
-            align-items: center;
-            display: flex;
-            height: 30px;
-
             a {
                 background: $color-1;
-                color: $color-5;
                 display: block;
-                font-size: $font-2;
                 padding: 5px 0;
                 text-align: center;
-                width: 100%;
-
-                &:visited {
-                    color: $color-5;
-                }
 
                 &:hover {
-                    animation: 500ms 200ms ease-out infinite alternate hover;
+                    animation: 500ms 200ms ease-in-out infinite alternate hover;
                 }
             }
         }

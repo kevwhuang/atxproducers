@@ -5,16 +5,16 @@ interface ZustandActions {
 }
 
 interface ZustandState {
-    filter: ZustandStateFilter;
     module: string;
+    filter: ZustandStateFilter;
     sort: ZustandStateSort;
 }
 
 interface ZustandStateFilter {
-    genres: { [key: string]: boolean };
-    instruments: { [key: string]: boolean };
     services: { [key: string]: boolean };
     workstations: { [key: string]: boolean };
+    genres: { [key: string]: boolean };
+    instruments: { [key: string]: boolean };
 }
 
 interface ZustandStateSort {

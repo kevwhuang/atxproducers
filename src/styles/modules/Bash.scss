@@ -1,60 +1,70 @@
 @use '../_root' as *;
 
 .bash {
-    margin-bottom: 25px;
+    margin-bottom: 50px;
+    padding: 0 100px;
 
-    .bash__resource {
-        display: grid;
-        grid-template-columns: 50px 170px 1fr 150px auto auto;
-        padding: 5px 50px;
+    .bash__table {
+        display: block;
+        font-size: $font-4;
 
-        p {
-            font-size: $font-4;
-            padding: 0 10px;
+        tr {
+            display: grid;
+            gap: 25px;
+            grid-template-columns: 50px 150px 1fr 155px 40px 40px;
+            margin-bottom: 10px;
 
-            &.easy {
-                color: green;
+            th {
+                &:nth-of-type(4) {
+                    text-align: right;
+                }
             }
 
-            &.medium {
-                color: peru;
-            }
+            td {
+                &:nth-of-type(1) {
+                    text-align: right;
+                }
 
-            &.hard {
-                color: crimson;
-            }
+                &:nth-of-type(3) {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
 
-            &:nth-of-type(1) {
-                text-align: center;
-            }
+                &:nth-of-type(4) {
+                    text-align: right;
 
-            &:nth-of-type(3) {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-            }
+                    &.easy {
+                        color: green;
+                    }
 
-            &:nth-of-type(4) {
-                text-align: right;
-            }
-        }
+                    &.medium {
+                        color: orange;
+                    }
 
-        svg {
-            color: $color-5;
-            font-size: $font-4;
-            height: 100%;
-            margin: 0 5px;
-            transition:
-                color 200ms,
-                scale 200ms,
-            ;
+                    &.hard {
+                        color: red;
+                    }
+                }
 
-            &:hover {
-                color: $color-4;
-            }
+                a {
+                    svg {
+                        font-size: $font-4;
+                        height: 100%;
+                        transition:
+                            color 200ms,
+                            scale 200ms,
+                        ;
 
-            &:active {
-                scale: .9;
+                        &:hover {
+                            color: $color-4;
+                        }
+
+                        &:active {
+                            scale: .9;
+                        }
+                    }
+                }
             }
         }
     }

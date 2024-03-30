@@ -1,13 +1,21 @@
 @use '_root' as *;
 
+#about {
+    min-height: calc(100dvh - 50px - 50px);
+}
+
+#events {
+    min-height: calc(100dvh - 50px - 50px);
+}
+
 #home {
-    min-height: calc(100dvh - 50px);
+    min-height: calc(100dvh - 50px - 50px);
 }
 
 #live {
-    min-height: calc(100dvh - 50px);
+    min-height: calc(100dvh - 50px - 50px);
 }
 
 #producers {
-    min-height: calc(100dvh - 50px);
+    min-height: calc(100dvh - 50px - 50px);
 }

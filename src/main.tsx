@@ -11,6 +11,8 @@ import { SWRConfig } from 'swr';
 
 import Display from './layouts/Display';
 
+import About from './pages/About';
+import Events from './pages/Events';
 import Home from './pages/Home';
 import Live from './pages/Live';
 import Producers from './pages/Producers';
@@ -40,11 +42,13 @@ const config = {
 const router = createBrowserRouter(createRoutesFromElements(
     <Route path="" element={<Display />} errorElement={<Error />}>
         <Route index element={<Home />} />
-        <Route path="error" element={<Error />} />
-        <Route path="fallback" element={<Fallback />} />
         <Route path="home" element={<Navigate to="/" replace={true} />} />
-        <Route path="live" element={<Live />} />
+        <Route path="about" element={<About />} />
         <Route path="producers" element={<Producers />} />
+        <Route path="events" element={<Events />} />
+        <Route path="live" element={<Live />} />
+        <Route path="fallback" element={<Fallback />} />
+        <Route path="error" element={<Error />} />
         <Route path="*" element={<Unknown />} />
     </Route>
 ));

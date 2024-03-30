@@ -51,7 +51,7 @@ module.exports = {
         'import/no-mutable-exports': 2,
         'import/no-webpack-loader-syntax': 2,
         'import/prefer-default-export': 2,
-        'indent': 2,
+        'indent': [2, 4, { SwitchCase: 1 }],
         'key-spacing': 2,
         'keyword-spacing': 2,
         'max-len': [2, { code: 100 }],

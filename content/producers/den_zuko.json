@@ -1,7 +1,7 @@
 {
     "alias": "Den Zuko",
     "name": "Brendan Carroll",
-    "bio": "Brendan Carroll (Den Zuko) has been producing an eclectic mix of music for 14 years. After studying jazz saxophone in college and performing with bands as a freelancer, he immersed into the electronic music world. Brendan taught music to students of all ages for 8 years before moving to Austin. He is currently a student of music production and audio engineering at Austin Community College and performs as half of Rainbow Drip alongside his good friend Eric Howard (Freethinker).",
+    "bio": "Den Zuko has been producing an eclectic mix of music for 14 years. After studying jazz saxophone in college and performing with bands as a freelancer, he immersed into the electronic music world. Brendan taught music to students of all ages for 8 years before moving to Austin. He is currently a student of music production and audio engineering at Austin Community College and performs as half of Rainbow Drip alongside his good friend Eric Howard (Freethinker).",
     "credits": [
         "Talldoor Records",
         "Blueprints Records"
@@ -12,27 +12,39 @@
     "admin": false,
     "spotlight": "",
     "socials": {
-        "website": "https://denzuko.bandzoogle.com",
         "tree": "https://linktr.ee/denzukomusic",
+        "website": "https://denzuko.bandzoogle.com",
         "instagram": "https://instagram.com/denzukomusic",
         "tiktok": "",
-        "spotify": "https://open.spotify.com/artist/561JSpK3d7x7H5EaSLEj58?si=f643d88d6a444a44",
-        "soundcloud": "https://soundcloud.com/denzukomusic",
-        "youtube": "https://youtube.com/@denzuko8415"
+        "youtube": "https://youtube.com/@denzuko8415",
+        "spotify": "https://open.spotify.com/artist/561JSpK3d7x7H5EaSLEj58",
+        "soundcloud": "https://soundcloud.com/denzukomusic"
     },
     "services": {
         "production": true,
         "beatmaking": false,
-        "songwriting": false,
-        "singing": false,
         "musician": false,
+        "singing": false,
+        "songwriting": false,
         "recording": false,
         "mixing": false,
         "mastering": false,
         "post": false,
-        "synthesis": false,
         "editing": false,
-        "live": false
+        "synthesis": false,
+        "live": false,
+        "teaching": false
+    },
+    "workstations": {
+        "protools": false,
+        "ableton": true,
+        "flstudio": false,
+        "logic": false,
+        "garageband": false,
+        "reaper": false,
+        "reason": false,
+        "cubase": false,
+        "studioone": false
     },
     "genres": {
         "electronic": false,
@@ -41,24 +53,16 @@
         "rnb": false,
         "pop": false,
         "indie": false,
-        "rock": false,
-        "acoustic": false
+        "rock": false
     },
     "instruments": {
         "hardware": false,
         "vocals": false,
         "guitar": false,
         "keys": false,
-        "percussions": false,
+        "drums": false,
+        "brass": false,
         "strings": false,
-        "brass": false
-    },
-    "workstations": {
-        "ableton": true,
-        "fl": false,
-        "logic": false,
-        "reaper": false,
-        "reason": false,
-        "protools": false
+        "woodwinds": false
     }
 }

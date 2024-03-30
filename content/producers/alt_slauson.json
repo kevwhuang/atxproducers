@@ -9,29 +9,41 @@
     "photo": "",
     "speaker": true,
     "admin": false,
-    "spotlight": "2024-03-20T05:00:00.000Z",
+    "spotlight": "2024-03-01T05:00:00.000Z",
     "socials": {
-        "website": "",
         "tree": "https://linktr.ee/altslauson",
+        "website": "",
         "instagram": "https://instagram.com/altslauson",
         "tiktok": "",
-        "spotify": "https://open.spotify.com/artist/3X9r0zczTWSwbSAv3A4S3m?si=a_NGwc5OTMOOf6ggUtNZ_g",
-        "soundcloud": "https://soundcloud.com/altslauson",
-        "youtube": "https://youtube.com/channel/UCz97yQQkIJBBStqVoUh37qg"
+        "youtube": "https://youtube.com/channel/UCz97yQQkIJBBStqVoUh37qg",
+        "spotify": "https://open.spotify.com/artist/3X9r0zczTWSwbSAv3A4S3m",
+        "soundcloud": "https://soundcloud.com/altslauson"
     },
     "services": {
         "production": true,
         "beatmaking": true,
-        "songwriting": false,
-        "singing": false,
         "musician": false,
+        "singing": false,
+        "songwriting": false,
         "recording": false,
         "mixing": false,
         "mastering": false,
         "post": false,
-        "synthesis": false,
         "editing": false,
-        "live": false
+        "synthesis": false,
+        "live": false,
+        "teaching": false
+    },
+    "workstations": {
+        "protools": false,
+        "ableton": false,
+        "flstudio": false,
+        "logic": false,
+        "garageband": false,
+        "reaper": false,
+        "reason": false,
+        "cubase": true,
+        "studioone": false
     },
     "genres": {
         "electronic": true,
@@ -40,24 +52,16 @@
         "rnb": false,
         "pop": false,
         "indie": false,
-        "rock": false,
-        "acoustic": false
+        "rock": false
     },
     "instruments": {
         "hardware": false,
         "vocals": true,
         "guitar": false,
         "keys": false,
-        "percussions": false,
+        "drums": false,
+        "brass": false,
         "strings": false,
-        "brass": false
-    },
-    "workstations": {
-        "ableton": false,
-        "fl": false,
-        "logic": false,
-        "reaper": false,
-        "reason": false,
-        "protools": false
+        "woodwinds": false
     }
 }

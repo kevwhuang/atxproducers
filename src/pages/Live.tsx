@@ -13,7 +13,6 @@ function Live(): React.ReactElement {
 
     return (
         <main id="live">
-            <div style={{ height: '50px' }}></div>
             <Toggle />
             {module === 'submissions' && <Submit />}
             {module === 'submissions' && <Feedback />}

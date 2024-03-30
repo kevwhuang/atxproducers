@@ -8,10 +8,14 @@ import '../styles/modules/Navbar.scss';
 function Navbar(): React.ReactElement {
     return (
         <nav className="navbar">
-            <img src={logo} alt="Logo" />
+            <Link className="navbar__logo" to="/">
+                <img src={logo} alt="Logo" />
+            </Link>
             <div className="navbar__pages">
                 <Link to="/">Home</Link>
+                <Link to="about">About</Link>
                 <Link to="producers">Producers</Link>
+                <Link to="events">Events</Link>
                 <Link to="live">Live</Link>
             </div>
         </nav>

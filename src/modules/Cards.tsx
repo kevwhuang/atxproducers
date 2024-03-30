@@ -11,6 +11,7 @@ import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
+import links from '../assets/links.json';
 import useZustand from '../hooks/useZustand';
 
 import '../styles/modules/Cards.scss';
@@ -23,9 +24,9 @@ function Cards(): React.ReactElement {
         (async function () {
             const res = await axios('/.netlify/functions/getProducers');
             for (const e of res.data) {
-                e.stream ||= 'https://soundcloud.com/skrillex';
+                e.stream ||= links.defaultStream;
                 e.stream = new URL(e.stream);
-                e.photo ||= 'https://images.unsplash.com/photo-1535682215715-c5c6a5d28247';
+                e.photo ||= links.defaultProducer;
                 e.photo = new URL(e.photo);
                 e.spotlight = new Date(e.spotlight);
                 for (const social in e.socials) {
@@ -58,8 +59,8 @@ function Cards(): React.ReactElement {
     return (
         <section className="cards">
             {producers.map((e: Producer) => {
-                const spotlight = e.spotlight.valueOf() ? 'spotlight' : '';
-                const speaker = e.speaker ? 'speaker' : '';
+                const className = e.spotlight.valueOf()
+                    ? 'cards__producer--photo glow' : 'cards__producer--photo';
                 for (const group in filter) {
                     for (const tag in filter[group as keyof typeof filter]) {
                         if (filter[group as keyof typeof filter][tag] === false) continue;
@@ -70,44 +71,60 @@ function Cards(): React.ReactElement {
                 return (
                     <article className="cards__producer" key={uuid()}>
                         <div
-                            className={`cards__producer--photo ${spotlight}`}
+                            className={className}
                             style={{ backgroundImage: `url(${e.photo.href})` }}
-                        >
-                        </div>
+                        />
                         <div className="cards__producer--identity">
-                            <p className={speaker}>
+                            <h3 className={e.speaker ? 'speaker' : ''}>
                                 {e.alias}
                                 {e.admin && ' '}
                                 {e.admin && <VerifiedUserIcon />}
-                            </p>
+                            </h3>
                             <p>{e.name}</p>
                         </div>
                         <div className="cards__producer--container">
-                            <div className="cards__producer--info">
+                            <div className="cards__producer--container--info">
                                 <p>{e.bio}</p>
                                 {e.credits.length ? <p>Credits: {e.credits.join(', ')}</p> : <></>}
                             </div>
                             {Object.values(e.services).includes(true) &&
-                                <div className="cards__producer--group">
+                                <div className="cards__producer--container--group">
                                     <p>Services</p>
                                     <div>
                                         {e.services.production && <span>Production</span>}
                                         {e.services.beatmaking && <span>Beatmaking</span>}
-                                        {e.services.songwriting && <span>Songwriting</span>}
-                                        {e.services.singing && <span>Singing</span>}
                                         {e.services.musician && <span>Musician</span>}
+                                        {e.services.singing && <span>Singing</span>}
+                                        {e.services.songwriting && <span>Songwriting</span>}
                                         {e.services.recording && <span>Recording</span>}
                                         {e.services.mixing && <span>Mixing</span>}
                                         {e.services.mastering && <span>Mastering</span>}
                                         {e.services.post && <span>Post Production</span>}
-                                        {e.services.synthesis && <span>Synthesis</span>}
                                         {e.services.editing && <span>Audio Editing</span>}
+                                        {e.services.synthesis && <span>Synthesis</span>}
                                         {e.services.live && <span>Live Sound</span>}
+                                        {e.services.teaching && <span>Teaching</span>}
+                                    </div>
+                                </div>
+                            }
+                            {Object.values(e.workstations).includes(true) &&
+                                <div className="cards__producer--container--group">
+                                    <p>Workstations</p>
+                                    <div>
+                                        {e.workstations.protools && <span>Pro Tools</span>}
+                                        {e.workstations.ableton && <span>Ableton</span>}
+                                        {e.workstations.flstudio && <span>FL Studio</span>}
+                                        {e.workstations.logic && <span>Logic</span>}
+                                        {e.workstations.garageband && <span>GarageBand</span>}
+                                        {e.workstations.reaper && <span>Reaper</span>}
+                                        {e.workstations.reason && <span>Reason</span>}
+                                        {e.workstations.cubase && <span>Cubase</span>}
+                                        {e.workstations.studioone && <span>Studio One</span>}
                                     </div>
                                 </div>
                             }
                             {Object.values(e.genres).includes(true) &&
-                                <div className="cards__producer--group">
+                                <div className="cards__producer--container--group">
                                     <p>Genres</p>
                                     <div>
                                         {e.genres.electronic && <span>Electronic</span>}
@@ -117,77 +134,50 @@ function Cards(): React.ReactElement {
                                         {e.genres.pop && <span>Pop</span>}
                                         {e.genres.indie && <span>Indie</span>}
                                         {e.genres.rock && <span>Rock</span>}
-                                        {e.genres.acoustic && <span>Acoustic</span>}
                                     </div>
                                 </div>
                             }
                             {Object.values(e.instruments).includes(true) &&
-                                <div className="cards__producer--group">
+                                <div className="cards__producer--container--group">
                                     <p>Instruments</p>
                                     <div>
                                         {e.instruments.hardware && <span>Hardware</span>}
                                         {e.instruments.vocals && <span>Vocals</span>}
                                         {e.instruments.guitar && <span>Guitar</span>}
                                         {e.instruments.keys && <span>Keys</span>}
-                                        {e.instruments.percussions && <span>Percussions</span>}
-                                        {e.instruments.strings && <span>Strings</span>}
+                                        {e.instruments.drums && <span>Drums</span>}
                                         {e.instruments.brass && <span>Brass</span>}
-                                    </div>
-                                </div>
-                            }
-                            {Object.values(e.workstations).includes(true) &&
-                                <div className="cards__producer--group">
-                                    <p>Workstations</p>
-                                    <div>
-                                        {e.workstations.ableton && <span>Ableton</span>}
-                                        {e.workstations.fl && <span>FL Studio</span>}
-                                        {e.workstations.logic && <span>Logic</span>}
-                                        {e.workstations.reaper && <span>Reaper</span>}
-                                        {e.workstations.reason && <span>Reason</span>}
-                                        {e.workstations.protools && <span>Pro Tools</span>}
+                                        {e.instruments.strings && <span>Strings</span>}
+                                        {e.instruments.woodwinds && <span>Woodwinds</span>}
                                     </div>
                                 </div>
                             }
                         </div>
                         <div className="cards__producer--socials">
-                            {e.socials.website &&
-                                <a href={e.socials.website.href} target="_blank">
-                                    <HomeIcon />
-                                </a>
-                            }
                             {e.socials.tree &&
-                                <a href={e.socials.tree.href} target="_blank">
-                                    <ForestIcon />
-                                </a>
+                                <a href={e.socials.tree.href}><ForestIcon /></a>
+                            }
+                            {e.socials.website &&
+                                <a href={e.socials.website.href}><HomeIcon /></a>
                             }
                             {e.socials.instagram &&
-                                <a href={e.socials.instagram.href} target="_blank">
-                                    <InstagramIcon />
-                                </a>
+                                <a href={e.socials.instagram.href}><InstagramIcon /></a>
                             }
                             {e.socials.tiktok &&
-                                <a href={e.socials.tiktok.href} target="_blank">
-                                    <VideocamIcon />
-                                </a>
-                            }
-                            {e.socials.spotify &&
-                                <a href={e.socials.spotify.href} target="_blank">
-                                    <MusicNoteIcon />
-                                </a>
-                            }
-                            {e.socials.soundcloud &&
-                                <a href={e.socials.soundcloud.href} target="_blank">
-                                    <MicIcon />
-                                </a>
+                                <a href={e.socials.tiktok.href}><VideocamIcon /></a>
                             }
                             {e.socials.youtube &&
-                                <a href={e.socials.youtube.href} target="_blank">
-                                    <YouTubeIcon />
-                                </a>
+                                <a href={e.socials.youtube.href}><YouTubeIcon /></a>
+                            }
+                            {e.socials.spotify &&
+                                <a href={e.socials.spotify.href}><MusicNoteIcon /></a>
+                            }
+                            {e.socials.soundcloud &&
+                                <a href={e.socials.soundcloud.href}><MicIcon /></a>
                             }
                         </div>
                         <div className="cards__producer--stream">
-                            <a href={e.stream.href} target="_blank">Stream</a>
+                            <a href={e.stream.href}>Stream</a>
                         </div>
                     </article>
                 );

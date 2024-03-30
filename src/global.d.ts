@@ -21,27 +21,39 @@ interface Producer {
     admin: boolean;
     spotlight: Date;
     socials: {
-        website?: URL;
         tree?: URL;
+        website?: URL;
         instagram?: URL;
         tiktok?: URL;
+        youtube?: URL;
         spotify?: URL;
         soundcloud?: URL;
-        youtube?: URL;
     };
     services: {
         production: boolean;
         beatmaking: boolean;
-        songwriting: boolean;
-        singing: boolean;
         musician: boolean;
+        singing: boolean;
+        songwriting: boolean;
         recording: boolean;
         mixing: boolean;
         mastering: boolean;
         post: boolean;
-        synthesis: boolean;
         editing: boolean;
+        synthesis: boolean;
         live: boolean;
+        teaching: boolean;
+    };
+    workstations: {
+        protools: boolean;
+        ableton: boolean;
+        flstudio: boolean;
+        logic: boolean;
+        garageband: boolean;
+        reaper: boolean;
+        reason: boolean;
+        cubase: boolean;
+        studioone: boolean;
     };
     genres: {
         electronic: boolean;
@@ -51,33 +63,25 @@ interface Producer {
         pop: boolean;
         indie: boolean;
         rock: boolean;
-        acoustic: boolean;
     };
     instruments: {
         hardware: boolean;
         vocals: boolean;
         guitar: boolean;
         keys: boolean;
-        percussions: boolean;
-        strings: boolean;
+        drums: boolean;
         brass: boolean;
-    };
-    workstations: {
-        ableton: boolean;
-        fl: boolean;
-        logic: boolean;
-        reaper: boolean;
-        reason: boolean;
-        protools: boolean;
+        strings: boolean;
+        woodwinds: boolean;
     };
 }
 
 interface Resource {
     id: number;
-    preview: URL;
-    name: string;
     type: 'one shot' | 'loop' | 'patch' | 'midi';
+    name: string;
     difficulty: 'easy' | 'medium' | 'hard';
+    preview: URL;
     download: URL;
 }
 

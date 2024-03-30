@@ -1,7 +1,7 @@
 {
     "alias": "Henyx",
     "name": "Braulio Guerra",
-    "bio": "Known by the alias Henyx, Houston's very own Braulio “Lio” Guerra is widely recognized for his unequivocally innovative sound design skills. Having been a part of many projects throughout his career, Lio's most notable accomplishment was being a featured artist in Geometry Dash, the #2 paid mobile arcade game in the Google Play Store. A father by day and a mad synthesist by night, Lio hopes to push the boundaries of sound design and inspire others to go beyond their limits.",
+    "bio": "Houston's very own Braulio “Lio” Guerra is widely recognized for his unequivocally innovative sound design skills. Having been a part of many projects throughout his career, Lio's most notable accomplishment was being a featured artist in Geometry Dash, the #2 paid mobile arcade game in the Google Play Store. A father by day and a mad synthesist by night, Lio hopes to push the boundaries of sound design and inspire others to go beyond their limits.",
     "credits": [
         "Geometry Dash"
     ],
@@ -11,27 +11,39 @@
     "admin": false,
     "spotlight": "",
     "socials": {
-        "website": "https://henyx.gumroad.com",
         "tree": "https://linktr.ee/henyx",
+        "website": "https://henyx.gumroad.com",
         "instagram": "https://instagram.com/henyxofficial",
         "tiktok": "",
-        "spotify": "https://open.spotify.com/artist/5Bf7LFN1GvTy4QZWAzPHRI?si=kJRqvSAZQJ2ZSm61wptToA",
-        "soundcloud": "https://soundcloud.com/officialhenyx",
-        "youtube": "https://youtube.com/channel/UCgPZAAsnYpPfzpil55Hta0w"
+        "youtube": "https://youtube.com/channel/UCgPZAAsnYpPfzpil55Hta0w",
+        "spotify": "https://open.spotify.com/artist/5Bf7LFN1GvTy4QZWAzPHRI",
+        "soundcloud": "https://soundcloud.com/officialhenyx"
     },
     "services": {
         "production": true,
         "beatmaking": false,
-        "songwriting": false,
-        "singing": false,
         "musician": false,
+        "singing": false,
+        "songwriting": false,
         "recording": false,
         "mixing": true,
         "mastering": false,
         "post": false,
-        "synthesis": true,
         "editing": false,
-        "live": false
+        "synthesis": true,
+        "live": false,
+        "teaching": true
+    },
+    "workstations": {
+        "protools": false,
+        "ableton": false,
+        "flstudio": true,
+        "logic": false,
+        "garageband": false,
+        "reaper": false,
+        "reason": false,
+        "cubase": false,
+        "studioone": false
     },
     "genres": {
         "electronic": true,
@@ -40,24 +52,16 @@
         "rnb": false,
         "pop": false,
         "indie": false,
-        "rock": false,
-        "acoustic": false
+        "rock": false
     },
     "instruments": {
         "hardware": false,
         "vocals": false,
         "guitar": false,
         "keys": false,
-        "percussions": false,
+        "drums": false,
+        "brass": false,
         "strings": false,
-        "brass": false
-    },
-    "workstations": {
-        "ableton": false,
-        "fl": true,
-        "logic": false,
-        "reaper": false,
-        "reason": false,
-        "protools": false
+        "woodwinds": false
     }
 }

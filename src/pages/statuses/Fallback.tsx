@@ -6,8 +6,7 @@ import '../../styles/statuses/Fallback.scss';
 function Fallback(): React.ReactElement {
     return (
         <main id="fallback">
-            <div style={{ height: '50px' }}></div>
-            <h1>FALLBACK</h1>
+            <h1>Fallback</h1>
             <Helmet>
                 <title>APA | Fallback</title>
             </Helmet>

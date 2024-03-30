@@ -1,13 +1,13 @@
 @use '../_root' as *;
 
 .audio {
-    .audio__soundcloud {
-        height: 480px;
+    .audio__spotify {
+        height: 500px;
         width: 100%;
     }
 
-    .audio__spotify {
-        height: 480px;
+    .audio__soundcloud {
+        height: 500px;
         width: 100%;
     }
 }

@@ -1,26 +1,23 @@
 import React from 'react';
 
-import '../styles/modules/Audio.scss';
+import links from '../assets/links.json';
 
-const base = 'https://w.soundcloud.com/player/?url=';
-const player = 'https%3A//api.soundcloud.com/playlists/1466044633&color=%23233044';
+import '../styles/modules/Audio.scss';
 
 function Audio(): React.ReactElement {
     return (
         <section className="audio">
             <iframe
                 className="audio__spotify"
-                src="https://open.spotify.com/embed/playlist/2RrQr63ODIQQYbQyfpX5hG?theme=0"
+                src={links.spotify}
                 allow="encrypted-media"
                 loading="lazy"
-            >
-            </iframe>
+            />
             <iframe
                 className="audio__soundcloud"
-                src={base + player}
+                src={links.soundcloud}
                 loading="lazy"
-            >
-            </iframe>
+            />
         </section>
     );
 }

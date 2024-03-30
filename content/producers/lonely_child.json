@@ -13,27 +13,39 @@
     "admin": false,
     "spotlight": "",
     "socials": {
-        "website": "https://lonelychildmusic.com",
         "tree": "",
+        "website": "https://lonelychildmusic.com",
         "instagram": "https://instagram.com/iamlonelychild",
         "tiktok": "https://tiktok.com/@lonelychildmusic",
-        "spotify": "https://open.spotify.com/user/lonelychild?si=b0d8f30bc08447a5",
-        "soundcloud": "",
-        "youtube": "https://youtube.com/@LonelyChildMusic"
+        "youtube": "https://youtube.com/@LonelyChildMusic",
+        "spotify": "https://open.spotify.com/user/lonelychild",
+        "soundcloud": ""
     },
     "services": {
         "production": true,
         "beatmaking": false,
-        "songwriting": true,
-        "singing": false,
         "musician": true,
+        "singing": false,
+        "songwriting": true,
         "recording": true,
         "mixing": true,
         "mastering": false,
         "post": false,
-        "synthesis": false,
         "editing": false,
-        "live": false
+        "synthesis": false,
+        "live": false,
+        "teaching": false
+    },
+    "workstations": {
+        "protools": false,
+        "ableton": false,
+        "flstudio": false,
+        "logic": true,
+        "garageband": false,
+        "reaper": false,
+        "reason": false,
+        "cubase": false,
+        "studioone": false
     },
     "genres": {
         "electronic": false,
@@ -42,24 +54,16 @@
         "rnb": false,
         "pop": true,
         "indie": true,
-        "rock": false,
-        "acoustic": false
+        "rock": false
     },
     "instruments": {
         "hardware": false,
         "vocals": false,
         "guitar": true,
         "keys": false,
-        "percussions": false,
+        "drums": false,
+        "brass": false,
         "strings": false,
-        "brass": false
-    },
-    "workstations": {
-        "ableton": false,
-        "fl": false,
-        "logic": true,
-        "reaper": false,
-        "reason": false,
-        "protools": false
+        "woodwinds": false
     }
 }

@@ -1,7 +1,7 @@
 {
     "alias": "Skrillex",
     "name": "Sonny Moore",
-    "bio": "Sonny John Moore (born January 15, 1988), known professionally as Skrillex, is an American DJ and music producer. Growing up in Northeast Los Angeles and Northern California, he joined the post-hardcore band From First to Last as the lead singer in 2004, and recorded two studio albums with the band (Dear Diary, My Teen Angst Has a Bodycount in 2004 and Heroine in 2006) before leaving to pursue a solo career in 2007. He began his first tour as a solo artist in late 2007. After recruiting a new band lineup, Moore joined the Alternative Press Tour to support bands such as All Time Low and the Rocket Summer, and appeared on the cover of Alternative Press's annual issue.",
+    "bio": "Sonny John Moore (born January 15, 1988), known professionally as Skrillex, is an American DJ and music producer. Growing up in Northeast Los Angeles and Northern California, he joined the post-hardcore band From First to Last as the lead singer in 2004, and recorded two studio albums with the band (Dear Diary, My Teen Angst Has a Bodycount in 2004 and Heroine in 2006) before leaving to pursue a solo career in 2007. He began his first tour as a solo artist in late 2007. After recruiting a new band lineup, Moore joined the Alternative Press Tour to support bands such as All Time Low and the Rocket Summer.",
     "credits": [
         "From First to Last",
         "Jack Ü",
@@ -11,29 +11,41 @@
     "photo": "https://images.unsplash.com/photo-1535682215715-c5c6a5d28247",
     "speaker": true,
     "admin": true,
-    "spotlight": "2024-03-25T05:00:00.000Z",
+    "spotlight": "2024-04-01T05:00:00.000Z",
     "socials": {
-        "website": "https://skrillex.com",
         "tree": "https://linktr.ee/skrillex.art",
+        "website": "https://skrillex.com",
         "instagram": "https://instagram.com/skrillex",
         "tiktok": "https://tiktok.com/@skrillex",
-        "spotify": "https://open.spotify.com/artist/5he5w2lnU9x7JFhnwcekXX?si=kOH8IlhmRlm7RatyMaLigg",
-        "soundcloud": "https://soundcloud.com/skrillex",
-        "youtube": "https://youtube.com/skrillex"
+        "youtube": "https://youtube.com/skrillex",
+        "spotify": "https://open.spotify.com/artist/5he5w2lnU9x7JFhnwcekXX",
+        "soundcloud": "https://soundcloud.com/skrillex"
     },
     "services": {
         "production": true,
         "beatmaking": true,
-        "songwriting": true,
-        "singing": true,
         "musician": true,
+        "singing": true,
+        "songwriting": true,
         "recording": true,
         "mixing": true,
         "mastering": true,
         "post": true,
-        "synthesis": true,
         "editing": true,
-        "live": true
+        "synthesis": true,
+        "live": true,
+        "teaching": true
+    },
+    "workstations": {
+        "protools": true,
+        "ableton": true,
+        "flstudio": true,
+        "logic": true,
+        "garageband": true,
+        "reaper": true,
+        "reason": true,
+        "cubase": true,
+        "studioone": true
     },
     "genres": {
         "electronic": true,
@@ -42,24 +54,16 @@
         "rnb": true,
         "pop": true,
         "indie": true,
-        "rock": true,
-        "acoustic": true
+        "rock": true
     },
     "instruments": {
         "hardware": true,
         "vocals": true,
         "guitar": true,
         "keys": true,
-        "percussions": true,
+        "drums": true,
+        "brass": true,
         "strings": true,
-        "brass": true
-    },
-    "workstations": {
-        "ableton": true,
-        "fl": true,
-        "logic": true,
-        "reaper": true,
-        "reason": true,
-        "protools": true
+        "woodwinds": true
     }
 }

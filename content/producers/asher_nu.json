@@ -3,59 +3,63 @@
     "name": "Kyle Henderson",
     "bio": "Kyle Henderson, AKA Asher Nu, is a music producer, audio engineer and sound designer. He creates music and works with artists in genres such as electronic, hip hop, R&B and more. His main goal is to help artists and creators express themselves and share their projects with the world.",
     "credits": [],
-    "stream": "",
+    "stream": "https://open.spotify.com/track/2bxFrDX5nRxg1eGjy3Q2pc",
     "photo": "",
     "speaker": false,
     "admin": true,
     "spotlight": "",
     "socials": {
-        "website": "https://ashernu.com",
         "tree": "https://linktr.ee/ashernu",
+        "website": "https://ashernu.com",
         "instagram": "https://instagram.com/asher_nu",
         "tiktok": "",
-        "spotify": "https://open.spotify.com/artist/5DExBme65MVVfVDxmN4mTl?si=j3KV2pQqRSuomorZbkPNqw",
-        "soundcloud": "https://soundcloud.com/ashernu",
-        "youtube": "https://youtube.com/@ashernu"
+        "youtube": "https://youtube.com/@ashernu",
+        "spotify": "https://open.spotify.com/artist/5DExBme65MVVfVDxmN4mTl",
+        "soundcloud": "https://soundcloud.com/ashernu"
     },
     "services": {
         "production": true,
-        "beatmaking": false,
-        "songwriting": false,
-        "singing": false,
+        "beatmaking": true,
         "musician": false,
+        "singing": false,
+        "songwriting": false,
         "recording": true,
-        "mixing": false,
+        "mixing": true,
         "mastering": false,
         "post": false,
-        "synthesis": false,
         "editing": false,
-        "live": false
+        "synthesis": false,
+        "live": false,
+        "teaching": false
+    },
+    "workstations": {
+        "protools": true,
+        "ableton": true,
+        "flstudio": true,
+        "logic": false,
+        "garageband": false,
+        "reaper": false,
+        "reason": false,
+        "cubase": false,
+        "studioone": false
     },
     "genres": {
         "electronic": true,
         "dance": false,
         "hiphop": false,
-        "rnb": false,
+        "rnb": true,
         "pop": false,
         "indie": false,
-        "rock": false,
-        "acoustic": false
+        "rock": false
     },
     "instruments": {
         "hardware": false,
         "vocals": false,
         "guitar": false,
         "keys": true,
-        "percussions": true,
+        "drums": true,
+        "brass": false,
         "strings": false,
-        "brass": false
-    },
-    "workstations": {
-        "ableton": false,
-        "fl": true,
-        "logic": false,
-        "reaper": false,
-        "reason": false,
-        "protools": false
+        "woodwinds": false
     }
 }

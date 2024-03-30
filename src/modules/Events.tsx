@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import { v4 as uuid } from 'uuid';
 
+import links from '../assets/links.json';
+
 import '../styles/modules/Events.scss';
 
 function parseDatetime(date: Date, duration: number): string {
@@ -28,7 +30,7 @@ function Events(): React.ReactElement {
             for (const e of res.data) {
                 e.date = new Date(e.date);
                 e.page = new URL(e.page);
-                e.image ||= 'https://images.unsplash.com/photo-1616714109948-c74fe5029a4d?w=300';
+                e.image ||= links.defaultMeetup;
                 e.image = new URL(e.image);
             }
             res.data = res.data.filter((e: Meetup) => e.date.valueOf() > Date.now());
@@ -41,11 +43,11 @@ function Events(): React.ReactElement {
         <section className="events">
             {meetups.map((e: Meetup) => (
                 <article className="events__meetup" key={uuid()}>
-                    <div style={{ backgroundImage: `url(${e.image.href})` }}></div>
+                    <div style={{ backgroundImage: `url(${e.image.href})` }} />
                     <p>
                         {parseDatetime(e.date, e.duration)}
                         &nbsp; • &nbsp;
-                        <a href={e.page.href} target="_blank">RSVP</a>
+                        <a href={e.page.href}>RSVP</a>
                     </p>
                     <p>{e.location}&nbsp; • &nbsp;{e.address}</p>
                     <h4>{e.speaker}: {e.title}</h4>

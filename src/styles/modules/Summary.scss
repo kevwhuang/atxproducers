@@ -1,0 +1,15 @@
+@use '../_root' as *;
+
+.summary {
+    padding: 0 100px 50px;
+
+    .summary__header {
+        margin: 0 auto 25px;
+        text-align: center;
+        width: fit-content;
+    }
+
+    .summary__content {
+        text-align: center;
+    }
+}

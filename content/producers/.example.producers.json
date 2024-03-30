@@ -9,27 +9,39 @@
     "admin": false,
     "spotlight": "",
     "socials": {
-        "website": "",
         "tree": "",
+        "website": "",
         "instagram": "",
         "tiktok": "",
+        "youtube": "",
         "spotify": "",
-        "soundcloud": "",
-        "youtube": ""
+        "soundcloud": ""
     },
     "services": {
         "production": false,
         "beatmaking": false,
-        "songwriting": false,
-        "singing": false,
         "musician": false,
+        "singing": false,
+        "songwriting": false,
         "recording": false,
         "mixing": false,
         "mastering": false,
         "post": false,
-        "synthesis": false,
         "editing": false,
-        "live": false
+        "synthesis": false,
+        "live": false,
+        "teaching": false
+    },
+    "workstations": {
+        "protools": false,
+        "ableton": false,
+        "flstudio": false,
+        "logic": false,
+        "garageband": false,
+        "reaper": false,
+        "reason": false,
+        "cubase": false,
+        "studioone": false
     },
     "genres": {
         "electronic": false,
@@ -38,24 +50,16 @@
         "rnb": false,
         "pop": false,
         "indie": false,
-        "rock": false,
-        "acoustic": false
+        "rock": false
     },
     "instruments": {
         "hardware": false,
         "vocals": false,
         "guitar": false,
         "keys": false,
-        "percussions": false,
+        "drums": false,
+        "brass": false,
         "strings": false,
-        "brass": false
-    },
-    "workstations": {
-        "ableton": false,
-        "fl": false,
-        "logic": false,
-        "reaper": false,
-        "reason": false,
-        "protools": false
+        "woodwinds": false
     }
 }

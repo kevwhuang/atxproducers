@@ -4,7 +4,7 @@
 
 Contributors: Kevin Huang, Thomas Flanigan
 
-Version: 0.6.1
+Version: 0.8.1
 
 Date: May 1, 2024
 

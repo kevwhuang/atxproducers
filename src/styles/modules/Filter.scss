@@ -3,31 +3,14 @@
 .filter {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin: 25px 0 75px;
-    padding: 0 50px;
-
-    p {
-        background: $color-2;
-        color: $color-3;
-        font-size: $font-2;
-        height: 100%;
-        margin-right: 5px;
-        padding: 5px 10px;
-        width: min-content;
-    }
+    gap: 15px;
+    padding: 50px 100px 75px;
 
     button {
         border: none;
         margin: 0 5px 5px 0;
         padding: 5px 10px;
         transition: color 200ms;
-        white-space: nowrap;
-
-        &:disabled {
-            cursor: default;
-            opacity: .5;
-        }
 
         &:hover {
             color: $color-4;
@@ -39,16 +22,25 @@
     }
 
     .filter__group {
-        display: flex;
-        flex-wrap: wrap;
+        span {
+            background: $color-2;
+            color: $color-3;
+            margin-right: 5px;
+            padding: 5px 10px;
+        }
     }
 
     .filter__actions {
-        display: flex;
-        flex-wrap: wrap;
-
         button {
             background: $color-2;
+
+            &:disabled {
+                opacity: .5;
+
+                &:hover {
+                    color: $color-5;
+                }
+            }
         }
     }
 }

@@ -10,45 +10,34 @@
         'stream stream'
     ;
     grid-template-columns: 2fr 1fr;
-    margin-bottom: 50px;
-    padding: 50px;
+    padding: 50px 100px;
 
-    h2 {
+    .spotlight__header {
         grid-area: header;
         margin: auto;
         text-align: center;
     }
 
-    p {
+    .spotlight__bio {
         grid-area: bio;
         margin: auto;
         text-align: center;
     }
 
-    div {
+    .spotlight__photo {
         background-size: cover;
         grid-area: photo;
-        max-height: 800px;
         min-height: 400px;
         position: relative;
         top: 50%;
         transform: translateY(-50%);
     }
 
-    a {
+    .spotlight__stream {
         background: $color-1;
-        color: $color-5;
+        font-size: $font-3;
         grid-area: stream;
-        padding: 10px 0;
+        padding: 15px 0;
         text-align: center;
-        transition: color 200ms;
-
-        &:visited {
-            color: $color-5;
-        }
-
-        &:hover {
-            color: $color-4;
-        }
     }
 }

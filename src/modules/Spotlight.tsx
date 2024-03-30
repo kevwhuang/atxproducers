@@ -1,12 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 
+import links from '../assets/links.json';
+
 import '../styles/modules/Spotlight.scss';
 
-type MyFeature = [Partial<Producer>, React.Dispatch<React.SetStateAction<Producer>>];
-
 function Spotlight(): React.ReactElement {
-    const [feature, setFeature]: MyFeature = React.useState({});
+    const [feature, setFeature]: FeatureType = React.useState({});
 
     React.useEffect(() => {
         (async function () {
@@ -15,7 +15,9 @@ function Spotlight(): React.ReactElement {
             for (const e of res.data) {
                 if (e.spotlight > producer.spotlight) producer = e;
             }
+            producer.stream ||= links.defaultStream;
             producer.stream = new URL(producer.stream);
+            producer.photo ||= links.defaultProducer;
             producer.photo = new URL(producer.photo);
             setFeature(producer);
         }());
@@ -23,10 +25,13 @@ function Spotlight(): React.ReactElement {
 
     return (
         <section className="spotlight">
-            <h2>Spotlight: {feature.alias}</h2>
-            <p>{feature.bio}</p>
-            <div style={{ backgroundImage: `url(${feature.photo?.href})` }}></div>
-            <a href={feature.stream?.href} target="_blank">Listen</a>
+            <h2 className="spotlight__header">Spotlight: {feature.alias}</h2>
+            <p className="spotlight__bio">{feature.bio}</p>
+            <div
+                className="spotlight__photo"
+                style={{ backgroundImage: `url(${feature.photo?.href})` }}
+            />
+            <a className="spotlight__stream" href={feature.stream?.href}>Listen</a>
         </section>
     );
 }

@@ -1,19 +1,18 @@
 @use '../_root' as *;
 
 .submit {
-    height: 100px;
-    margin: 0 50px 0px;
+    padding: 0 100px 50px;
 
-    form {
+    .submit__form {
         display: grid;
         grid-template-columns: 1fr auto;
 
         input {
             border-color: $color-6;
             font-size: $font-4;
-            padding: 10px 25px;
-            transition: border-color 200ms;
             margin-right: 25px;
+            padding: 15px 30px;
+            transition: border-color 200ms;
 
             &:focus {
                 border-color: $color-5;
@@ -28,9 +27,8 @@
         button {
             background: $color-2;
             border: none;
-            color: $color-5;
             font-size: $font-4;
-            padding: 10px 25px;
+            padding: 15px 30px;
             transition: color 200ms;
 
             &:hover {

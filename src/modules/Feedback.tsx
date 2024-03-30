@@ -28,15 +28,28 @@ function Feedback(): React.ReactElement {
 
     return (
         <section className="feedback">
-            {!loading && submissions.map((e: Submission) => (
-                <div className="feedback__submissions" key={uuid()}>
-                    <p>{e.id}</p>
-                    <p>{e.producer}</p>
-                    <p>{e.title}</p>
-                    <a href={e.stream.href} target="_blank"><PlayCircleOutlineIcon /></a>
-                    {checkAuth() && <CheckCircleOutlineIcon onClick={handleClick} />}
-                </div>
-            ))}
+            <table className="feedback__table">
+                <thead>
+                    <tr>
+                        <th />
+                        <th>Producer</th>
+                        <th>Title</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {!loading && submissions.map((e: Submission) => (
+                        <tr key={uuid()}>
+                            <td>{e.id}</td>
+                            <td>{e.producer}</td>
+                            <td>{e.title}</td>
+                            <td><a href={e.stream.href} ><PlayCircleOutlineIcon /></a></td>
+                            {checkAuth() &&
+                                <td><CheckCircleOutlineIcon onClick={handleClick} /></td>
+                            }
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </section>
     );
 }

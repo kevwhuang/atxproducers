@@ -1,13 +1,13 @@
 import React from 'react';
 
-import '../styles/modules/Hero.scss';
+import links from '../assets/links.json';
 
-const background = 'https://images.unsplash.com/photo-1594623930572-300a3011d9ae';
+import '../styles/modules/Hero.scss';
 
 function Hero(): React.ReactElement {
     return (
-        <header className="hero" style={{ backgroundImage: `url(${background})` }}>
-            <h1>Austin Producer Alliance</h1>
+        <header className="hero" style={{ backgroundImage: `url(${links.hero})` }}>
+            <h1 className="hero__header" >Austin Producer Alliance</h1>
         </header>
     );
 }

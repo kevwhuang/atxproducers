@@ -65,22 +65,35 @@ function Filter(): React.ReactElement {
     return (
         <section className="filter">
             <div className="filter__group">
-                <p>Services</p>
+                <span>Services</span>
                 <Tag group="services" tag="production" label="Production" />
                 <Tag group="services" tag="beatmaking" label="Beatmaking" />
-                <Tag group="services" tag="songwriting" label="Songwriting" />
-                <Tag group="services" tag="singing" label="Singing" />
                 <Tag group="services" tag="musician" label="Musician" />
+                <Tag group="services" tag="singing" label="Singing" />
+                <Tag group="services" tag="songwriting" label="Songwriting" />
                 <Tag group="services" tag="recording" label="Recording" />
                 <Tag group="services" tag="mixing" label="Mixing" />
                 <Tag group="services" tag="mastering" label="Mastering" />
                 <Tag group="services" tag="post" label="Post Production" />
-                <Tag group="services" tag="synthesis" label="Synthesis" />
                 <Tag group="services" tag="editing" label="Audio Editing" />
+                <Tag group="services" tag="synthesis" label="Synthesis" />
                 <Tag group="services" tag="live" label="Live Sound" />
+                <Tag group="services" tag="teaching" label="Teaching" />
             </div>
             <div className="filter__group">
-                <p>Genres</p>
+                <span>Workstations</span>
+                <Tag group="workstations" tag="protools" label="Pro Tools" />
+                <Tag group="workstations" tag="ableton" label="Ableton" />
+                <Tag group="workstations" tag="flstudio" label="FL Studio" />
+                <Tag group="workstations" tag="logic" label="Logic" />
+                <Tag group="workstations" tag="gargeband" label="GarageBand" />
+                <Tag group="workstations" tag="reaper" label="Reaper" />
+                <Tag group="workstations" tag="reason" label="Reason" />
+                <Tag group="workstations" tag="cubase" label="Cubase" />
+                <Tag group="workstations" tag="studioone" label="Studio One" />
+            </div>
+            <div className="filter__group">
+                <span>Genres</span>
                 <Tag group="genres" tag="electronic" label="Electronic" />
                 <Tag group="genres" tag="dance" label="Dance" />
                 <Tag group="genres" tag="hiphop" label="Hip Hop" />
@@ -88,26 +101,17 @@ function Filter(): React.ReactElement {
                 <Tag group="genres" tag="pop" label="Pop" />
                 <Tag group="genres" tag="indie" label="Indie" />
                 <Tag group="genres" tag="rock" label="Rock" />
-                <Tag group="genres" tag="acoustic" label="Acoustic" />
             </div>
             <div className="filter__group">
-                <p>Instruments</p>
+                <span>Instruments</span>
                 <Tag group="instruments" tag="hardware" label="Hardware" />
                 <Tag group="instruments" tag="vocals" label="Vocals" />
                 <Tag group="instruments" tag="guitar" label="Guitar" />
                 <Tag group="instruments" tag="keys" label="Keys" />
-                <Tag group="instruments" tag="percussions" label="Percussions" />
-                <Tag group="instruments" tag="strings" label="Strings" />
+                <Tag group="instruments" tag="drums" label="Drums" />
                 <Tag group="instruments" tag="brass" label="Brass" />
-            </div>
-            <div className="filter__group">
-                <p>Workstations</p>
-                <Tag group="workstations" tag="ableton" label="Ableton" />
-                <Tag group="workstations" tag="fl" label="FL Studio" />
-                <Tag group="workstations" tag="logic" label="Logic" />
-                <Tag group="workstations" tag="reaper" label="Reaper" />
-                <Tag group="workstations" tag="reason" label="Reason" />
-                <Tag group="workstations" tag="protools" label="Pro Tools" />
+                <Tag group="instruments" tag="strings" label="Strings" />
+                <Tag group="instruments" tag="woodwinds" label="Woodwinds" />
             </div>
             <div className="filter__actions">
                 <button onClick={handleSort}>Sort by Alias</button>

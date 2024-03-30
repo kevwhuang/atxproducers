@@ -1,6 +1,8 @@
 @use '../_root' as *;
 
 .events {
+    padding-top: 50px;
+
     .events__meetup {
         display: grid;
         gap: 0 25px;
@@ -10,17 +12,12 @@
             'image title'
             'image description'
         ;
-        grid-template-columns: 200px 1fr;
-        margin-bottom: 50px;
-        padding: 0 50px;
+        grid-template-columns: 1fr 4fr;
+        padding: 0 100px 50px;
 
         div {
             background-size: cover;
             grid-area: image;
-            max-height: 200px;
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
         }
 
         p {
@@ -35,7 +32,6 @@
                 a {
                     border-bottom: 1px solid transparent;
                     color: $color-4;
-                    font-size: $font-2;
                     transition: border-bottom-color 200ms;
 
                     &:visited {
