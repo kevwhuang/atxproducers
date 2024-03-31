@@ -30,11 +30,13 @@ function Feedback(): React.ReactElement {
         <section className="feedback">
             <table className="feedback__table">
                 <thead>
-                    <tr>
-                        <th />
-                        <th>Producer</th>
-                        <th>Title</th>
-                    </tr>
+                    {submissions?.length > 0 &&
+                        <tr>
+                            <th />
+                            <th>Producer</th>
+                            <th>Title</th>
+                        </tr>
+                    }
                 </thead>
                 <tbody>
                     {!loading && submissions.map((e: Submission) => (

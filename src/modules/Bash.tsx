@@ -38,12 +38,14 @@ function Bash(): React.ReactElement {
         <section className="bash">
             <table className="bash__table">
                 <thead>
-                    <tr>
-                        <th />
-                        <th>Type</th>
-                        <th>Name</th>
-                        <th>Difficulty</th>
-                    </tr>
+                    {resources?.length > 0 &&
+                        <tr>
+                            <th />
+                            <th>Type</th>
+                            <th>Name</th>
+                            <th>Difficulty</th>
+                        </tr>
+                    }
                 </thead>
                 <tbody>
                     {resources.map((e: Resource) => (
