@@ -8,7 +8,9 @@ import helmet from 'helmet';
 import path from 'path';
 import url from 'url';
 
-function logger(req, _, next): void {
+type Arr = (Meetup | Producer | Resource | Submission)[];
+
+function logger(req: express.Request, _: express.Response, next: express.NextFunction): void {
     console.table({
         time: new Date().toISOString(),
         url: `${req.protocol}://${req.get('host')}${req.path}`,
@@ -17,38 +19,38 @@ function logger(req, _, next): void {
     next();
 }
 
-async function append(endpoint, arr): Promise<void> {
+async function append(endpoint: string, arr: Arr): Promise<void> {
     const config = { assert: { type: 'json' } };
     const res = await import(`./content${endpoint}`, config);
     arr.push(res.default);
 }
 
-async function controllerMeetups(_, res): Promise<void> {
-    const data = [];
+async function controllerMeetups(_: express.Request, res: express.Response): Promise<void> {
+    const data: Meetup[] = [];
     for (const meetup of meetups) {
         await append(`/meetups/${meetup}`, data);
     }
     res.send(data);
 }
 
-async function controllerProducers(_, res): Promise<void> {
-    const data = [];
+async function controllerProducers(_: express.Request, res: express.Response): Promise<void> {
+    const data: Producer[] = [];
     for (const producer of producers) {
         await append(`/producers/${producer}`, data);
     }
     res.send(data);
 }
 
-async function controllerResources(_, res): Promise<void> {
-    const data = [];
+async function controllerResources(_: express.Request, res: express.Response): Promise<void> {
+    const data: Resource[] = [];
     for (const resource of resources) {
         await append(`/resources/${resource}`, data);
     }
     res.send(data);
 }
 
-async function controllerSubmissions(_, res): Promise<void> {
-    const data = [];
+async function controllerSubmissions(_: express.Request, res: express.Response): Promise<void> {
+    const data: Submission[] = [];
     for (const submission of submissions) {
         await append(`/submissions/${submission}`, data);
     }
@@ -56,10 +58,10 @@ async function controllerSubmissions(_, res): Promise<void> {
 }
 
 const base = path.join(path.dirname(url.fileURLToPath(import.meta.url)), 'content');
-const meetups = fs.readdirSync(`${base}/meetups`).slice(1);
-const producers = fs.readdirSync(`${base}/producers`).slice(1);
-const resources = fs.readdirSync(`${base}/resources`).slice(1);
-const submissions = fs.readdirSync(`${base}/submissions`).slice(1);
+const meetups = fs.readdirSync(`${base}/meetups`);
+const producers = fs.readdirSync(`${base}/producers`);
+const resources = fs.readdirSync(`${base}/resources`);
+const submissions = fs.readdirSync(`${base}/submissions`);
 
 const options = {
     credentials: true,
@@ -69,8 +71,8 @@ const options = {
 
 const app = express();
 
-app.listen(process.env.PORT ?? 5000, () => {
-    console.log('\x1b[35m%s\x1b[0m', `Listening on port ${process.env.PORT ?? 5000}.`);
+app.listen(process.env['PORT'] ?? 5000, () => {
+    console.log('\x1b[35m%s\x1b[0m', `Listening on port ${process.env['PORT'] ?? 5000}.`);
 });
 
 app.disable('strict routing');

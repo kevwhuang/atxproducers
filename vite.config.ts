@@ -1,12 +1,12 @@
 import autoprefixer from 'autoprefixer';
 import react from '@vitejs/plugin-react-swc';
 import {
-    ManifestOptions,
     VitePWA,
+    type ManifestOptions,
 } from 'vite-plugin-pwa';
 import {
-    UserConfigExport,
     defineConfig,
+    type UserConfigExport,
 } from 'vite';
 
 const manifest: Partial<ManifestOptions> = {

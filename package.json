@@ -22,7 +22,7 @@
         "dev": "vite",
         "eslint": "eslint src --ext js,cjs,mjs,jsx,ts,tsx",
         "fe": "ntl dev",
-        "start": "bun --watch backend/app.js",
+        "start": "NODE_ENV=production node backend/app.js",
         "test": "vitest",
         "tslint": "tsc"
     },
@@ -47,9 +47,11 @@
         "zustand": "*"
     },
     "devDependencies": {
+        "@types/bun": "*",
+        "@types/cors": "*",
+        "@types/express": "*",
         "@testing-library/jest-dom": "*",
         "@testing-library/react": "*",
-        "@types/bun": "*",
         "@types/react": "*",
         "@types/react-dom": "*",
         "@types/react-router-dom": "*",

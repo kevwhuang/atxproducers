@@ -1,7 +1,7 @@
 import {
-    UserConfigExport,
     configDefaults,
     defineConfig,
+    type UserConfigExport,
 } from 'vitest/config';
 
 const vitest: UserConfigExport = defineConfig({
