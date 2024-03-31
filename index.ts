@@ -8,7 +8,7 @@ import helmet from 'helmet';
 import path from 'path';
 import url from 'url';
 
-function logger(req, _, next) {
+function logger(req, _, next): void {
     console.table({
         time: new Date().toISOString(),
         url: `${req.protocol}://${req.get('host')}${req.path}`,
@@ -17,13 +17,13 @@ function logger(req, _, next) {
     next();
 }
 
-async function append(endpoint, arr) {
+async function append(endpoint, arr): Promise<void> {
     const config = { assert: { type: 'json' } };
-    const res = await import(`../content${endpoint}`, config);
+    const res = await import(`./content${endpoint}`, config);
     arr.push(res.default);
 }
 
-async function controllerMeetups(_, res) {
+async function controllerMeetups(_, res): Promise<void> {
     const data = [];
     for (const meetup of meetups) {
         await append(`/meetups/${meetup}`, data);
@@ -31,7 +31,7 @@ async function controllerMeetups(_, res) {
     res.send(data);
 }
 
-async function controllerProducers(_, res) {
+async function controllerProducers(_, res): Promise<void> {
     const data = [];
     for (const producer of producers) {
         await append(`/producers/${producer}`, data);
@@ -39,7 +39,7 @@ async function controllerProducers(_, res) {
     res.send(data);
 }
 
-async function controllerResources(_, res) {
+async function controllerResources(_, res): Promise<void> {
     const data = [];
     for (const resource of resources) {
         await append(`/resources/${resource}`, data);
@@ -47,7 +47,7 @@ async function controllerResources(_, res) {
     res.send(data);
 }
 
-async function controllerSubmissions(_, res) {
+async function controllerSubmissions(_, res): Promise<void> {
     const data = [];
     for (const submission of submissions) {
         await append(`/submissions/${submission}`, data);
@@ -55,7 +55,7 @@ async function controllerSubmissions(_, res) {
     res.send(data);
 }
 
-const base = path.join(path.dirname(url.fileURLToPath(import.meta.url)), '../content');
+const base = path.join(path.dirname(url.fileURLToPath(import.meta.url)), 'content');
 const meetups = fs.readdirSync(`${base}/meetups`).slice(1);
 const producers = fs.readdirSync(`${base}/producers`).slice(1);
 const resources = fs.readdirSync(`${base}/resources`).slice(1);

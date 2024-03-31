@@ -1,4 +1,5 @@
 .env
+bun.lockb
 todo.txt
 **/.DS_Store
 .netlify/
