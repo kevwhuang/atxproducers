@@ -4,9 +4,9 @@
 
 Contributors: Kevin Huang, Thomas Flanigan
 
-Version: 0.8.1
+Version: 1.0.0
 
-Date: May 1, 2024
+Date: April 10, 2024
 
 ## For Developers
 

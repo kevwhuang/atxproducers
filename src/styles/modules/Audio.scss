@@ -3,11 +3,13 @@
 .audio {
     .audio__spotify {
         height: 500px;
+        user-select: none;
         width: 100%;
     }
 
     .audio__soundcloud {
         height: 500px;
+        user-select: none;
         width: 100%;
     }
 }

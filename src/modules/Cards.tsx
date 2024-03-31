@@ -85,7 +85,7 @@ function Cards(): React.ReactElement {
                         <div className="cards__producer--container">
                             <div className="cards__producer--container--info">
                                 <p>{e.bio}</p>
-                                {e.credits.length ? <p>Credits: {e.credits.join(', ')}</p> : <></>}
+                                {e.credits.length > 0 && <p>Credits: {e.credits.join(', ')}</p>}
                             </div>
                             {Object.values(e.services).includes(true) &&
                                 <div className="cards__producer--container--group">
