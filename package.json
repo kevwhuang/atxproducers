@@ -17,16 +17,21 @@
         "url": "https://github.com/kevwhuang/atxproducers.git"
     },
     "scripts": {
-        "be": "nodemon mock/server.mjs",
+        "be": "bun --watch index.ts",
         "build": "vite build",
         "dev": "vite",
         "eslint": "eslint src --ext js,cjs,mjs,jsx,ts,tsx",
         "fe": "ntl dev",
-        "start": "NODE_ENV=production node backend/app.js",
+        "start": "bun --watch backend/app.js",
         "test": "vitest",
         "tslint": "tsc"
     },
     "dependencies": {
+        "cors": "*",
+        "dotenv": "*",
+        "express": "*",
+        "helmet": "*",
+        "mongodb": "*",
         "@emotion/react": "*",
         "@emotion/styled": "*",
         "@mui/icons-material": "*",
@@ -39,17 +44,12 @@
         "react-router-dom": "*",
         "swr": "*",
         "uuid": "*",
-        "zustand": "*",
-        "": "",
-        "cors": "*",
-        "dotenv": "*",
-        "express": "*",
-        "helmet": "*",
-        "mongodb": "*"
+        "zustand": "*"
     },
     "devDependencies": {
         "@testing-library/jest-dom": "*",
         "@testing-library/react": "*",
+        "@types/bun": "*",
         "@types/react": "*",
         "@types/react-dom": "*",
         "@types/react-router-dom": "*",
@@ -67,9 +67,7 @@
         "typescript": "*",
         "vite": "*",
         "vite-plugin-pwa": "*",
-        "vitest": "*",
-        "": "",
-        "nodemon": "*"
+        "vitest": "*"
     },
     "private": true
 }

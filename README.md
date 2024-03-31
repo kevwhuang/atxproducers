@@ -10,6 +10,7 @@ Date: April 10, 2024
 
 ## For Developers
 
-- Run <code>npm i</code> to install dependencies.
-- Run <code>npm run fe</code> to initiate local front-end server.
-- Run <code>npm run be</code> to initiate local back-end server.
+- Run <code>curl -fsSL https://bun.sh/install | bash</code> to install Bun.
+- Run <code>bun i</code> to install dependencies.
+- Run <code>bun fe</code> to initiate local front-end server.
+- Run <code>bun be</code> to initiate local back-end server.
