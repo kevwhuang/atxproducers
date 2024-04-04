@@ -21,6 +21,10 @@
 
         a {
             display: flex;
+
+            svg {
+                font-size: $font-3;
+            }
         }
     }
 }

@@ -59,12 +59,12 @@
 
             &:hover {
                 &::-webkit-scrollbar-thumb {
-                    background: $color-5;
+                    border-right: 1px solid $color-5;
                 }
             }
 
             &::-webkit-scrollbar {
-                width: 1px;
+                width: 4px;
             }
 
             .cards__producer--container--info {
@@ -105,6 +105,15 @@
 
             a {
                 display: flex;
+
+                svg {
+                    font-size: $font-3;
+                    transition: scale 200ms;
+
+                    &:active {
+                        scale: .9;
+                    }
+                }
             }
         }
 

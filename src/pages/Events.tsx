@@ -1,14 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import Future from '../modules/Future';
-import Past from '../modules/Past';
+import Meetups from '../modules/Meetups';
 
 function Events(): React.ReactElement {
     return (
         <main id="events">
-            <Future />
-            <Past />
+            <Meetups period="past" />
+            <Meetups period="upcoming" />
+            <Meetups period="future" />
             <Helmet>
                 <title>APA | Events</title>
             </Helmet >

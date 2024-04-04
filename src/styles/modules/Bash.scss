@@ -7,6 +7,8 @@
     .bash__table {
         display: block;
         font-size: $font-4;
+        margin: auto;
+        width: fit-content;
 
         tr {
             display: grid;

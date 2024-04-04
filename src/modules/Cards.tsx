@@ -1,15 +1,10 @@
 import React from 'react';
 import axios from 'axios';
+import {
+    Icon,
+    InlineIcon,
+} from '@iconify/react';
 import { v4 as uuid } from 'uuid';
-
-import ForestIcon from '@mui/icons-material/Forest';
-import HomeIcon from '@mui/icons-material/Home';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import MicIcon from '@mui/icons-material/Mic';
-import MusicNoteIcon from '@mui/icons-material/MusicNote';
-import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
-import VideocamIcon from '@mui/icons-material/Videocam';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 
 import links from '../assets/links.json';
 import useZustand from '../hooks/useZustand';
@@ -78,7 +73,7 @@ function Cards(): React.ReactElement {
                             <h3 className={e.speaker ? 'speaker' : ''}>
                                 {e.alias}
                                 {e.admin && ' '}
-                                {e.admin && <VerifiedUserIcon />}
+                                {e.admin && <InlineIcon icon="material-symbols:verified-user" />}
                             </h3>
                             <p>{e.name}</p>
                         </div>
@@ -155,25 +150,39 @@ function Cards(): React.ReactElement {
                         </div>
                         <div className="cards__producer--socials">
                             {e.socials.tree &&
-                                <a href={e.socials.tree.href}><ForestIcon /></a>
+                                <a href={e.socials.tree.href}>
+                                    <Icon icon="simple-icons:linktree" />
+                                </a>
                             }
                             {e.socials.website &&
-                                <a href={e.socials.website.href}><HomeIcon /></a>
+                                <a href={e.socials.website.href}>
+                                    <Icon icon="material-symbols:home" />
+                                </a>
                             }
                             {e.socials.instagram &&
-                                <a href={e.socials.instagram.href}><InstagramIcon /></a>
+                                <a href={e.socials.instagram.href}>
+                                    <Icon icon="mdi:instagram" />
+                                </a>
                             }
                             {e.socials.tiktok &&
-                                <a href={e.socials.tiktok.href}><VideocamIcon /></a>
+                                <a href={e.socials.tiktok.href}>
+                                    <Icon icon="ic:baseline-tiktok" />
+                                </a>
                             }
                             {e.socials.youtube &&
-                                <a href={e.socials.youtube.href}><YouTubeIcon /></a>
+                                <a href={e.socials.youtube.href}>
+                                    <Icon icon="mdi:youtube" />
+                                </a>
                             }
                             {e.socials.spotify &&
-                                <a href={e.socials.spotify.href}><MusicNoteIcon /></a>
+                                <a href={e.socials.spotify.href}>
+                                    <Icon icon="mdi:spotify" />
+                                </a>
                             }
                             {e.socials.soundcloud &&
-                                <a href={e.socials.soundcloud.href}><MicIcon /></a>
+                                <a href={e.socials.soundcloud.href}>
+                                    <Icon icon="mdi:soundcloud" />
+                                </a>
                             }
                         </div>
                         <div className="cards__producer--stream">

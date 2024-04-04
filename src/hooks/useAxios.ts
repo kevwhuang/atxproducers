@@ -3,17 +3,17 @@ import useSWR from 'swr';
 
 import links from '../assets/links.json';
 
-interface Params {
+interface AxiosParams {
     endpoint: string;
     options?: AxiosRequestConfig;
 }
 
-function useAxios(params: Params) {
+function useAxios(params: AxiosParams) {
     const { data, error, isLoading, mutate } = useSWR(params, fetcher);
     return { data, error, loading: isLoading, mutate };
 }
 
-async function fetcher(params: Params) {
+async function fetcher(params: AxiosParams) {
     try {
         const res = await axios(`/.netlify/functions/${params.endpoint}`, params.options);
         if (params.endpoint === 'getSubmissions') {

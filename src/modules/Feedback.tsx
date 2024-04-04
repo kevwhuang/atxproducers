@@ -1,26 +1,21 @@
 import React from 'react';
+import { Icon } from '@iconify/react';
 import { v4 as uuid } from 'uuid';
 
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
-
 import useAxios from '../hooks/useAxios';
+import { checkAuth } from '../utilities';
 
 import '../styles/modules/Feedback.scss';
 
-function checkAuth(): boolean {
-    return localStorage.getItem('password') === import.meta.env['VITE_PASSWORD'];
-}
-
-function handleClick(e: React.MouseEvent): void {
-    if (!(e.currentTarget instanceof SVGElement)) return;
-    const classes = e.currentTarget.classList;
-    if (classes.contains('marked')) classes.remove('marked');
-    else (classes.add('marked'));
-}
-
 function Feedback(): React.ReactElement {
     const { data: submissions, loading, mutate } = useAxios({ endpoint: 'getSubmissions' });
+
+    function handleClick(e: React.MouseEvent): void {
+        if (!(e.currentTarget instanceof SVGElement)) return;
+        const classes = e.currentTarget.classList;
+        if (classes.contains('marked')) classes.remove('marked');
+        else (classes.add('marked'));
+    }
 
     React.useEffect(() => {
         mutate([]);
@@ -31,7 +26,7 @@ function Feedback(): React.ReactElement {
             <table className="feedback__table">
                 <thead>
                     {submissions?.length > 0 &&
-                        <tr>
+                        <tr className={checkAuth() ? 'admin' : ''}>
                             <th />
                             <th>Producer</th>
                             <th>Title</th>
@@ -44,9 +39,18 @@ function Feedback(): React.ReactElement {
                             <td>{e.id}</td>
                             <td>{e.producer}</td>
                             <td>{e.title}</td>
-                            <td><a href={e.stream.href} ><PlayCircleOutlineIcon /></a></td>
+                            <td>
+                                <a href={e.stream.href}>
+                                    <Icon icon="material-symbols:play-circle-outline" />
+                                </a>
+                            </td>
                             {checkAuth() &&
-                                <td><CheckCircleOutlineIcon onClick={handleClick} /></td>
+                                <td>
+                                    <Icon
+                                        icon="material-symbols:check-circle-outline"
+                                        onClick={handleClick}
+                                    />
+                                </td>
                             }
                         </tr>
                     ))}

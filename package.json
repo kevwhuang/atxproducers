@@ -1,75 +1,73 @@
 {
-    "name": "atxproducers",
-    "version": "1.0.0",
-    "description": "Austin Producer Alliance",
-    "keywords": [
-        "music",
-        "producers"
-    ],
-    "homepage": "https://atxproducers.com",
-    "bugs": {
-        "url": "https://github.com/kevwhuang/atxproducers/issues"
-    },
-    "license": "UNLICENSED",
-    "author": "Kevin Huang",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/kevwhuang/atxproducers.git"
-    },
-    "scripts": {
-        "be": "bun --watch index.ts",
-        "build": "vite build",
-        "dev": "vite",
-        "eslint": "eslint src --ext js,cjs,mjs,jsx,ts,tsx",
-        "fe": "ntl dev",
-        "start": "NODE_ENV=production node backend/app.js",
-        "test": "vitest",
-        "tslint": "tsc"
-    },
-    "dependencies": {
-        "cors": "*",
-        "dotenv": "*",
-        "express": "*",
-        "helmet": "*",
-        "mongodb": "*",
-        "@emotion/react": "*",
-        "@emotion/styled": "*",
-        "@mui/icons-material": "*",
-        "@netlify/functions": "*",
-        "axios": "*",
-        "react": "*",
-        "react-dom": "*",
-        "react-helmet-async": "*",
-        "react-hot-toast": "*",
-        "react-router-dom": "*",
-        "swr": "*",
-        "uuid": "*",
-        "zustand": "*"
-    },
-    "devDependencies": {
-        "@types/bun": "*",
-        "@types/cors": "*",
-        "@types/express": "*",
-        "@testing-library/jest-dom": "*",
-        "@testing-library/react": "*",
-        "@types/react": "*",
-        "@types/react-dom": "*",
-        "@types/react-router-dom": "*",
-        "@types/uuid": "*",
-        "@typescript-eslint/eslint-plugin": "*",
-        "@typescript-eslint/parser": "*",
-        "@vitejs/plugin-react-swc": "*",
-        "autoprefixer": "*",
-        "eslint": "*",
-        "eslint-plugin-import": "*",
-        "eslint-plugin-react-hooks": "*",
-        "eslint-plugin-react-refresh": "*",
-        "jsdom": "*",
-        "sass": "*",
-        "typescript": "*",
-        "vite": "*",
-        "vite-plugin-pwa": "*",
-        "vitest": "*"
-    },
-    "private": true
+  "name": "atxproducers",
+  "version": "1.0.0",
+  "description": "Austin Producer Alliance",
+  "keywords": [
+    "music",
+    "producers"
+  ],
+  "homepage": "https://atxproducers.com",
+  "bugs": {
+    "url": "https://github.com/kevwhuang/atxproducers/issues"
+  },
+  "license": "UNLICENSED",
+  "author": "Kevin Huang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevwhuang/atxproducers.git"
+  },
+  "scripts": {
+    "be": "bun --watch index.ts",
+    "build": "vite build",
+    "dev": "vite",
+    "eslint": "eslint src --ext js,cjs,mjs,jsx,ts,tsx",
+    "fe": "ntl dev",
+    "start": "NODE_ENV=production node backend/app.js",
+    "test": "vitest",
+    "tslint": "tsc"
+  },
+  "dependencies": {
+    "cors": "*",
+    "dotenv": "*",
+    "express": "*",
+    "helmet": "*",
+    "mongodb": "*",
+    "@iconify/react": "*",
+    "@netlify/functions": "*",
+    "axios": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-helmet-async": "*",
+    "react-hot-toast": "*",
+    "react-router-dom": "*",
+    "swr": "*",
+    "uuid": "*",
+    "zustand": "*"
+  },
+  "devDependencies": {
+    "@types/bun": "*",
+    "@types/cors": "*",
+    "@types/express": "*",
+    "@testing-library/jest-dom": "*",
+    "@testing-library/react": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@types/react-router-dom": "*",
+    "@types/uuid": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "@vitejs/plugin-react-swc": "*",
+    "autoprefixer": "*",
+    "eslint": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-react-hooks": "*",
+    "eslint-plugin-react-refresh": "*",
+    "jsdom": "*",
+    "sass": "*",
+    "typescript": "*",
+    "vite": "*",
+    "vite-plugin-pwa": "*",
+    "vitest": "*"
+  },
+  "private": true
 }

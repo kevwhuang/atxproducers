@@ -7,12 +7,18 @@
     .feedback__table {
         display: block;
         font-size: $font-4;
+        margin: auto;
+        width: fit-content;
 
         tr {
             display: grid;
             gap: 25px;
-            grid-template-columns: 50px minmax(155px, 1fr) 2fr 40px 40px;
+            grid-template-columns: 50px minmax(155px, 1fr) 2fr 40px;
             margin-bottom: 10px;
+
+            &.admin {
+                grid-template-columns: 50px minmax(155px, 1fr) 2fr 40px 40px;
+            }
 
             td {
                 &:nth-of-type(1) {
@@ -29,6 +35,10 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
+                }
+
+                &:nth-of-type(5) {
+                    grid-column: 5;
                 }
 
                 svg {

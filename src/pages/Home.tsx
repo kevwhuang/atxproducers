@@ -2,8 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 import Audio from '../modules/Audio';
-import Events from '../modules/Events';
 import Hero from '../modules/Hero';
+import Meetups from '../modules/Meetups';
 import Spotlight from '../modules/Spotlight';
 import Summary from '../modules/Summary';
 
@@ -13,7 +13,7 @@ function Home(): React.ReactElement {
             <Hero />
             <Summary />
             <Spotlight />
-            <Events />
+            <Meetups period="upcoming" />
             <Audio />
             <Helmet>
                 <title>APA | Home</title>

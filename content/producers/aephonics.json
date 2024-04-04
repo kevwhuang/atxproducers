@@ -1,24 +1,23 @@
 {
     "alias": "Aephonics",
     "name": "Kevin Huang",
-    "bio": "Aephonics is a versatile variety producer who specializes in pop, dance, and urban. With over 10 years of experience engineering in FL Studio, he excels at merging technical proficiency and creative freedom. Aephonics has garnered millions of streams across various platforms with his originals, remixes, and mixtapes. A programmer by day, Kevin continues his work as the main developer for the APA website and produces for other artists during his free time.",
+    "bio": "Aephonics is a versatile variety producer who specializes in pop, dance, and urban. With over 10 years of experience engineering in FL Studio, he excels at merging creative freedom with technical proficiency. Aephonics has garnered millions of streams across various platforms with originals, remixes, and mixtapes. A programmer by day, he presides as the main developer for the APA portal and produces for other artists during his free time.",
     "credits": [
-        "Austin Producer Alliance",
         "Auraphonics"
     ],
     "stream": "https://soundcloud.com/auraphonics/september",
     "photo": "",
-    "speaker": true,
+    "speaker": false,
     "admin": true,
     "spotlight": "",
     "socials": {
-        "tree": "",
+        "tree": "https://linktr.ee/atxproducers",
         "website": "https://atxproducers.com",
         "instagram": "https://instagram.com/atxproducers",
         "tiktok": "https://tiktok.com/@atxproducers",
-        "youtube": "",
-        "spotify": "",
-        "soundcloud": ""
+        "youtube": "https://youtube.com/@atxproducers",
+        "spotify": "https://open.spotify.com/user/atxproducers",
+        "soundcloud": "https://soundcloud.com/atxproducers"
     },
     "services": {
         "production": true,

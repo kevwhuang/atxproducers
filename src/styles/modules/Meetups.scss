@@ -1,9 +1,9 @@
 @use '../_root' as *;
 
-.events {
+.meetups {
     padding-top: 50px;
 
-    .events__meetup {
+    .meetups__meetup {
         display: grid;
         gap: 0 25px;
         grid-template-areas:
