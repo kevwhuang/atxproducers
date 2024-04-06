@@ -1,6 +1,6 @@
 @use '../_root' as *;
 
-.filter {
+.filter-producers {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -19,19 +19,24 @@
         &.active {
             background: $color-2;
         }
+
+        &.collapsed {
+            animation: collapse 500ms forwards;
+        }
     }
 
-    .filter__group {
+    .filter-producers__group {
         span {
             background: $color-2;
             color: $color-3;
+            cursor: pointer;
             display: inline-block;
             margin: 0 5px 5px 0;
             padding: 5px 10px;
         }
     }
 
-    .filter__actions {
+    .filter-producers__actions {
         button {
             background: $color-2;
             margin-bottom: 0;

@@ -1,16 +1,24 @@
 interface ZustandActions {
     changeModule: (module: string) => void;
-    updateFilter: (filter: ZustandStateFilter) => void;
+    updateProducers: (filter: ZustandStateProducers) => void;
     updateSort: (sort: ZustandStateSort) => void;
+    updateEvents: (events: ZustandStateEvents) => void;
 }
 
 interface ZustandState {
     module: string;
-    filter: ZustandStateFilter;
+    producers: ZustandStateProducers;
     sort: ZustandStateSort;
+    events: ZustandStateEvents;
 }
 
-interface ZustandStateFilter {
+interface ZustandStateEvents {
+    past: boolean;
+    upcoming: boolean;
+    future: boolean;
+}
+
+interface ZustandStateProducers {
     services: { [key: string]: boolean };
     workstations: { [key: string]: boolean };
     genres: { [key: string]: boolean };

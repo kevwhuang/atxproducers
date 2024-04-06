@@ -2,12 +2,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 import Cards from '../modules/Cards';
-import Filter from '../modules/Filter';
+import FilterProducers from '../modules/FilterProducers';
 
 function Producers(): React.ReactElement {
     return (
         <main id="producers">
-            <Filter />
+            <FilterProducers />
             <Cards />
             <Helmet>
                 <title>APA | Producers</title>

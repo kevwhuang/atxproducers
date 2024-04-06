@@ -55,9 +55,12 @@
 
         .cards__producer--container {
             margin-bottom: 10px;
+            mask-image: linear-gradient(180deg, black 80%, transparent);
             overflow-y: scroll;
 
             &:hover {
+                mask-image: none;
+
                 &::-webkit-scrollbar-thumb {
                     border-right: 1px solid $color-5;
                 }
@@ -125,7 +128,7 @@
                 text-align: center;
 
                 &:hover {
-                    animation: 500ms 200ms ease-in-out infinite alternate hover;
+                    animation: hover 500ms 200ms ease-in-out infinite alternate;
                 }
             }
         }

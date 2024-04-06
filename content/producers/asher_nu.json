@@ -30,7 +30,7 @@
         "editing": false,
         "synthesis": false,
         "live": false,
-        "teaching": false
+        "teaching": true
     },
     "workstations": {
         "protools": true,

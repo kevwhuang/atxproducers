@@ -1,5 +1,13 @@
 @use '_root' as *;
 
+@keyframes collapse {
+    to {
+        display: none;
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
 @keyframes hover {
     to {
         scale: .9;

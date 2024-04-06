@@ -13,7 +13,7 @@ import '../styles/modules/Cards.scss';
 
 function Cards(): React.ReactElement {
     const [producers, setProducers] = React.useState([]);
-    const [filter, sort] = useZustand(s => [s.filter, s.sort]);
+    const [filter, sort] = useZustand(s => [s.producers, s.sort]);
 
     React.useEffect(() => {
         (async function () {

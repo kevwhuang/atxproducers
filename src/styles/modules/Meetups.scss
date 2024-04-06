@@ -1,8 +1,6 @@
 @use '../_root' as *;
 
 .meetups {
-    padding-top: 50px;
-
     .meetups__meetup {
         display: grid;
         gap: 0 25px;

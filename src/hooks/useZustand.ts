@@ -2,7 +2,7 @@ import { create } from 'zustand';
 
 const initialize: ZustandState = {
     module: 'submissions',
-    filter: {
+    producers: {
         services: {
             production: false,
             beatmaking: false,
@@ -54,12 +54,18 @@ const initialize: ZustandState = {
         name: false,
         prev: true,
     },
+    events: {
+        past: false,
+        upcoming: true,
+        future: false,
+    },
 };
 
 const useZustand = create<ZustandActions & ZustandState>(set => ({
     changeModule: module => set(() => ({ module })),
-    updateFilter: filter => set(() => ({ filter })),
+    updateProducers: producers => set(() => ({ producers })),
     updateSort: sort => set(() => ({ sort })),
+    updateEvents: events => set(() => ({ events })),
     ...initialize,
 }));
 
