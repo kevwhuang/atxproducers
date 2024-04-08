@@ -9,13 +9,13 @@ function Audio(): React.ReactElement {
         <section className="audio">
             <iframe
                 className="audio__spotify"
-                src={links.spotify}
+                src={links.embedSpotify}
                 allow="encrypted-media"
                 loading="lazy"
             />
             <iframe
                 className="audio__soundcloud"
-                src={links.soundcloud}
+                src={links.embedSoundcloud}
                 loading="lazy"
             />
         </section>

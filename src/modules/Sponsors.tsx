@@ -1,6 +1,6 @@
 import React from 'react';
 
-import capital_factory from '../assets/images/sponsor_capital_factory.png';
+import capitalFactory from '../assets/sponsor_capital_factory.png';
 
 import '../styles/modules/Sponsors.scss';
 
@@ -9,7 +9,7 @@ function Sponsors(): React.ReactElement {
         <section className="sponsors">
             <div
                 className="sponsors__single"
-                style={{ backgroundImage: `url(${capital_factory})` }}
+                style={{ backgroundImage: `url(${capitalFactory})` }}
             />
         </section>
     );

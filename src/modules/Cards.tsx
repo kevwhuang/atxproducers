@@ -21,7 +21,7 @@ function Cards(): React.ReactElement {
             for (const e of res.data) {
                 e.stream ||= links.defaultStream;
                 e.stream = new URL(e.stream);
-                e.photo ||= links.defaultProducer;
+                e.photo ||= links.imageProducer;
                 e.photo = new URL(e.photo);
                 e.spotlight = new Date(e.spotlight);
                 for (const social in e.socials) {

@@ -14,7 +14,7 @@ function Introduction(): React.ReactElement {
             <div className="introduction__sponsors">
                 <span>{texts.sponsorCapitalFactory}</span>
                 &nbsp;
-                <a href={links.capitalFactory}>click here</a>
+                <a href={links.sponsorCapitalFactory}>click here</a>
                 <span>.</span>
             </div>
         </section>
