@@ -17,7 +17,7 @@ function Meetups({ period }: { period: string }): React.ReactElement {
             for (const e of res.data) {
                 e.date = new Date(e.date);
                 e.page = new URL(e.page);
-                e.image ||= links.defaultMeetup;
+                e.image ||= links.imageMeetup;
                 e.image = new URL(e.image);
             }
             res.data.sort((a: Meetup, b: Meetup) => (a.date < b.date ? -1 : 1));

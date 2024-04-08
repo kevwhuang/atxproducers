@@ -81,7 +81,7 @@ function Hero(): React.ReactElement {
     }, []);
 
     return (
-        <header className="hero" style={{ backgroundImage: `url(${links.hero})` }}>
+        <header className="hero" style={{ backgroundImage: `url(${links.imageHero})` }}>
             {init &&
                 <Particles
                     id="tsparticles"

@@ -17,7 +17,7 @@ function Spotlight(): React.ReactElement {
             }
             producer.stream ||= links.defaultStream;
             producer.stream = new URL(producer.stream);
-            producer.photo ||= links.defaultProducer;
+            producer.photo ||= links.imageSpotlight;
             producer.photo = new URL(producer.photo);
             setFeature(producer);
         }());

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Divide as Hamburger } from 'hamburger-react';
 
-import logo from '../assets/images/logo.png';
+import logo from '../assets/logo.png';
 
 import '../styles/modules/Navbar.scss';
 
