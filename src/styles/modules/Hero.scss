@@ -7,11 +7,19 @@
     top: -50px;
     z-index: -100;
 
+    .hero__particles {
+        height: 450px;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+    }
+
     .hero__header {
         left: 50%;
         position: relative;
         text-align: center;
         top: 50%;
         transform: translate(-50%, -50%);
+        user-select: none;
     }
 }

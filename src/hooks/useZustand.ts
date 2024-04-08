@@ -50,7 +50,7 @@ const initialize: ZustandState = {
         },
     },
     sort: {
-        alias: false,
+        alias: true,
         name: false,
         prev: true,
     },

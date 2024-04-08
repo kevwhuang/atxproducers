@@ -1,5 +1,16 @@
 @use '../_root' as *;
 
 .sponsors {
-    height: 200px;
+    background: $color-2;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    padding: 50px 100px;
+
+    .sponsors__single {
+        background-size: contain;
+        filter: invert(1);
+        height: 150px;
+        width: 150px;
+    }
 }
