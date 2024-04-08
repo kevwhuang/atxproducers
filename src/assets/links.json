@@ -1,9 +1,10 @@
 {
+    "capitalFactory": "https://capital-factory.officernd.com/signup?office=5d1bcda0dbd6e40010479eec",
     "defaultDownload": "https://mediafire.com/file/4fijmhv7ba2bpmm/AED1_Kicks.zip",
     "defaultMeetup": "https://images.unsplash.com/photo-1633294666093-ab54f43a947a?w=500",
     "defaultProducer": "https://images.unsplash.com/photo-1580321187070-da8bdee36013?w=500",
     "defaultStream": "https://soundcloud.com/auraphonics/kicks",
     "hero": "https://images.unsplash.com/photo-1594623930572-300a3011d9ae",
-    "soundcloud": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1466044633&color=%23233044",
-    "spotify": "https://open.spotify.com/embed/playlist/2RrQr63ODIQQYbQyfpX5hG?theme=0"
+    "soundcloud": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1806163063&color=%23233044",
+    "spotify": "https://open.spotify.com/embed/playlist/1C6RBmscOMwLiEkdHgrfFi?theme=0"
 }

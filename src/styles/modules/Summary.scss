@@ -2,11 +2,10 @@
 
 .summary {
     padding: 0 100px 50px;
+    text-align: center;
 
     .summary__header {
-        margin: 0 auto 25px;
-        text-align: center;
-        width: fit-content;
+        margin-bottom: 25px;
     }
 
     .summary__content {

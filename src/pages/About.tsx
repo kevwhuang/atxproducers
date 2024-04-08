@@ -8,8 +8,8 @@ import Sponsors from '../modules/Sponsors';
 function About(): React.ReactElement {
     return (
         <main id="about">
-            <Sponsors />
             <Introduction />
+            <Sponsors />
             <Carousel />
             <Helmet>
                 <title>APA | About</title>

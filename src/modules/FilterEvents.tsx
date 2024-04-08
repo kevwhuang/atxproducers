@@ -9,8 +9,11 @@ function FilterEvents(): React.ReactElement {
 
     function handleClick(e: React.MouseEvent): void {
         if (!(e.target instanceof HTMLElement)) return;
+        for (const key in events) {
+            events[key as keyof typeof events] = false;
+        }
         const key = e.target.innerText!.toLowerCase() as keyof typeof events;
-        events[key] = !events[key];
+        events[key] = true;
         updateEvents({ ...events });
     }
 
