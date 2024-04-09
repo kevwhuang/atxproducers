@@ -12,7 +12,11 @@ function Navbar(): React.ReactElement {
 
     return (
         <nav className="navbar">
-            <Link className="navbar__logo" to="/">
+            <Link
+                className="navbar__logo"
+                to="/"
+                onClick={() => setOpen(false)}
+            >
                 <img src={logo} alt="Logo" />
             </Link>
             <div className="navbar__pages">
@@ -32,11 +36,11 @@ function Navbar(): React.ReactElement {
             </div>
             {open &&
                 <div className="navbar__pages--mobile">
-                    <Link to="/">Home</Link>
-                    <Link to="about">About</Link>
-                    <Link to="producers">Producers</Link>
-                    <Link to="events">Events</Link>
-                    <Link to="live">Live</Link>
+                    <Link to="/" onClick={() => setOpen(false)}>Home</Link>
+                    <Link to="about" onClick={() => setOpen(false)}>About</Link>
+                    <Link to="producers" onClick={() => setOpen(false)}>Producers</Link>
+                    <Link to="events" onClick={() => setOpen(false)}>Events</Link>
+                    <Link to="live" onClick={() => setOpen(false)}>Live</Link>
                 </div>
             }
         </nav>

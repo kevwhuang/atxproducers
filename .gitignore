@@ -1,6 +1,7 @@
 .env
 bun.lockb
 todo.txt
+package-lock.json
 **/.DS_Store
 .netlify/
 .vscode/

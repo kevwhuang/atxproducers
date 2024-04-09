@@ -1,0 +1,8 @@
+{
+    "id": 7,
+    "type": "midi",
+    "name": "Gatekeeper",
+    "difficulty": "medium",
+    "preview": "https://res.cloudinary.com/atxproducers/video/upload/f_auto:video,q_auto/resources/gatekeeper.wav",
+    "download": "https://res.cloudinary.com/atxproducers/video/upload/f_auto:video,q_auto/resources/gatekeeper_midi.midi"
+}
