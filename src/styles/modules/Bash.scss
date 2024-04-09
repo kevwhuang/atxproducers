@@ -49,22 +49,21 @@
                     }
                 }
 
-                a {
-                    svg {
-                        font-size: $font-4;
-                        height: 100%;
-                        transition:
-                            color 200ms,
-                            scale 200ms,
-                        ;
+                svg {
+                    cursor: pointer;
+                    font-size: $font-4;
+                    height: 100%;
+                    transition:
+                        color 200ms,
+                        scale 200ms,
+                    ;
 
-                        &:hover {
-                            color: $color-4;
-                        }
+                    &:hover {
+                        color: $color-4;
+                    }
 
-                        &:active {
-                            scale: .9;
-                        }
+                    &:active {
+                        scale: .9;
                     }
                 }
             }

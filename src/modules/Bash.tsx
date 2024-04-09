@@ -10,7 +10,17 @@ import links from '../assets/links.json';
 import '../styles/modules/Bash.scss';
 
 function Bash(): React.ReactElement {
+    const audio = React.useRef<HTMLAudioElement>(null);
+    const source = React.useRef<HTMLSourceElement>(null);
     const [resources, setResources] = React.useState([]);
+
+    function handleClick(e: React.MouseEvent): void {
+        if (!(audio.current instanceof HTMLAudioElement)) return;
+        if (!(source.current instanceof HTMLSourceElement)) return;
+        source.current.src = e.currentTarget.getAttribute('data-preview') as string;
+        audio.current.load();
+        audio.current.play();
+    }
 
     React.useEffect(() => {
         (async function () {
@@ -47,9 +57,11 @@ function Bash(): React.ReactElement {
                             <td>{e.name}</td>
                             <td className={e.difficulty}>{capitalizeResource(e.difficulty)}</td>
                             <td>
-                                <a href={e.preview.href}>
-                                    <Icon icon="material-symbols:play-circle-outline" />
-                                </a>
+                                <Icon
+                                    icon="material-symbols:play-circle-outline"
+                                    data-preview={e.preview.href}
+                                    onClick={handleClick}
+                                />
                             </td>
                             <td>
                                 <a href={e.download.href}>
@@ -60,6 +72,9 @@ function Bash(): React.ReactElement {
                     ))}
                 </tbody>
             </table>
+            <audio className="bash__audio" ref={audio}>
+                <source type="audio/wav" ref={source} />
+            </audio>
         </section>
     );
 }
