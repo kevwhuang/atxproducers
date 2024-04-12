@@ -45,7 +45,7 @@ function Submit(): React.ReactElement {
                     required
                     onChange={e => setInputText(e.target.value)}
                 />
-                <button type="submit">Submit</button>
+                <button>Submit</button>
             </form>
             <Toaster gutter={10} />
         </section>

@@ -5,7 +5,7 @@
     "credits": [],
     "stream": "https://open.spotify.com/track/2bxFrDX5nRxg1eGjy3Q2pc",
     "photo": "https://res.cloudinary.com/atxproducers/image/upload/q_auto/f_auto/c_scale,h_150,w_150/producers/asher_nu.webp",
-    "speaker": false,
+    "speaker": true,
     "admin": true,
     "spotlight": "",
     "socials": {

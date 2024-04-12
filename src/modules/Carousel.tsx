@@ -2,18 +2,12 @@ import React from 'react';
 
 import ImageGallery, { type ReactImageGalleryItem } from 'react-image-gallery';
 
-import 'react-image-gallery/styles/css/image-gallery.css';
-import '../styles/modules/Carousel.scss';
+import gallery from '../assets/gallery.json';
 
-const items: ReactImageGalleryItem[] | any = [
-    'lonely_child_1',
-    'henyx_1',
-    'henyx_2',
-    'den_zuko_1',
-    'den_zuko_2',
-    'producer_bash_1',
-    'producer_bash_2',
-];
+import '../styles/modules/Carousel.scss';
+import 'react-image-gallery/styles/css/image-gallery.css';
+
+const items: ReactImageGalleryItem[] | any = gallery;
 
 for (let i = 0; i < items.length; i++) {
     const base = 'https://res.cloudinary.com/atxproducers/image/upload';
