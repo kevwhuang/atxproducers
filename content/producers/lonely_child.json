@@ -7,7 +7,7 @@
         "Jefferson Clay",
         "Middlespoon"
     ],
-    "stream": "",
+    "stream": "https://open.spotify.com/track/6NgFdt2XvqRacjK0BPgMi8",
     "photo": "",
     "speaker": true,
     "admin": false,
@@ -24,7 +24,7 @@
     "services": {
         "production": true,
         "beatmaking": false,
-        "musician": true,
+        "musician": false,
         "singing": false,
         "songwriting": true,
         "recording": true,
@@ -37,7 +37,7 @@
         "teaching": false
     },
     "workstations": {
-        "protools": false,
+        "protools": true,
         "ableton": false,
         "flstudio": false,
         "logic": true,

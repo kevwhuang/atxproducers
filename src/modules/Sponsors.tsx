@@ -8,7 +8,7 @@ function Sponsors(): React.ReactElement {
     return (
         <section className="sponsors">
             <div
-                className="sponsors__single"
+                className="sponsors__sponsor"
                 style={{ backgroundImage: `url(${capitalFactory})` }}
             />
         </section>

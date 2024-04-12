@@ -24,11 +24,11 @@ const options: ISourceOptions = {
         },
         modes: {
             push: {
-                quantity: 2,
+                quantity: 1,
             },
             repulse: {
-                distance: 100,
-                duration: .5,
+                distance: 20,
+                duration: 1,
             },
         },
     },
@@ -89,7 +89,7 @@ function Hero(): React.ReactElement {
                     options={options}
                 />
             }
-            <h1 className="hero__header" >Austin Producer Alliance</h1>
+            <h1 className="hero__header">Austin Producer Alliance</h1>
         </header>
     );
 }

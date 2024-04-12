@@ -7,7 +7,7 @@
     ],
     "stream": "https://soundcloud.com/auraphonics/september",
     "photo": "https://res.cloudinary.com/atxproducers/image/upload/q_auto/f_auto/c_scale,h_150,w_150/producers/aephonics.webp",
-    "speaker": false,
+    "speaker": true,
     "admin": true,
     "spotlight": "",
     "socials": {

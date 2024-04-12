@@ -27,11 +27,6 @@
         "tslint": "tsc"
     },
     "dependencies": {
-        "cors": "*",
-        "dotenv": "*",
-        "express": "*",
-        "helmet": "*",
-        "mongodb": "*",
         "@iconify/react": "*",
         "@netlify/functions": "*",
         "@tsparticles/react": "*",
@@ -46,12 +41,14 @@
         "react-router-dom": "*",
         "swr": "*",
         "uuid": "*",
-        "zustand": "*"
+        "zustand": "*",
+        "cors": "*",
+        "dotenv": "*",
+        "express": "*",
+        "helmet": "*",
+        "mongodb": "*"
     },
     "devDependencies": {
-        "@types/bun": "*",
-        "@types/cors": "*",
-        "@types/express": "*",
         "@testing-library/jest-dom": "*",
         "@testing-library/react": "*",
         "@types/react": "*",
@@ -68,6 +65,9 @@
         "typescript": "*",
         "vite": "*",
         "vite-plugin-pwa": "*",
-        "vitest": "*"
+        "vitest": "*",
+        "@types/bun": "*",
+        "@types/cors": "*",
+        "@types/express": "*"
     }
 }
