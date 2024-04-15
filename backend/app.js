@@ -9,7 +9,7 @@ const port = process.env.PORT || 5000;
 const user = process.env.MONGO_USER;
 const password = process.env.MONGO_PASSWORD;
 const cluster = process.env.MONGO_CLUSTER;
-const api_args = process.env.MONGO_ARGS || 'retryWrites=true&w=majority'
+const api_args = process.env.MONGO_ARGS || 'retryWrites=true&w=majority';
 
 const mongo_uri = `mongodb+srv://${user}:${password}@${cluster}/?${api_args}`
 

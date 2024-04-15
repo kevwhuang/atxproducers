@@ -13,7 +13,7 @@
         "website": "https://thomasflanigan.com",
         "instagram": "https://instagram.com/material_soul",
         "tiktok": "",
-        "youtube": "",
+        "youtube": "https://www.youtube.com/@material-soul",
         "spotify": "",
         "soundcloud": ""
     },
@@ -30,7 +30,7 @@
         "editing": false,
         "synthesis": true,
         "live": false,
-        "teaching": false
+        "teaching": true
     },
     "workstations": {
         "protools": false,
