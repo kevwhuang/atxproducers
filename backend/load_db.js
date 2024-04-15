@@ -1,4 +1,5 @@
-// Current directory should be repo root
+// Do not use for production, this is a one-time script to load the database
+// Can be rerun to recover/update state for test DB
 const { MongoClient } = require('mongodb');
 require('dotenv').config();
 const fs = require('fs');
@@ -38,14 +39,17 @@ async function update_collection(collection_name) {
         const files = fs.readdirSync(`./content/${collection_name}`);
 
         for (const file of files) {
-            if (path.extname(file) === '.json') {
+            extension = path.extname(file);
+            if (extension === '.json') {
                 const filePath = path.join(`./content/${collection_name}`, file);
                 const jsonData = fs.readFileSync(filePath, { encoding: 'utf-8' });
                 const data = JSON.parse(jsonData);
 
-                const result = await collection.replacecOne(
-                    { _id: producerData._id },
-                    producerData,
+                // id is the filename, so be careful if you change filenames
+                // the overwrite portion of this could break in that case
+                const result = await collection.replaceOne(
+                    { _id: path.basename(file, extension)},
+                    data,
                     { upsert: true }
                 );
                 console.log(`Processed ${file}: ${result.upsertedCount ? 'Inserted' : 'Updated'}`);
