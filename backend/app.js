@@ -50,17 +50,17 @@ app.get('/submissions/:id', async (req, res) => {
     findDocumentById('submissions', req.params.id, res);
 });
 
-app.post('/producers', async (req, res) => {
+app.post ('/submissions', async (req, res) => {
     try {
         const database = client.db('atxproducers');
-        const producers = database.collection('producers');
-        const producerData = req.body;
-        const result = await producers.insertOne(producerData);
+        const submissions = database.collection('submissions');
+        const submissionData = req.body;
+        const result = await submissions.insertOne(submissionData);
 
         if (result.acknowledged) {
-            res.status(201).send('Producer added successfully');
+            res.status(201).send('Submission added successfully');
         } else {
-            res.status(400).send('Error adding producer');
+            res.status(400).send('Error adding submission');
         }
     } catch (error) {
         console.error(error);
