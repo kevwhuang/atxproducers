@@ -15,23 +15,23 @@ const mongo_uri = `mongodb+srv://${user}:${password}@${cluster}/?${api_args}`
 
 const client = new MongoClient(mongo_uri);
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
+app.listen(port, () => {
+    console.log(`App listening at http://localhost:${port}`);
 });
 
-app.get('/producers/:alias', async (req, res) => {
-    const alias = req.params.alias;
+app.get('/meetups/:id', async (req, res) => {
+    const eventId = req.params.id;
     try {
         await client.connect();
         const database = client.db('atxproducers');
-        const producers = database.collection('producers');
-        const query = { alias: alias };
-        const producer = await producers.findOne(query);
+        const meetups = database.collection('meetups');
+        const query = { _id: eventId };
+        const meetup = await meetups.findOne(query);
 
-        if (producer) {
-            res.json(producer);
+        if (meetup) {
+            res.json(meetup);
         } else {
-            res.status(500).send('Producer not found');
+            res.status(404).send('Meetup not found');
         }
     } catch (error) {
         console.error(error);
@@ -39,8 +39,64 @@ app.get('/producers/:alias', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+app.get('/producers/:id', async (req, res) => {
+    const producerId = req.params.id;
+    try {
+        await client.connect();
+        const database = client.db('atxproducers');
+        const producers = database.collection('producers');
+        const query = { _id: producerId };
+        const producer = await producers.findOne(query);
+
+        if (producer) {
+            res.json(producer);
+        } else {
+            res.status(404).send('Producer not found');
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error connecting to the database');
+    }
+});
+
+app.get('/resources/:id', async (req, res) => {
+    const resourceId = req.params.id;
+    try {
+        await client.connect();
+        const database = client.db('atxproducers');
+        const resources = database.collection('resources');
+        const query = { _id: resourceId };
+        const resource = await resources.findOne(query);
+
+        if (resource) {
+            res.json(resource);
+        } else {
+            res.status(404).send('Resource not found');
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error connecting to the database');
+    }
+});
+
+app.get('/submissions/:id', async (req, res) => {
+    const submissionId = req.params.id;
+    try {
+        await client.connect();
+        const database = client.db('atxproducers');
+        const submissions = database.collection('submissions');
+        const query = { _id: submissionId };
+        const submission = await submissions.findOne(query);
+
+        if (submission) {
+            res.json(submission);
+        } else {
+            res.status(404).send('Submission not found');
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error connecting to the database');
+    }
 });
 
 app.post('/producers', async (req, res) => {
