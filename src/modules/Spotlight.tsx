@@ -18,6 +18,7 @@ function Spotlight(): React.ReactElement {
             producer.stream ||= links.defaultStream;
             producer.stream = new URL(producer.stream);
             producer.photo ||= links.imageSpotlight;
+            producer.photo = producer.photo.replaceAll('150', '1000');
             producer.photo = new URL(producer.photo);
             setFeature(producer);
         }());
