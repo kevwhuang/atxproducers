@@ -1,5 +1,6 @@
 const Ajv = require('ajv');
 const addFormats = require('ajv-formats');
+const xss = require('xss-clean');
 const express = require('express');
 const { MongoClient } = require('mongodb');
 const helmet = require('helmet');
@@ -10,7 +11,15 @@ require('dotenv').config();
 
 const app = express();
 app.use(express.json({ limit: '100kb'}));
-app.use(helmet());
+app.use(xss());
+app.use(helmet.contentSecurityPolicy({
+    directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "atxproducers.com"],
+        objectSrc: ["'none'"],
+        upgradeInsecureRequests: [],
+    }
+}));
 app.use(cors());
 
 const ajv = new Ajv({ allErrors: true });
