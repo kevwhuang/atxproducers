@@ -91,48 +91,21 @@ function loadDBSchema(filePath) {
     }
 }
 
-const validateId = environment !== 'production' ? ajv.compile(testIdSchema) : ajv.compile(idSchema);
-const validateDate = ajv.compile(dateSchema);
-const validateAlias = ajv.compile(aliasSchema);
-const dBschema = loadDBSchema(dbSchemaPath);
-const validatePost = ajv.compile(dBschema);
-
-function validateIdMiddleware(req, res, next) {
-    const valid = validateId({ id: req.params.id });
-    if (!valid) {
-        res.status(400).json(validateId.errors);
-        return;
-    }
-    next();
+function createValidator(validator) {
+    return function(req, res, next) {
+        const valid = validator(req.params);
+        if (!valid) {
+            res.status(400).json(validator.errors);
+            return;
+        }
+        next();
+    };
 }
 
-function validateDateMiddleware(req, res, next) {
-    const valid = validateDate({ date: req.params.date });
-    if (!valid) {
-        console.log("Date validation error")
-        res.status(400).json(validateDate.errors);
-        return;
-    }
-    next();
-}
-
-function validateAliasMiddleware(req, res, next) {
-    const valid = validateAlias({ alias: req.params.alias });
-    if (!valid) {
-        res.status(400).json(validateAlias.errors);
-        return;
-    }
-    next();
-}
-
-function validateInputMiddleware(req, res, next) {
-    const valid = validatePost(req.body);
-    if (!valid) {
-        res.status(400).json(validatePost.errors);
-        return;
-    }
-    next();
-}
+const validateId = createValidator(environment !== 'production' ? ajv.compile(testIdSchema) : ajv.compile(idSchema));
+const validateDate = createValidator(ajv.compile(dateSchema));
+const validateAlias = createValidator(ajv.compile(aliasSchema));
+const validateInput = createValidator(ajv.compile(loadDBSchema(dbSchemaPath)));
 
 async function findDocumentById(collectionName, id, res) {
     try {
@@ -221,31 +194,31 @@ app.get('/submissions', async (req, res) => {
     getAllInCollection('submissions', res);
 });
 
-app.get('/meetups/id/:id', validateIdMiddleware, async (req, res) => {
+app.get('/meetups/id/:id', validateId, async (req, res) => {
     findDocumentById('meetups', req.params.id, res);
 });
 
-app.get('/producers/id/:id', validateIdMiddleware, async (req, res) => {
+app.get('/producers/id/:id', validateId, async (req, res) => {
     findDocumentById('producers', req.params.id, res);
 });
 
-app.get('/resources/id/:id', validateIdMiddleware, async (req, res) => {
+app.get('/resources/id/:id', validateId, async (req, res) => {
     findDocumentById('resources', req.params.id, res);
 });
 
-app.get('/submissions/id/:id', validateIdMiddleware, async (req, res) => {
+app.get('/submissions/id/:id', validateId, async (req, res) => {
     findDocumentById('submissions', req.params.id, res);
 });
 
-app.get('/meetups/date/:date', validateDateMiddleware, async (req, res) => {
+app.get('/meetups/date/:date', validateDate, async (req, res) => {
     findDocumentByDate('meetups', req.params.date, res);
 });
 
-app.get('/producers/alias/:alias', validateAliasMiddleware, async (req, res) => {
+app.get('/producers/alias/:alias', validateAlias, async (req, res) => {
     getDocumentByAlias('producers', req.params.alias, res);
 });
 
-app.post('/resources', validateInputMiddleware, async (req, res) => {
+app.post('/resources', validateInput, async (req, res) => {
     try {
         const database = client.db(dbName);
         const resources = database.collection('resources');
@@ -263,7 +236,7 @@ app.post('/resources', validateInputMiddleware, async (req, res) => {
     }
 });
 
-app.post ('/submissions', validateInputMiddleware, async (req, res) => {
+app.post ('/submissions', validateInput, async (req, res) => {
     try {
         const database = client.db(dbName);
         const submissions = database.collection('submissions');
