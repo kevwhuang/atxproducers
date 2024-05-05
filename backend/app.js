@@ -1,25 +1,126 @@
+const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const express = require('express');
 const { MongoClient } = require('mongodb');
+const helmet = require('helmet');
 const cors = require('cors');
+const fs = require('fs');
+const path = require('path');
 require('dotenv').config();
 
 const app = express();
-app.use(express.json());
+app.use(express.json({ limit: '100kb'}));
+app.use(helmet());
 app.use(cors());
+
+const ajv = new Ajv({ allErrors: true });
+addFormats(ajv);
 
 const port = process.env.PORT || 5000;
 const user = process.env.MONGO_USER;
 const password = process.env.MONGO_PASSWORD;
 const cluster = process.env.MONGO_CLUSTER;
-const api_args = process.env.MONGO_ARGS || 'retryWrites=true&w=majority';
-const db_name = process.env.DATABASE_NAME || 'atxproducers';
+const apiArgs = process.env.MONGO_ARGS || 'retryWrites=true&w=majority';
+const dbName = process.env.DATABASE_NAME || 'atxproducers';
+const dbSchemaPath = process.env.DB_SCHEMA || 'schemas/collections.json';
+const environment = process.env.NODE_ENV || 'production';
 
-const mongo_uri = `mongodb+srv://${user}:${password}@${cluster}/?${api_args}`
+const mongo_uri = `mongodb+srv://${user}:${password}@${cluster}/?${apiArgs}`
 const client = new MongoClient(mongo_uri);
+
+const testIdSchema = {
+    type: "object",
+    properties: {
+        id: { type: "string", pattern: "^[0-9a-zA-Z_\.\-]+$" }
+    },
+    required: ["id"],
+    additionalProperties: false
+};
+
+const idSchema = {
+    type: "object",
+    properties: {
+        id: { type: "string", pattern: "^[0-9a-fA-F]{24}$" }
+    },
+    required: ["id"],
+    additionalProperties: false
+};
+
+const dateSchema = {
+    type: "object",
+    properties: {
+        date: { type: "string", format: "date-time" }
+    },
+    required: ["date"],
+    additionalProperties: false
+};
+
+const aliasSchema = {
+    type: "object",
+    properties: {
+        alias: { type: "string", pattern: "^[a-zA-Z0-9_\.\-]+$"}
+    },
+    required: ["alias"],
+    additionalProperties: false
+};
+
+function loadDBSchema(filePath) {
+    try{
+        const absPath = path.resolve(__dirname, '..', filePath);
+        const fileData = fs.readFileSync(absPath, 'utf8');
+        return JSON.parse(fileData);
+    } catch (error) {
+        console.error(error);
+        process.exit(1);
+    }
+}
+
+const validateId = environment !== 'production' ? ajv.compile(testIdSchema) : ajv.compile(idSchema);
+const validateDate = ajv.compile(dateSchema);
+const validateAlias = ajv.compile(aliasSchema);
+const dBschema = loadDBSchema(dbSchemaPath);
+const validatePost = ajv.compile(dBschema);
+
+function validateIdMiddleware(req, res, next) {
+    const valid = validateId({ id: req.params.id });
+    if (!valid) {
+        res.status(400).json(validateId.errors);
+        return;
+    }
+    next();
+}
+
+function validateDateMiddleware(req, res, next) {
+    const valid = validateDate({ date: req.params.date });
+    if (!valid) {
+        console.log("Date validation error")
+        res.status(400).json(validateDate.errors);
+        return;
+    }
+    next();
+}
+
+function validateAliasMiddleware(req, res, next) {
+    const valid = validateAlias({ alias: req.params.alias });
+    if (!valid) {
+        res.status(400).json(validateAlias.errors);
+        return;
+    }
+    next();
+}
+
+function validateInputMiddleware(req, res, next) {
+    const valid = validatePost(req.body);
+    if (!valid) {
+        res.status(400).json(validatePost.errors);
+        return;
+    }
+    next();
+}
 
 async function findDocumentById(collectionName, id, res) {
     try {
-        const database = client.db(db_name);
+        const database = client.db(dbName);
         const collection = database.collection(collectionName);
         const query = { _id: id };
         const document = await collection.findOne(query);
@@ -37,7 +138,7 @@ async function findDocumentById(collectionName, id, res) {
 
 async function findDocumentByDate(collectionName, date, res) {
     try {
-        const database = client.db(db_name);
+        const database = client.db(dbName);
         const collection = database.collection(collectionName);
         const query = { date: date };
         const document = await collection.findOne(query);
@@ -55,7 +156,7 @@ async function findDocumentByDate(collectionName, date, res) {
 
 async function getDocumentByAlias(collectionName, alias, res) {
     try {
-        const database = client.db(db_name);
+        const database = client.db(dbName);
         const collection = database.collection(collectionName);
         const query = { alias: alias };
         const document = await collection.findOne(query);
@@ -73,7 +174,7 @@ async function getDocumentByAlias(collectionName, alias, res) {
 
 async function getAllInCollection(collectionName, res) {
     try {
-        const database = client.db(db_name);
+        const database = client.db(dbName);
         const collection = database.collection(collectionName);
         const documents = await collection.find().toArray();
 
@@ -104,33 +205,33 @@ app.get('/submissions', async (req, res) => {
     getAllInCollection('submissions', res);
 });
 
-app.get('/meetups/id/:id', async (req, res) => {
+app.get('/meetups/id/:id', validateIdMiddleware, async (req, res) => {
     findDocumentById('meetups', req.params.id, res);
 });
 
-app.get('/producers/id/:id', async (req, res) => {
+app.get('/producers/id/:id', validateIdMiddleware, async (req, res) => {
     findDocumentById('producers', req.params.id, res);
 });
 
-app.get('/resources/id/:id', async (req, res) => {
+app.get('/resources/id/:id', validateIdMiddleware, async (req, res) => {
     findDocumentById('resources', req.params.id, res);
 });
 
-app.get('/submissions/id/:id', async (req, res) => {
+app.get('/submissions/id/:id', validateIdMiddleware, async (req, res) => {
     findDocumentById('submissions', req.params.id, res);
 });
 
-app.get('/meetups/date/:date', async (req, res) => {
+app.get('/meetups/date/:date', validateDateMiddleware, async (req, res) => {
     findDocumentByDate('meetups', req.params.date, res);
 });
 
-app.get('/producers/alias/:alias', async (req, res) => {
+app.get('/producers/alias/:alias', validateAliasMiddleware, async (req, res) => {
     getDocumentByAlias('producers', req.params.alias, res);
 });
 
-app.post('/resources', async (req, res) => {
+app.post('/resources', validateInputMiddleware, async (req, res) => {
     try {
-        const database = client.db(db_name);
+        const database = client.db(dbName);
         const resources = database.collection('resources');
         const resourceData = req.body;
         const result = await resources.insertOne(resourceData);
@@ -146,9 +247,9 @@ app.post('/resources', async (req, res) => {
     }
 });
 
-app.post ('/submissions', async (req, res) => {
+app.post ('/submissions', validateInputMiddleware, async (req, res) => {
     try {
-        const database = client.db(db_name);
+        const database = client.db(dbName);
         const submissions = database.collection('submissions');
         const submissionData = req.body;
         const result = await submissions.insertOne(submissionData);
