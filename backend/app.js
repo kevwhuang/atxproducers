@@ -7,6 +7,7 @@ const helmet = require('helmet');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
+const { default: rateLimit } = require('express-rate-limit');
 require('dotenv').config();
 
 const app = express();
@@ -21,6 +22,12 @@ app.use(helmet.contentSecurityPolicy({
     }
 }));
 app.use(cors());
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100,
+    message: 'Too many requests from this IP, please try again after 15 minutes'
+});
+app.use(limiter);
 
 const ajv = new Ajv({ allErrors: true });
 addFormats(ajv);
