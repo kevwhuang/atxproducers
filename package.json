@@ -50,6 +50,7 @@
     "swr": "*",
     "typescript-json-schema": "^0.63.0",
     "uuid": "*",
+    "xss-clean": "^0.1.4",
     "zustand": "*"
   },
   "devDependencies": {
