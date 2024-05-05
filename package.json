@@ -38,6 +38,7 @@
     "cors": "*",
     "dotenv": "*",
     "express": "*",
+    "express-rate-limit": "^7.2.0",
     "hamburger-react": "*",
     "helmet": "^7.1.0",
     "mongodb": "*",
