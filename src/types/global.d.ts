@@ -1,4 +1,4 @@
-interface Meetup {
+export interface Meetup {
     date: Date;
     duration: number;
     location: string;
@@ -10,7 +10,7 @@ interface Meetup {
     image: URL;
 }
 
-interface Producer {
+export interface Producer {
     alias: string;
     name: string;
     bio: string;
@@ -76,7 +76,7 @@ interface Producer {
     };
 }
 
-interface Resource {
+export interface Resource {
     id: number;
     type: 'one shot' | 'loop' | 'patch' | 'midi';
     name: string;
@@ -85,7 +85,7 @@ interface Resource {
     download: URL;
 }
 
-interface Submission {
+export interface Submission {
     id: number;
     producer: string;
     title: string;

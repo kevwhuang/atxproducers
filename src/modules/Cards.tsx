@@ -10,6 +10,7 @@ import links from '../assets/links.json';
 import useZustand from '../hooks/useZustand';
 
 import '../styles/modules/Cards.scss';
+import type { Producer } from '../types/global';
 
 function Cards(): React.ReactElement {
     const [producers, setProducers] = React.useState([]);
