@@ -1,10 +1,10 @@
 {
     "alias": "Justin M",
     "name": "Justin Aquino",
-    "bio": "Justin M is a producer with two years of experience in house and dance music. He has released over 40 original tracks and remixes. Justin's most successful track has accumulated over 9,000 plays on YouTube and SoundCloud.",
+    "bio": "Justin M is a dance music DJ and producer. He has been making music since 2022, focusing on progressive house, melodic house, and trance. He has released dozens of original tracks and remixes. Justin's most successful track has accumulated over 26,000 plays on YouTube and SoundCloud.",
     "credits": [],
     "stream": "https://youtube.com/watch?v=GSNiW_xgqQQ",
-    "photo": "",
+    "photo": "https://res.cloudinary.com/atxproducers/image/upload/q_auto/f_auto/c_scale,h_150,w_150/producers/justin_m.webp",
     "speaker": true,
     "admin": false,
     "spotlight": "",
@@ -18,7 +18,7 @@
         "soundcloud": "https://soundcloud.com/justin-msc"
     },
     "services": {
-        "production": false,
+        "production": true,
         "beatmaking": false,
         "musician": false,
         "singing": false,
@@ -44,7 +44,7 @@
         "studioone": false
     },
     "genres": {
-        "electronic": false,
+        "electronic": true,
         "dance": true,
         "hiphop": false,
         "rnb": false,
