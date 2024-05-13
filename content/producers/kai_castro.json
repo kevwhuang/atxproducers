@@ -6,7 +6,7 @@
         "The Concourse Project",
         "Coconut Club"
     ],
-    "stream": "https://soundcloud.com/kaicastromusic/nosajgreene",
+    "stream": "https://soundcloud.com/kaicastromusic/knowyoubootleg",
     "photo": "",
     "speaker": true,
     "admin": false,
@@ -22,22 +22,22 @@
     },
     "services": {
         "production": true,
-        "beatmaking": false,
-        "musician": false,
+        "beatmaking": true,
+        "musician": true,
         "singing": false,
-        "songwriting": false,
+        "songwriting": true,
         "recording": false,
-        "mixing": false,
-        "mastering": false,
+        "mixing": true,
+        "mastering": true,
         "post": false,
-        "editing": false,
-        "synthesis": false,
+        "editing": true,
+        "synthesis": true,
         "live": false,
         "teaching": true
     },
     "workstations": {
         "protools": false,
-        "ableton": false,
+        "ableton": true,
         "flstudio": false,
         "logic": false,
         "garageband": false,
@@ -47,7 +47,7 @@
         "studioone": false
     },
     "genres": {
-        "electronic": false,
+        "electronic": true,
         "dance": true,
         "hiphop": false,
         "rnb": false,
