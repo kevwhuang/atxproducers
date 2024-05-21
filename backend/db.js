@@ -4,6 +4,7 @@ const { dbName } = require('./config');
 const { error } = require('console');
 
 let client;
+let dbInstance = null;
 const mongo_uri = `mongodb+srv://${user}:${password}@${cluster}/?${apiArgs}`
 const validateId = createValidator(stage !== 'production' ? ajv.compile(testIdSchema) : ajv.compile(idSchema));
 const validateDate = createValidator(ajv.compile(dateSchema));
@@ -11,11 +12,14 @@ const validateAlias = createValidator(ajv.compile(aliasSchema));
 const validateInput = createValidator(ajv.compile(loadDBSchema(dbSchemaPath)));
 
 async function connectToDatabase() {
-    if (!client) {
-        client = new MongoClient(mongo_uri);
-        await client.connect();
+    if (dbInstance) {
+        return dbInstance;
     }
-    return client;
+
+    client = new MongoClient(mongo_uri);
+    await client.connect();
+    dbInstance = client.db(dbName);
+    return dbInstance;
 }
 
 function loadDBSchema(filePath) {
@@ -42,8 +46,7 @@ function createValidator(validator) {
 
 async function findDocumentByDate(collectionName, date) {
     try {
-        const client = await connectToDatabase();
-        const database = client.db(dbName);
+        const database = await connectToDatabase();
         const collection = database.collection(collectionName);
         const query = { date: date };
         const document = await collection.findOne(query);
@@ -55,8 +58,7 @@ async function findDocumentByDate(collectionName, date) {
 
 async function findDocumentById(collectionName, id) {
     try {
-        const client = await connectToDatabase();
-        const database = client.db(dbName);
+        const database = await connectToDatabase();
         const collection = database.collection(collectionName);
         const query = { _id: id };
         const document = await collection.findOne(query);
@@ -68,8 +70,7 @@ async function findDocumentById(collectionName, id) {
 
 async function getDocumentByAlias(collectionName, alias) {
     try {
-        const client = await connectToDatabase();
-        const database = client.db(dbName);
+        const database = await connectToDatabase();
         const collection = database.collection(collectionName);
         const query = { alias: alias };
         const document = await collection.findOne(query);
@@ -81,8 +82,7 @@ async function getDocumentByAlias(collectionName, alias) {
 
 async function getAllInCollection(collectionName) {
     try {
-        const client = await connectToDatabase();
-        const database = client.db(dbName);
+        const database = await connectToDatabase();
         const collection = database.collection(collectionName);
         const documents = await collection.find().toArray();
         return documents;
@@ -92,8 +92,7 @@ async function getAllInCollection(collectionName) {
 }
 
 async function addDocumentToCollection(collectionName, document) {
-    const client = await connectToDatabase();
-    const database = client.db(dbName);
+    const database = await connectToDatabase();
     const collection = database.collection(collectionName);
     const result = await collection.insertOne(document);
     if (!result.acknowledged) {
