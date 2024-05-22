@@ -1,12 +1,10 @@
-const Ajv = require('ajv');
-const addFormats = require('ajv-formats');
 const xss = require('xss-clean');
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 const { default: rateLimit } = require('express-rate-limit');
 
-const { port, dbSchemaPath, stage } = require('./config');
+const { port } = require('./config');
 const { 
     connectToDatabase, 
     findDocumentByDate, 
@@ -20,7 +18,7 @@ const {
     validateAlias,
     validateInput
 } = require('./db');
-const { idSchema, testIdSchema, dateSchema, aliasSchema } = require('./schemas');
+
 
 async function startServer() {
     try {
@@ -54,9 +52,6 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 app.use(errorHandler);
-
-const ajv = new Ajv({ allErrors: true });
-addFormats(ajv);
 
 app.get('/meetups', async (req, res, next) => {
     getAllInCollection('meetups')

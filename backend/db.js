@@ -2,9 +2,17 @@ const path = require('path');
 const { MongoClient } = require('mongodb');
 const { dbName } = require('./config');
 const { error } = require('console');
+const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
+const fs = require('fs');
+
+const { idSchema, testIdSchema, dateSchema, aliasSchema } = require('./schemas');
+const { user, password, cluster, apiArgs, dbSchemaPath, stage } = require('./config');
 
 let client;
 let dbInstance = null;
+const ajv = new Ajv({ allErrors: true });
+addFormats(ajv);
 const mongo_uri = `mongodb+srv://${user}:${password}@${cluster}/?${apiArgs}`
 const validateId = createValidator(stage !== 'production' ? ajv.compile(testIdSchema) : ajv.compile(idSchema));
 const validateDate = createValidator(ajv.compile(dateSchema));
