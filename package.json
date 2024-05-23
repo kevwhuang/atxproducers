@@ -24,6 +24,7 @@
     "fe": "ntl dev",
     "generate:schemas": "bun x typescript-json-schema tsconfig.json '*' --include src/types/global.d.ts --out schemas/collections.json",
     "start": "NODE_ENV=production node backend/app.js",
+    "prebuild": "npm run generate:schemas",
     "test": "vitest",
     "tslint": "tsc"
   },
