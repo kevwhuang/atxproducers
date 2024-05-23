@@ -16,7 +16,7 @@ function Home(): React.ReactElement {
             <Meetups period="upcoming" />
             <Audio />
             <Helmet>
-                <title>APA | Home</title>
+                <title>Home | APA</title>
             </Helmet>
         </main>
     );

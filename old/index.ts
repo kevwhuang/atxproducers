@@ -8,6 +8,11 @@ import helmet from 'helmet';
 import path from 'path';
 import url from 'url';
 
+import { type Meetup } from '../src/types/global';
+import { type Producer } from '../src/types/global';
+import { type Resource } from '../src/types/global';
+import { type Submission } from '../src/types/global';
+
 type Arr = (Meetup | Producer | Resource | Submission)[];
 
 function logger(req: express.Request, _: express.Response, next: express.NextFunction): void {

@@ -1,6 +1,7 @@
 import axios, { type AxiosRequestConfig } from 'axios';
 import useSWR from 'swr';
-import type { Submission } from '../types/global';
+
+import { type Submission } from '../types/global.d';
 
 import links from '../assets/links.json';
 

@@ -8,7 +8,7 @@ function Unknown(): React.ReactElement {
         <main id="unknown">
             <h1>Unknown</h1>
             <Helmet>
-                <title>APA | Unknown</title>
+                <title>Unknown | APA</title>
             </Helmet>
         </main>
     );

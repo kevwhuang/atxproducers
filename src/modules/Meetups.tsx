@@ -3,9 +3,9 @@ import axios from 'axios';
 import { v4 as uuid } from 'uuid';
 
 import { parseDatetime } from '../utilities';
+import { type Meetup } from '../types/global.d';
 
 import links from '../assets/links.json';
-import type { Meetup } from '../types/global';
 
 import '../styles/modules/Meetups.scss';
 

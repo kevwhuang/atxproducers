@@ -8,7 +8,7 @@ function Fallback(): React.ReactElement {
         <main id="fallback">
             <h1>Fallback</h1>
             <Helmet>
-                <title>APA | Fallback</title>
+                <title>Fallback | APA</title>
             </Helmet>
         </main>
     );

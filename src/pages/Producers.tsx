@@ -10,7 +10,7 @@ function Producers(): React.ReactElement {
             <FilterProducers />
             <Cards />
             <Helmet>
-                <title>APA | Producers</title>
+                <title>Producers | APA</title>
             </Helmet>
         </main>
     );

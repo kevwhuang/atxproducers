@@ -6,7 +6,7 @@ Contributors: Kevin Huang, Thomas Flanigan
 
 Version: 1.0.0
 
-Date: May 1, 2024
+Date: July 1, 2024
 
 ## For Developers
 

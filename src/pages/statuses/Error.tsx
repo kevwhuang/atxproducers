@@ -8,7 +8,7 @@ function Error(): React.ReactElement {
         <main id="error">
             <h1>Error</h1>
             <Helmet>
-                <title>APA | Error</title>
+                <title>Error | APA</title>
             </Helmet>
         </main>
     );

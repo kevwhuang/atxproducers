@@ -42,14 +42,14 @@ const config = {
 const router = createBrowserRouter(createRoutesFromElements(
     <Route path="" element={<Display />} errorElement={<Error />}>
         <Route index element={<Home />} />
-        <Route path="home" element={<Navigate to="/" replace={true} />} />
-        <Route path="about" element={<About />} />
-        <Route path="producers" element={<Producers />} />
-        <Route path="events" element={<Events />} />
-        <Route path="live" element={<Live />} />
-        <Route path="fallback" element={<Fallback />} />
-        <Route path="error" element={<Error />} />
         <Route path="*" element={<Unknown />} />
+        <Route path="about" element={<About />} />
+        <Route path="error" element={<Error />} />
+        <Route path="events" element={<Events />} />
+        <Route path="fallback" element={<Fallback />} />
+        <Route path="home" element={<Navigate to="/" replace={true} />} />
+        <Route path="live" element={<Live />} />
+        <Route path="producers" element={<Producers />} />
     </Route>
 ));
 

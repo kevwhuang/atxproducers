@@ -12,7 +12,7 @@ function About(): React.ReactElement {
             <Sponsors />
             <Carousel />
             <Helmet>
-                <title>APA | About</title>
+                <title>About | APA</title>
             </Helmet>
         </main>
     );

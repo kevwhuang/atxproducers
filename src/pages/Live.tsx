@@ -18,7 +18,7 @@ function Live(): React.ReactElement {
             {module === 'submissions' && <Feedback />}
             {module === 'resources' && <Bash />}
             <Helmet>
-                <title>APA | Live</title>
+                <title>Live | APA</title>
             </Helmet>
         </main>
     );

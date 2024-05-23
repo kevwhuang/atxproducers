@@ -2,9 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import { Icon } from '@iconify/react';
 import { v4 as uuid } from 'uuid';
-import type { Resource } from '../types/global';
 
 import { capitalizeResource } from '../utilities';
+import { type Resource } from '../types/global.d';
 
 import links from '../assets/links.json';
 

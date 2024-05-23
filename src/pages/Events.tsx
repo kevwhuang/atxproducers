@@ -16,7 +16,7 @@ function Events(): React.ReactElement {
             {filter.upcoming && <Meetups period="upcoming" />}
             {filter.future && <Meetups period="future" />}
             <Helmet>
-                <title>APA | Events</title>
+                <title>Events | APA</title>
             </Helmet>
         </main>
     );

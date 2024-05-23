@@ -74,7 +74,7 @@ function Hero(): React.ReactElement {
     const [init, setInit] = React.useState(false);
 
     React.useEffect(() => {
-        initParticlesEngine(async engine => {
+        initParticlesEngine(async (engine: any) => {
             await loadSlim(engine);
             setInit(true);
         });

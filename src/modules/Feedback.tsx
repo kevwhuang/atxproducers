@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid';
 
 import useAxios from '../hooks/useAxios';
 import { checkAuth } from '../utilities';
-import type { Submission } from '../types/global';
+import { type Submission } from '../types/global.d';
 
 import '../styles/modules/Feedback.scss';
 
