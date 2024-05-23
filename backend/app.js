@@ -34,6 +34,7 @@ async function startServer() {
 }
 
 const app = express();
+app.set('trust proxy', 1);
 app.use(express.json({ limit: '100kb'}));
 app.use(xss());
 app.use(helmet.contentSecurityPolicy({
@@ -53,67 +54,67 @@ const limiter = rateLimit({
 app.use(limiter);
 app.use(errorHandler);
 
-app.get('/meetups', async (req, res, next) => {
+app.get('/api/meetups', async (req, res, next) => {
     getAllInCollection('meetups')
         .then(data => res.json(data))
         .catch(next);
 });
 
-app.get('/producers', async (req, res, next) => {
+app.get('/api/producers', async (req, res, next) => {
     getAllInCollection('producers')
         .then(data => res.json(data))
         .catch(next);
 });
 
-app.get('/resources', async (req, res, next) => {
+app.get('/api/resources', async (req, res, next) => {
     getAllInCollection('resources')
         .then(data => res.json(data))
         .catch(next);
 });
 
-app.get('/submissions', async (req, res, next) => {
+app.get('/api/submissions', async (req, res, next) => {
     getAllInCollection('submissions')
         .then(data => res.json(data))
         .catch(next);
 });
 
-app.get('/meetups/id/:id', validateId, async (req, res, next) => {
+app.get('/api/meetups/id/:id', validateId, async (req, res, next) => {
     findDocumentById('meetups', req.params.id)
         .then(data => res.json(data))
         .catch(next);
 });
 
-app.get('/producers/id/:id', validateId, async (req, res, next) => {
+app.get('/api/producers/id/:id', validateId, async (req, res, next) => {
     findDocumentById('producers', req.params.id)
         .then(data => res.json(data))
         .catch(next);
 });
 
-app.get('/resources/id/:id', validateId, async (req, res, next) => {
+app.get('/api/resources/id/:id', validateId, async (req, res, next) => {
     findDocumentById('resources', req.params.id)
         .then(data => res.json(data))
         .catch(next);
 });
 
-app.get('/submissions/id/:id', validateId, async (req, res, next) => {
+app.get('/api/submissions/id/:id', validateId, async (req, res, next) => {
     findDocumentById('submissions', req.params.id)
         .then(data => res.json(data))
         .catch(next);
 });
 
-app.get('/meetups/date/:date', validateDate, async (req, res, next) => {
+app.get('/api/meetups/date/:date', validateDate, async (req, res, next) => {
     findDocumentByDate('meetups', req.params.date)
         .then(data => res.json(data))
         .catch(next);
 });
 
-app.get('/producers/alias/:alias', validateAlias, async (req, res, next) => {
+app.get('/api/producers/alias/:alias', validateAlias, async (req, res, next) => {
     getDocumentByAlias('producers', req.params.alias)
         .then(data => res.json(data))
         .catch(next);
 });
 
-app.post('/resources', validateInput, async (req, res, next) => {
+app.post('/api/resources', validateInput, async (req, res, next) => {
     try {
         const result = await addDocumentToCollection('resources', req.body);
         res.status(201).send('Resource added successfully');
@@ -122,7 +123,7 @@ app.post('/resources', validateInput, async (req, res, next) => {
     }
 });
 
-app.post ('/submissions', validateInput, async (req, res) => {
+app.post ('/api/submissions', validateInput, async (req, res) => {
     try {
         const result = await addDocumentToCollection('submissions', req.body);
         res.status(201).send('Submission added successfully');
