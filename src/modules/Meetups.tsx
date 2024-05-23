@@ -5,6 +5,7 @@ import { v4 as uuid } from 'uuid';
 import { parseDatetime } from '../utilities';
 
 import links from '../assets/links.json';
+import type { Meetup } from '../types/global';
 
 import '../styles/modules/Meetups.scss';
 

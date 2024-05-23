@@ -1,172 +1,28 @@
+const xss = require('xss-clean');
 const express = require('express');
-const { MongoClient } = require('mongodb');
+const helmet = require('helmet');
 const cors = require('cors');
-require('dotenv').config();
+const { default: rateLimit } = require('express-rate-limit');
 
-const app = express();
-app.use(express.json());
-app.use(cors());
+const { port } = require('./config');
+const { 
+    connectToDatabase, 
+    findDocumentByDate, 
+    findDocumentById, 
+    getDocumentByAlias, 
+    getAllInCollection,
+    addDocumentToCollection,
+    errorHandler,
+    validateId,
+    validateDate,
+    validateAlias,
+    validateInput
+} = require('./db');
 
-const port = process.env.PORT || 5000;
-const user = process.env.MONGO_USER;
-const password = process.env.MONGO_PASSWORD;
-const cluster = process.env.MONGO_CLUSTER;
-const api_args = process.env.MONGO_ARGS || 'retryWrites=true&w=majority';
-const db_name = process.env.DATABASE_NAME || 'atxproducers';
-
-const mongo_uri = `mongodb+srv://${user}:${password}@${cluster}/?${api_args}`
-const client = new MongoClient(mongo_uri);
-
-async function findDocumentById(collectionName, id, res) {
-    try {
-        const database = client.db(db_name);
-        const collection = database.collection(collectionName);
-        const query = { _id: id };
-        const document = await collection.findOne(query);
-
-        if (document) {
-            res.json(document);
-        } else {
-            res.status(404).send(`${collectionName.slice(0, -1)} ${id} not found`);
-        }
-    } catch {
-        console.error(error);
-        res.status(500).send(error);
-    }
-}
-
-async function findDocumentByDate(collectionName, date, res) {
-    try {
-        const database = client.db(db_name);
-        const collection = database.collection(collectionName);
-        const query = { date: date };
-        const document = await collection.findOne(query);
-
-        if (document) {
-            res.json(document);
-        } else {
-            res.status(404).send(`${collectionName.slice(0, -1)} on ${date} not found`);
-        }
-    } catch (error) {
-        console.error(error);
-        res.status(500).send(error);
-    }
-}
-
-async function getDocumentByAlias(collectionName, alias, res) {
-    try {
-        const database = client.db(db_name);
-        const collection = database.collection(collectionName);
-        const query = { alias: alias };
-        const document = await collection.findOne(query);
-
-        if (document) {
-            res.json(document);
-        } else {
-            res.status(404).send(`${collectionName.slice(0, -1)} ${alias} not found`);
-        }
-    } catch (error) {
-        console.error(error);
-        res.status(500).send(error);
-    }
-}
-
-async function getAllInCollection(collectionName, res) {
-    try {
-        const database = client.db(db_name);
-        const collection = database.collection(collectionName);
-        const documents = await collection.find().toArray();
-
-        if (documents.length > 0) {
-            res.json(documents);
-        } else {
-            res.status(404).send(`No ${collectionName} found`);
-        }
-    } catch (error) {
-        console.error(error);
-        res.status(500).send(error);
-    }
-}
-
-app.get('/meetups', async (req, res) => {
-    getAllInCollection('meetups', res);
-});
-
-app.get('/producers', async (req, res) => {
-    getAllInCollection('producers', res);
-});
-
-app.get('/resources', async (req, res) => {
-    getAllInCollection('resources', res);
-});
-
-app.get('/submissions', async (req, res) => {
-    getAllInCollection('submissions', res);
-});
-
-app.get('/meetups/id/:id', async (req, res) => {
-    findDocumentById('meetups', req.params.id, res);
-});
-
-app.get('/producers/id/:id', async (req, res) => {
-    findDocumentById('producers', req.params.id, res);
-});
-
-app.get('/resources/id/:id', async (req, res) => {
-    findDocumentById('resources', req.params.id, res);
-});
-
-app.get('/submissions/id/:id', async (req, res) => {
-    findDocumentById('submissions', req.params.id, res);
-});
-
-app.get('/meetups/date/:date', async (req, res) => {
-    findDocumentByDate('meetups', req.params.date, res);
-});
-
-app.get('/producers/alias/:alias', async (req, res) => {
-    getDocumentByAlias('producers', req.params.alias, res);
-});
-
-app.post('/resources', async (req, res) => {
-    try {
-        const database = client.db(db_name);
-        const resources = database.collection('resources');
-        const resourceData = req.body;
-        const result = await resources.insertOne(resourceData);
-
-        if (result.acknowledged) {
-            res.status(201).send('Resource added successfully');
-        } else {
-            res.status(400).send('Error adding resource');
-        }
-    } catch (error) {
-        console.error(error);
-        res.status(500).send(error);
-    }
-});
-
-app.post ('/submissions', async (req, res) => {
-    try {
-        const database = client.db(db_name);
-        const submissions = database.collection('submissions');
-        const submissionData = req.body;
-        const result = await submissions.insertOne(submissionData);
-
-        if (result.acknowledged) {
-            res.status(201).send('Submission added successfully');
-        } else {
-            res.status(400).send('Error adding submission');
-        }
-    } catch (error) {
-        console.error(error);
-        res.status(500).send(error);
-    }
-});
 
 async function startServer() {
     try {
-        await client.connect();
+        await connectToDatabase();
         console.log('Connected to MongoDB')
         app.listen(port, () => {
             console.log(`Server listening on port ${port}`);
@@ -176,5 +32,103 @@ async function startServer() {
         process.exit(1);
     }
 }
+
+const app = express();
+app.use(express.json({ limit: '100kb'}));
+app.use(xss());
+app.use(helmet.contentSecurityPolicy({
+    directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "atxproducers.com"],
+        objectSrc: ["'none'"],
+        upgradeInsecureRequests: [],
+    }
+}));
+app.use(cors());
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100,
+    message: 'Too many requests from this IP, please try again after 15 minutes'
+});
+app.use(limiter);
+app.use(errorHandler);
+
+app.get('/meetups', async (req, res, next) => {
+    getAllInCollection('meetups')
+        .then(data => res.json(data))
+        .catch(next);
+});
+
+app.get('/producers', async (req, res, next) => {
+    getAllInCollection('producers')
+        .then(data => res.json(data))
+        .catch(next);
+});
+
+app.get('/resources', async (req, res, next) => {
+    getAllInCollection('resources')
+        .then(data => res.json(data))
+        .catch(next);
+});
+
+app.get('/submissions', async (req, res, next) => {
+    getAllInCollection('submissions')
+        .then(data => res.json(data))
+        .catch(next);
+});
+
+app.get('/meetups/id/:id', validateId, async (req, res, next) => {
+    findDocumentById('meetups', req.params.id)
+        .then(data => res.json(data))
+        .catch(next);
+});
+
+app.get('/producers/id/:id', validateId, async (req, res, next) => {
+    findDocumentById('producers', req.params.id)
+        .then(data => res.json(data))
+        .catch(next);
+});
+
+app.get('/resources/id/:id', validateId, async (req, res, next) => {
+    findDocumentById('resources', req.params.id)
+        .then(data => res.json(data))
+        .catch(next);
+});
+
+app.get('/submissions/id/:id', validateId, async (req, res, next) => {
+    findDocumentById('submissions', req.params.id)
+        .then(data => res.json(data))
+        .catch(next);
+});
+
+app.get('/meetups/date/:date', validateDate, async (req, res, next) => {
+    findDocumentByDate('meetups', req.params.date)
+        .then(data => res.json(data))
+        .catch(next);
+});
+
+app.get('/producers/alias/:alias', validateAlias, async (req, res, next) => {
+    getDocumentByAlias('producers', req.params.alias)
+        .then(data => res.json(data))
+        .catch(next);
+});
+
+app.post('/resources', validateInput, async (req, res, next) => {
+    try {
+        const result = await addDocumentToCollection('resources', req.body);
+        res.status(201).send('Resource added successfully');
+    } catch (error) {
+        next(error);
+    }
+});
+
+app.post ('/submissions', validateInput, async (req, res) => {
+    try {
+        const result = await addDocumentToCollection('submissions', req.body);
+        res.status(201).send('Submission added successfully');
+    } catch (error) {
+        next(error);
+    }
+});
 
 startServer();
