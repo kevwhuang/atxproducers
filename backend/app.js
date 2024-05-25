@@ -116,7 +116,7 @@ app.get('/api/producers/alias/:alias', validateAlias, async (req, res, next) => 
 
 app.post('/api/resources', validateInput, async (req, res, next) => {
     try {
-        const result = await addDocumentToCollection('resources', req.body);
+        // const result = await addDocumentToCollection('resources', req.body);
         res.status(201).send('Resource added successfully');
     } catch (error) {
         next(error);
@@ -125,7 +125,7 @@ app.post('/api/resources', validateInput, async (req, res, next) => {
 
 app.post ('/api/submissions', validateInput, async (req, res) => {
     try {
-        const result = await addDocumentToCollection('submissions', req.body);
+        // const result = await addDocumentToCollection('submissions', req.body);
         res.status(201).send('Submission added successfully');
     } catch (error) {
         next(error);
