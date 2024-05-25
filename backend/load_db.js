@@ -36,6 +36,7 @@ async function update_collection(collection_name) {
     try {
         const database = client.db('atxproducers');
         const collection = database.collection(collection_name);
+        await collection.deleteMany({});
         const files = fs.readdirSync(`./content/${collection_name}`);
 
         for (const file of files) {
