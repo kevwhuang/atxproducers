@@ -7,12 +7,12 @@
     height: 50px;
 
     .footer__copyright {
-        font-size: $font-2;
+        font-size: $f2;
         font-weight: bold;
     }
 
     .footer__email {
-        font-size: $font-2;
+        font-size: $f2;
     }
 
     .footer__socials {
@@ -23,7 +23,7 @@
             display: flex;
 
             svg {
-                font-size: $font-3;
+                font-size: $f3;
             }
         }
     }

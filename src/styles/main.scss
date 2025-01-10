@@ -1,0 +1,67 @@
+@use '_root' as *;
+
+:root {
+    --c1: #1b2635;
+    --c2: #233044;
+    --c3: #407ad6;
+    --c4: #478e3d;
+    --c5: #f3f4f5;
+    --c6: #898e96;
+    --f1: 10.67px;
+    --f2: 16px;
+    --f3: 24px;
+    --f4: 36px;
+    --f5: 54px;
+    --f6: 81px;
+}
+
+a {
+    color: $c5;
+    transition: color 200ms;
+
+    &:visited {
+        color: $c5;
+    }
+
+    &:hover {
+        color: $c4;
+    }
+}
+
+button {
+    color: $c5;
+}
+
+h1 {
+    color: $c5;
+    font-size: $f6;
+}
+
+h2 {
+    color: $c5;
+    font-size: $f5;
+}
+
+h3 {
+    color: $c5;
+    font-size: $f4;
+}
+
+h4 {
+    color: $c5;
+    font-size: $f3;
+}
+
+html {
+    background: $c1;
+    color: $c5;
+    font-family: 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    height: 100dvh;
+    margin: auto;
+    max-width: 2560px;
+}
+
+p {
+    color: $c5;
+    font-size: $f3;
+}

@@ -1,0 +1,17 @@
+@use '../../_root' as *;
+
+#about .carousel {
+    padding: 50px 100px;
+
+    .carousel__gallery {
+        .image-gallery-content {
+            &:not(.fullscreen) {
+                .image-gallery-slide-wrapper {
+                    img {
+                        max-height: 500px;
+                    }
+                }
+            }
+        }
+    }
+}

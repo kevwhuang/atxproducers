@@ -1,112 +1,25 @@
-'use strict';
+import { eslint } from '@aephonics/config';
 
-import globals from 'globals';
-import typescriptParser from '@typescript-eslint/parser';
+const ignores = [
+    '',
+];
 
-const eslint = {
-    files: ['src/**/*.{ts,tsx}'],
-    ignores: ['src/types/**'],
-    languageOptions: {
-        parser: typescriptParser,
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        globals: {
-            ...globals.browser,
+const globals = [
+    '',
+];
+
+const overrides = [
+    {
+        files: ['**/*.{ts,tsx}'],
+        ignores: [...ignores],
+        rules: {
+            'no-undef': 0,
         },
     },
-    linterOptions: {
-        noInlineConfig: true,
-        reportUnusedDisableDirectives: true,
-    },
-    rules: {
-        'array-bracket-spacing': 2,
-        'array-callback-return': 2,
-        'arrow-parens': [2, 'as-needed'],
-        'arrow-spacing': 2,
-        'block-spacing': 2,
-        'brace-style': 2,
-        'camelcase': 2,
-        'class-methods-use-this': 2,
-        'comma-dangle': 0,
-        'comma-spacing': 2,
-        'comma-style': 2,
-        'computed-property-spacing': 2,
-        'default-param-last': 2,
-        'dot-notation': 0,
-        'eol-last': 2,
-        'eqeqeq': 2,
-        'func-call-spacing': 2,
-        'func-style': [2, 'declaration', { 'allowArrowFunctions': true }],
-        'function-paren-newline': 0,
-        'generator-star-spacing': 2,
-        'id-length': 0,
-        'implicit-arrow-linebreak': 2,
-        'indent': [2, 4, { SwitchCase: 1 }],
-        'key-spacing': 2,
-        'keyword-spacing': 2,
-        'max-len': [2, { code: 100 }],
-        'new-cap': [2, { newIsCapExceptionPattern: '^webkit' }],
-        'newline-per-chained-call': [2, { ignoreChainWithDepth: 4 }],
-        'no-array-constructor': 2,
-        'no-case-declarations': 2,
-        'no-confusing-arrow': 2,
-        'no-console': 2,
-        'no-const-assign': 2,
-        'no-dupe-class-members': 2,
-        'no-duplicate-imports': 2,
-        'no-else-return': 2,
-        'no-eval': 2,
-        'no-iterator': 2,
-        'no-loop-func': 2,
-        'no-mixed-operators': 2,
-        'no-multi-assign': 2,
-        'no-multiple-empty-lines': 2,
-        'no-nested-ternary': 2,
-        'no-new-func': 2,
-        'no-new-object': 2,
-        'no-new-wrappers': 2,
-        'no-param-reassign': 0,
-        'no-plusplus': 0,
-        'no-prototype-builtins': 2,
-        'no-restricted-globals': 2,
-        'no-restricted-properties': 2,
-        'no-restricted-syntax': 2,
-        'no-trailing-spaces': 2,
-        'no-undef': 0,
-        'no-underscore-dangle': 2,
-        'no-unneeded-ternary': 2,
-        'no-unsafe-optional-chaining': 2,
-        'no-unused-vars': 2,
-        'no-useless-constructor': 2,
-        'no-useless-escape': 2,
-        'no-var': 2,
-        'no-whitespace-before-property': 2,
-        'nonblock-statement-body-position': 2,
-        'object-curly-newline': 2,
-        'object-curly-spacing': [2, 'always'],
-        'object-shorthand': 2,
-        'one-var': [2, 'never'],
-        'operator-linebreak': 2,
-        'padded-blocks': [2, 'never'],
-        'prefer-arrow-callback': 2,
-        'prefer-const': 2,
-        'prefer-destructuring': [2, { array: false }],
-        'prefer-object-spread': 2,
-        'prefer-spread': 2,
-        'prefer-template': 2,
-        'quote-props': [2, 'as-needed'],
-        'quotes': [2, 'single'],
-        'radix': 2,
-        'react-hooks/exhaustive-deps': 0,
-        'semi': 2,
-        'space-before-blocks': 2,
-        'space-before-function-paren': [2, { anonymous: 'always', named: 'never' }],
-        'space-in-parens': 2,
-        'space-infix-ops': 2,
-        'spaced-comment': 2,
-        'template-curly-spacing': 2,
-        'wrap-iife': 2,
-    },
-};
+];
 
-export default [eslint];
+ignores.forEach(e => eslint[0].ignores.push(e));
+globals.forEach(e => (eslint[0].languageOptions.globals[e] = true));
+overrides.forEach(e => eslint.push(e));
+
+export default eslint;

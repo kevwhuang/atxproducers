@@ -1,0 +1,5 @@
+@use '../_root' as *;
+
+#live {
+    min-height: calc(100dvh - 50px - 50px);
+}

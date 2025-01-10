@@ -1,0 +1,54 @@
+@use '../../_root' as *;
+
+#producers .filter {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 50px 100px 75px;
+
+    button {
+        border: none;
+        margin: 0 5px 5px 0;
+        padding: 5px 10px;
+        transition: color 200ms;
+
+        &:hover {
+            color: $c4;
+        }
+
+        &.active {
+            background: $c2;
+        }
+
+        &.collapsed {
+            animation: collapse 500ms forwards;
+        }
+    }
+
+    .filter__group {
+        span {
+            background: $c2;
+            color: $c3;
+            cursor: pointer;
+            display: inline-block;
+            margin: 0 5px 5px 0;
+            padding: 5px 10px;
+        }
+    }
+
+    .filter__actions {
+        button {
+            background: $c2;
+            margin-bottom: 0;
+
+            &:disabled {
+                cursor: default;
+                opacity: .5;
+
+                &:hover {
+                    color: $c5;
+                }
+            }
+        }
+    }
+}

@@ -1,9 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 import { Divide as Hamburger } from 'hamburger-react';
 
-import logo from '../assets/logo.png';
+import logo from '../assets/images/logo.png';
 
 import '../styles/modules/Navbar.scss';
 
@@ -17,8 +17,9 @@ function Navbar(): React.ReactElement {
                 to="/"
                 onClick={() => setOpen(false)}
             >
-                <img src={logo} alt="Logo" />
+                <img alt="Logo" src={logo} />
             </Link>
+
             <div className="navbar__pages">
                 <Link to="/">Home</Link>
                 <Link to="about">About</Link>
@@ -26,15 +27,18 @@ function Navbar(): React.ReactElement {
                 <Link to="events">Events</Link>
                 <Link to="live">Live</Link>
             </div>
+
             <div className="navbar__hamburger">
                 <Hamburger
-                    toggled={open}
-                    rounded
                     label="Menu"
+                    rounded
                     toggle={setOpen}
+                    toggled={open}
                 />
             </div>
-            {open &&
+
+            {
+                open &&
                 <div className="navbar__pages--mobile">
                     <Link to="/" onClick={() => setOpen(false)}>Home</Link>
                     <Link to="about" onClick={() => setOpen(false)}>About</Link>

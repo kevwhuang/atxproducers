@@ -1,14 +1,10 @@
 [build]
 command = 'npm run build'
-functions = 'functions'
 publish = 'dist'
 
 [dev]
 port = 4000
 targetPort = 3000
-
-[functions]
-node_bundler = 'esbuild'
 
 [[headers]]
 for = '/*'
@@ -19,7 +15,7 @@ X-Content-Type-Options = 'nosniff'
 X-Frame-Options = 'SAMEORIGIN'
 
 [[headers]]
-for = '/assets/*'
+for = '/public/*'
 [headers.values]
 cache-control = '''
     max-age=31536000

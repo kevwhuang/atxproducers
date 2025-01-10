@@ -1,0 +1,16 @@
+@use '../../_root' as *;
+
+#about .sponsors {
+    background: $c2;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    padding: 50px 100px;
+
+    .sponsors__sponsor {
+        background-size: contain;
+        filter: invert(1);
+        height: 150px;
+        width: 150px;
+    }
+}

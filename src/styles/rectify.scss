@@ -321,10 +321,11 @@ iframe {
 }
 
 img {
-    display: inline-block;
+    display: block;
     max-width: 100%;
     overflow: initial;
     overflow-clip-margin: initial;
+    user-select: none;
 }
 
 input {
@@ -621,6 +622,16 @@ sup {
     display: inline;
     font-size: 1rem;
     vertical-align: 0;
+}
+
+svg {
+    path {
+        fill: currentColor;
+
+        &:hover {
+            fill: currentColor;
+        }
+    }
 }
 
 table {

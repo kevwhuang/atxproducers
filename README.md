@@ -1,15 +1,5 @@
 # Austin Producer Alliance
 
-[ATX Producers™](https://atxproducers.com) is the home of Austin Producer Alliance, a community for music producers in Austin.
+Authors: Kevin Huang, Thomas Flanigan
 
-Contributors: Kevin Huang, Thomas Flanigan
-
-Version: 1.0.0
-
-Date: July 1, 2024
-
-## For Developers
-
-- Run <code>curl -fsSL https://bun.sh/install | bash</code> to install Bun.
-- Run <code>bun i</code> to install dependencies.
-- Run <code>bun fe</code> to initiate local front-end server.
+Version: 25.1.10

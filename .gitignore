@@ -1,9 +1,4 @@
 .env
-bun.lockb
-package-lock.json
 **/.DS_Store
-.netlify/
-.vscode/
 dist/
 node_modules/
-schemas/

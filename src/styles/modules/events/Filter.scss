@@ -1,0 +1,23 @@
+@use '../../_root' as *;
+
+#events .filter {
+    display: flex;
+    gap: 15px;
+    padding: 50px 100px;
+
+    button {
+        border: none;
+        margin: 0 5px 5px 0;
+        padding: 5px 10px;
+        transition: color 200ms;
+
+        &:hover {
+            color: $c4;
+        }
+
+        &.active {
+            background: $c2;
+        }
+    }
+
+}

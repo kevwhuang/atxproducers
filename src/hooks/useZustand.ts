@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-const initialize: ZustandState = {
+const init: ZustandState = {
     module: 'submissions',
     producers: {
         services: {
@@ -62,11 +62,11 @@ const initialize: ZustandState = {
 };
 
 const useZustand = create<ZustandActions & ZustandState>(set => ({
+    ...init,
     changeModule: module => set(() => ({ module })),
     updateProducers: producers => set(() => ({ producers })),
     updateSort: sort => set(() => ({ sort })),
     updateEvents: events => set(() => ({ events })),
-    ...initialize,
 }));
 
 export default useZustand;

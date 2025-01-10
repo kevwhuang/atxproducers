@@ -1,0 +1,132 @@
+@use '../../_root' as *;
+
+#producers .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 75px 50px;
+    justify-content: center;
+    padding: 0 100px 50px;
+
+    .cards__producer {
+        background: $c2;
+        display: grid;
+        grid-template-rows: 85px;
+        height: 500px;
+        padding: 20px;
+        width: 300px;
+
+        .cards__producer--photo {
+            background-size: cover;
+            border-radius: 50%;
+            height: 125px;
+            position: relative;
+            top: -50px;
+            transition: scale 200ms;
+            width: 125px;
+
+            &:hover {
+                scale: 1.15;
+            }
+
+            &.glow {
+                box-shadow: 0 0 20px 0 $c3;
+            }
+        }
+
+        .cards__producer--identity {
+            margin-bottom: 10px;
+
+            h3 {
+                font-weight: normal;
+
+                &.speaker {
+                    color: gold;
+                }
+            }
+
+            p {
+                font-size: $f2;
+            }
+        }
+
+        .cards__producer--container {
+            margin-bottom: 10px;
+            mask-image: linear-gradient(180deg, black 80%, transparent);
+            overflow-y: scroll;
+
+            &:hover {
+                mask-image: none;
+
+                &::-webkit-scrollbar-thumb {
+                    border-right: 1px solid $c5;
+                }
+            }
+
+            &::-webkit-scrollbar {
+                width: 4px;
+            }
+
+            .cards__producer--container--info {
+                min-height: 100%;
+
+                p {
+                    color: $c6;
+                    font-size: $f2;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .cards__producer--container--group {
+                p {
+                    font-size: $f2;
+                    font-weight: bold;
+                    margin: 5px 0;
+                }
+
+                div {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    span {
+                        background: $c1;
+                        margin: 0 5px 5px 0;
+                        padding: 2.5px 7.5px;
+                    }
+                }
+            }
+        }
+
+        .cards__producer--socials {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 10px;
+
+            a {
+                display: flex;
+
+                svg {
+                    font-size: $f3;
+                    transition: scale 200ms;
+
+                    &:active {
+                        scale: .9;
+                    }
+                }
+            }
+        }
+
+        .cards__producer--stream {
+            a {
+                background: $c1;
+                display: block;
+                padding: 5px 0;
+                text-align: center;
+
+                &:hover {
+                    animation: hover 500ms 200ms ease-in-out infinite alternate;
+                }
+            }
+        }
+    }
+}

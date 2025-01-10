@@ -1,0 +1,71 @@
+@use '_root' as *;
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        display: grid;
+        grid-template-areas:
+            'logo . hamburger'
+            'pages pages pages'
+        ;
+        position: relative;
+        z-index: 100;
+
+        .navbar__logo {
+            grid-area: logo;
+        }
+
+        .navbar__pages {
+            display: none;
+        }
+
+        .navbar__hamburger {
+            display: block;
+            grid-area: hamburger;
+        }
+
+        .navbar__pages--mobile {
+            align-items: end;
+            display: flex;
+            flex-direction: column;
+            grid-area: pages;
+
+            a {
+                background: $c2;
+                padding: 5px 20px;
+                text-align: right;
+                width: 150px;
+            }
+        }
+    }
+
+    #home {
+        .summary {
+            padding: 0 25px 50px;
+        }
+
+        .spotlight {
+            grid-template-areas:
+                'header'
+                'bio'
+                'stream'
+            ;
+            grid-template-columns: auto;
+            padding: 50px 25px;
+
+            .spotlight__photo {
+                display: none;
+            }
+        }
+
+        .meetups {
+            .meetups__meetup {
+                display: block;
+                padding: 0 25px 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 200px) {}
+
+@media screen and (orientation: landscape) {}

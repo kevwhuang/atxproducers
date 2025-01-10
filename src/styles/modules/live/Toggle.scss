@@ -1,0 +1,34 @@
+@use '../../_root' as *;
+
+#live .toggle {
+    align-items: center;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    padding: 50px;
+
+    button {
+        background: $c2;
+        border: none;
+        border-bottom: 1px solid transparent;
+        border-radius: 50px;
+        font-size: $f4;
+        padding: 25px 50px;
+        transition:
+            border-bottom-color 200ms,
+            color 200ms,
+        ;
+
+        &:not(.active) {
+            &:hover {
+                border-bottom-color: $c4;
+                color: $c4;
+            }
+        }
+
+        &.active {
+            border-bottom-color: $c3;
+            color: $c3;
+        }
+    }
+}

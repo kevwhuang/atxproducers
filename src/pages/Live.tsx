@@ -1,25 +1,26 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-import Bash from '../modules/Bash';
-import Feedback from '../modules/Feedback';
-import Submit from '../modules/Submit';
-import Toggle from '../modules/Toggle';
+import Bash from '../modules/live/Bash';
+import Feedback from '../modules/live/Feedback';
+import Submit from '../modules/live/Submit';
+import Toggle from '../modules/live/Toggle';
 
 import useZustand from '../hooks/useZustand';
 
+import '../styles/pages/Live.scss';
+
 function Live(): React.ReactElement {
+    scroll(0, 0);
+
     const module = useZustand(s => s.module);
 
     return (
         <main id="live">
+            <title>Live | APA</title>
             <Toggle />
             {module === 'submissions' && <Submit />}
             {module === 'submissions' && <Feedback />}
             {module === 'resources' && <Bash />}
-            <Helmet>
-                <title>Live | APA</title>
-            </Helmet>
         </main>
     );
 }

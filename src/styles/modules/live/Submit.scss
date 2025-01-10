@@ -1,0 +1,39 @@
+@use '../../_root' as *;
+
+#live .submit {
+    padding: 0 100px 50px;
+
+    .submit__form {
+        display: grid;
+        grid-template-columns: 1fr auto;
+
+        input {
+            border-color: $c6;
+            font-size: $f4;
+            margin-right: 25px;
+            padding: 15px 30px;
+            transition: border-color 200ms;
+
+            &:focus {
+                border-color: $c5;
+                outline: none;
+            }
+
+            &::placeholder {
+                color: $c6;
+            }
+        }
+
+        button {
+            background: $c2;
+            border: none;
+            font-size: $f4;
+            padding: 15px 30px;
+            transition: color 200ms;
+
+            &:hover {
+                color: $c4;
+            }
+        }
+    }
+}

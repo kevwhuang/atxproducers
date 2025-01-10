@@ -1,22 +1,22 @@
-// * { animation: none !important; opacity: 1 !important; transition: none !important; }
-// * { background: white !important; border-color: black !important; box-shadow: none !important; color: black !important; filter: grayscale(100%) !important; text-shadow: none !important; }
+// * { animation: none !important; transition: none !important; }
+// * { background: #fff !important; border-color: #000 !important; box-shadow: none !important; color: #000 !important; filter: grayscale(100%) !important; text-shadow: none !important; }
 // * { font-family: sans-serif !important; }
 // * { user-select: all !important; }
 
-// .audio { display: none; }
-// .bash { display: none; }
-// .cards { display: none; }
-// .carousel { display: none; }
-// .feedback { display: none; }
-// .filter-events { display: none; }
-// .filter-producers { display: none; }
 // .footer { display: none; }
-// .hero { display: none; }
-// .introduction { display: none; }
-// .meetups { display: none; }
 // .navbar { display: none; }
-// .sponsors { display: none; }
-// .spotlight { display: none; }
-// .submit { display: none; }
-// .summary { display: none; }
-// .toggle { display: none; }
+// #about .carousel { display: none; }
+// #about .introduction { display: none; }
+// #about .sponsors { display: none; }
+// #events .filter { display: none; }
+// #events .meetups { display: none; }
+// #home .audio { display: none; }
+// #home .hero { display: none; }
+// #home .spotlight { display: none; }
+// #home .summary { display: none; }
+// #live .bash { display: none; }
+// #live .feedback { display: none; }
+// #live .submit { display: none; }
+// #live .toggle { display: none; }
+// #producers .cards { display: none; }
+// #producers .filter { display: none; }

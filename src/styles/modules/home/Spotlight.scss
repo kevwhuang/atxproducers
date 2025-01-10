@@ -1,0 +1,48 @@
+@use '../../_root' as *;
+
+#home .spotlight {
+    background: $c2;
+    display: grid;
+    gap: 25px;
+    grid-template-areas:
+        'header header'
+        'bio photo'
+        'stream stream'
+    ;
+    grid-template-columns: 2fr 1fr;
+    padding: 50px 100px;
+    margin-bottom: 50px;
+
+    .spotlight__header {
+        grid-area: header;
+        margin: auto;
+        text-align: center;
+    }
+
+    .spotlight__bio {
+        grid-area: bio;
+        margin: auto;
+        text-align: center;
+    }
+
+    .spotlight__photo {
+        background-size: cover;
+        box-shadow:
+            rgba(0, 0, 0, .19) 0 10px 20px,
+            rgba(0, 0, 0, .23) 0 6px 6px,
+        ;
+        grid-area: photo;
+        min-height: 400px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .spotlight__stream {
+        background: $c1;
+        font-size: $f3;
+        grid-area: stream;
+        padding: 15px 0;
+        text-align: center;
+    }
+}
