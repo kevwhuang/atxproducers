@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: 
-Sitemap: https://atxproducers.com/sitemap.xml/
+Sitemap: https://atxproducers.com/sitemap.xml

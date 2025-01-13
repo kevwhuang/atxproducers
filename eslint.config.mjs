@@ -5,16 +5,14 @@ const ignores = [
 ];
 
 const globals = [
-    '',
+    'ZustandActions',
+    'ZustandState',
 ];
 
 const overrides = [
     {
-        files: ['**/*.{ts,tsx}'],
-        ignores: [...ignores],
-        rules: {
-            'no-undef': 0,
-        },
+        files: [''],
+        rules: {},
     },
 ];
 

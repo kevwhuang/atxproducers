@@ -3,7 +3,7 @@ import React from 'react';
 import { v4 as uuid } from 'uuid';
 
 import capitalizeResource from '../../functions/capitalizeResource';
-import { type Resource } from '../../types';
+import type { Resource } from '../../types';
 
 import links from '../../assets/texts/links.json';
 
@@ -25,18 +25,18 @@ function Bash(): React.ReactElement {
 
     React.useEffect(() => {
         (async function () {
-            const res = await axios('https://aephonics.onrender.com/atxproducers/v1/assets');
+            const res = await fetch('https://aephonics.onrender.com/atxproducers/v1/assets');
             const data = await res.json();
 
-            for (const e of res.data) {
+            for (const e of data) {
                 e.preview ||= links.defaultStream;
                 e.preview = new URL(e.preview);
                 e.download ||= links.defaultDownload;
                 e.download = new URL(e.download);
             }
 
-            res.data.sort((a: Resource, b: Resource) => a.id - b.id);
-            setResources(res.data);
+            data.sort((a: Resource, b: Resource) => a.id - b.id);
+            setResources(data);
         }());
     }, []);
 

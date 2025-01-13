@@ -83,8 +83,8 @@
         "rootDir": ".",
         "target": "esnext",
         "lib": [
-            "dom.iterable",
             "dom",
+            "dom.iterable",
             "esnext",
             "scripthost",
             "webworker",
@@ -93,5 +93,10 @@
             "bun-types",
             "vite/client",
         ],
+        "paths": {
+            "react": [
+                "node_modules/@types/react",
+            ],
+        },
     },
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { v4 as uuid } from 'uuid';
 
 import parseDatetime from '../../functions/parseDatetime';
-import { type Meetup } from '../../types';
+import type { Meetup } from '../../types';
 
 import links from '../../assets/texts/links.json';
 

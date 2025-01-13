@@ -2,7 +2,7 @@ import { Icon, InlineIcon } from '@iconify/react';
 import React from 'react';
 import { v4 as uuid } from 'uuid';
 
-import { type Producer } from '../../types';
+import type { Producer } from '../../types';
 
 import links from '../../assets/texts/links.json';
 import useZustand from '../../hooks/useZustand';

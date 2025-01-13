@@ -2,7 +2,7 @@ import { Icon } from '@iconify/react';
 import React from 'react';
 import { v4 as uuid } from 'uuid';
 
-import { type Submission } from '../../types';
+import type { Submission } from '../../types';
 import checkAuth from '../../functions/checkAuth';
 
 import '../../styles/modules/live/Feedback.scss';

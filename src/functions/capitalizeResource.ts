@@ -1,4 +1,4 @@
-export default function capitalizeResource(str: string): string {
+export default function (str: string): string {
     switch (str) {
         case 'one shot': return 'One Shot';
         case 'midi': return 'MIDI';

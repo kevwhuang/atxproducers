@@ -1,6 +1,6 @@
 {
     "name": "atxproducers",
-    "version": "25.1.10",
+    "version": "25.1.13",
     "author": "Kevin Huang",
     "scripts": {
         "build": "vite build",
@@ -12,11 +12,11 @@
         "@tsparticles/react": "latest",
         "@tsparticles/slim": "latest",
         "hamburger-react": "latest",
+        "react": "latest",
         "react-dom": "latest",
         "react-hot-toast": "latest",
         "react-image-gallery": "latest",
         "react-router-dom": "latest",
-        "react": "latest",
         "uuid": "latest",
         "zustand": "latest"
     },
@@ -25,10 +25,10 @@
         "@testing-library/jest-dom": "latest",
         "@testing-library/react": "latest",
         "@types/bun": "latest",
+        "@types/react": "latest",
         "@types/react-dom": "latest",
         "@types/react-image-gallery": "latest",
         "@types/react-router-dom": "latest",
-        "@types/react": "latest",
         "@types/uuid": "latest",
         "@vite-pwa/astro": "latest",
         "@vitejs/plugin-react-swc": "latest",
@@ -37,7 +37,7 @@
         "jsdom": "latest",
         "sass": "latest",
         "typescript": "latest",
-        "vite-plugin-pwa": "latest",
-        "vite": "latest"
+        "vite": "latest",
+        "vite-plugin-pwa": "latest"
     }
 }

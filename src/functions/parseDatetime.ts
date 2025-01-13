@@ -1,4 +1,4 @@
-export default function parseDatetime(date: Date, duration: number): string {
+export default function (date: Date, duration: number): string {
     function parseTime(hour: number, minute: number): string {
         const post = hour <= 11 ? 'AM' : 'PM';
         if (hour >= 13) hour -= 12;
